@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ClinicianDashboard from "../components/ClinicianDashboard.astro";
+
+const title = "PelliScope for Dermatologists | Build your digital practice";
+const description =
+  "Set your availability, receive organised skin cases, choose your professional fee and join the PelliScope European clinician network.";
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/doctors.html">
+  <Header active="doctors" />
+  <main id="main-content">
+    <section class="subpage-hero doctor-page-hero">
+      <div class="subpage-glow" aria-hidden="true"></div>
+      <div class="subpage-hero-inner section-shell">
+        <div class="subpage-copy">
+          <p class="eyebrow"><span></span>PelliScope for dermatologists</p>
+          <h1>Your expertise.<br /><em>On your terms.</em></h1>
+          <p>
+            Receive prepared skin cases, consult during the hours you choose, and build a verified
+            digital practice around your professional scope.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary magnetic" href="mailto:partnerships@hawkfranklin.in?subject=PelliScope%20European%20Clinician%20Network">Join the clinician network <span>→</span></a>
+            <a class="button button-outline" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Clinician sign in <span>↗</span></a>
+          </div>
+          <p class="subpage-micro">Credential and regional eligibility review is required before accepting patient cases.</p>
+        </div>
+        <div class="subpage-visual"><ClinicianDashboard /></div>
+      </div>
+    </section>
+
+    <section class="doctor-value-section" aria-labelledby="doctor-value-title">
+      <div class="section-shell">
+        <p class="eyebrow dark"><span></span>A practice that fits around yours</p>
+        <h2 id="doctor-value-title">Less administration.<br /><em>More clinical time.</em></h2>
+        <div class="value-grid">
+          <article><span>01</span><h3>Cases arrive prepared.</h3><p>Photographs, symptoms, duration and screening context stay together before review begins.</p></article>
+          <article><span>02</span><h3>You control availability.</h3><p>Open remote consultation hours around your clinic, hospital, research or family schedule.</p></article>
+          <article><span>03</span><h3>Your expertise creates value.</h3><p>Set a professional fee and earn through completed consultations where payments are enabled.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="doctor-flow-section" aria-labelledby="doctor-flow-title">
+      <div class="section-shell doctor-flow-layout">
+        <div>
+          <p class="eyebrow"><span></span>The clinician flow</p>
+          <h2 id="doctor-flow-title">From available hour to <em>completed care.</em></h2>
+        </div>
+        <ol class="doctor-flow-list">
+          <li><span>01</span><p><strong>Open availability</strong><small>Choose when you are ready to receive cases.</small></p></li>
+          <li><span>02</span><p><strong>Review the prepared case</strong><small>See photographs and context before patient contact.</small></p></li>
+          <li><span>03</span><p><strong>Consult and decide</strong><small>Continue remotely or direct the patient to in-person care.</small></p></li>
+          <li><span>04</span><p><strong>Complete the consultation</strong><small>Keep notes, response and professional fee in one workflow.</small></p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="doctor-earn-section">
+      <div class="section-shell earn-panel">
+        <div>
+          <p class="eyebrow dark"><span></span>Professional earnings</p>
+          <h2>Set your fee.<br /><em>See every stage.</em></h2>
+          <p>Consultation payment, platform fee and payout status remain visible inside your professional workspace.</p>
+        </div>
+        <div class="earn-flow" aria-label="Consultation earnings workflow">
+          <article><span>CASE</span><strong>Consultation accepted</strong><i></i></article>
+          <b>→</b>
+          <article><span>CARE</span><strong>Review completed</strong><i></i></article>
+          <b>→</b>
+          <article><span>PAYOUT</span><strong>Your fee becomes eligible</strong><i></i></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="network-cta">
+      <div class="section-shell">
+        <p class="eyebrow"><span></span>European clinician network</p>
+        <h2>Bring your practice<br /><em>into the care journey.</em></h2>
+        <p>We are inviting qualified dermatologists to help shape country-by-country availability and responsible remote-care workflows.</p>
+        <a class="button button-primary magnetic" href="mailto:partnerships@hawkfranklin.in?subject=PelliScope%20European%20Clinician%20Network&body=Hello%20PelliScope%20team%2C%0A%0AI%20am%20interested%20in%20joining%20the%20European%20clinician%20network.%0A%0ACountry%20of%20practice%3A%0ASpecialty%3A%0AProfessional%20registration%3A%0A">Apply to join <span>→</span></a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

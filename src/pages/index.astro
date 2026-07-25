@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PatientPhoneStory from "../components/PatientPhoneStory.astro";
+import ClinicianDashboard from "../components/ClinicianDashboard.astro";
+
+const title = "PelliScope Europe | From skin concern to clinical direction";
+const description =
+  "Share photographs, receive an AI-assisted first screen, and connect with a participating dermatologist through one organised care journey.";
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/">
+  <Header active="home" />
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-contours" aria-hidden="true">
+        <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+          <path d="M108 501C101 339 211 192 382 122c204-83 465-42 616 103 154 148 176 399 45 561-118 146-349 192-553 140C286 874 116 702 108 501Z"></path>
+          <path d="M164 495c-6-139 87-265 233-325 174-71 397-36 526 88 132 127 151 341 39 480-101 125-299 164-473 120-174-45-318-192-325-363Z"></path>
+          <path d="M222 490c-5-116 72-220 194-270 145-59 330-30 438 73 109 106 125 284 32 399-84 104-249 137-393 100-145-37-265-159-271-302Z"></path>
+          <path d="M284 486c-4-90 56-171 151-210 113-46 257-23 341 57 85 82 97 221 25 311-66 81-194 106-306 78-113-29-206-124-211-236Z"></path>
+        </svg>
+      </div>
+      <div class="hero-glow hero-glow-mint" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-coral" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow"><span></span>A clearer first step for skin concerns</p>
+          <h1 id="hero-title">Skin concern?<br /><em>Show us.</em></h1>
+          <p class="hero-lede">
+            Share a few photographs, get an AI-assisted first screen, and connect with a dermatologist
+            when you need one.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
+              Start my skin check <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-outline" href="#for-doctors">
+              I’m a dermatologist <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div class="hero-assurance" aria-label="Important service information">
+            <span><i></i> Guided intake</span>
+            <span><i></i> Patient-controlled sharing</span>
+            <span><i></i> Clinician-led decisions</span>
+          </div>
+        </div>
+
+        <div class="hero-product">
+          <PatientPhoneStory />
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#how-it-works"><span>Scroll the care journey</span><i>↓</i></a>
+    </section>
+
+    <section class="clarity-section" id="how-it-works" aria-labelledby="clarity-title">
+      <div class="section-shell">
+        <div class="clarity-heading">
+          <p class="eyebrow dark"><span></span>One concern. One clear path.</p>
+          <h2 id="clarity-title">Less searching.<br /><em>More direction.</em></h2>
+        </div>
+        <p class="clarity-lede">
+          PelliScope turns photographs, symptoms and context into one organised case—ready for the next
+          appropriate step.
+        </p>
+      </div>
+
+      <div class="journey-grid section-shell">
+        <article class="journey-step" data-reveal>
+          <span class="step-number">01</span>
+          <div class="step-icon capture-icon" aria-hidden="true"><i></i><b></b></div>
+          <h3>Show what changed.</h3>
+          <p>Add clear photographs and describe what you feel, where it is and when it began.</p>
+        </article>
+        <article class="journey-step" data-reveal>
+          <span class="step-number">02</span>
+          <div class="step-icon signal-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h3>Understand the first signal.</h3>
+          <p>Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it.</p>
+        </article>
+        <article class="journey-step" data-reveal>
+          <span class="step-number">03</span>
+          <div class="step-icon connect-icon" aria-hidden="true"><i></i><b></b><span></span></div>
+          <h3>Continue with someone qualified.</h3>
+          <p>Choose a participating dermatologist and carry the complete case into a private review.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="handoff-section" aria-labelledby="handoff-title">
+      <div class="handoff-copy section-shell">
+        <p class="eyebrow"><span></span>The hand-off</p>
+        <h2 id="handoff-title">Technology prepares the case.<br /><em>A clinician makes the decision.</em></h2>
+      </div>
+
+      <div class="handoff-stage section-shell" data-handoff>
+        <div class="handoff-person patient-side">
+          <span class="person-node">You</span>
+          <div><small>CONCERN ORGANISED</small><strong>Photographs + context</strong></div>
+        </div>
+
+        <div class="handoff-track" aria-hidden="true">
+          <span class="track-line"></span>
+          <div class="travelling-case" data-travelling-case>
+            <span class="case-mini-photo"><i></i></span>
+            <span><small>PRIVATE CASE</small><strong>PS · 2048</strong></span>
+            <b>→</b>
+          </div>
+        </div>
+
+        <div class="handoff-person doctor-side">
+          <span class="person-node doctor">Dr</span>
+          <div><small>CLINICAL REVIEW</small><strong>Judgment + next step</strong></div>
+        </div>
+      </div>
+
+      <div class="handoff-note section-shell">
+        <span>Screening</span><i></i><span>Professional review</span><i></i><span>Digital or in-person care</span>
+      </div>
+    </section>
+
+    <section class="doctor-section" id="for-doctors" aria-labelledby="doctor-title">
+      <div class="doctor-orb doctor-orb-one" aria-hidden="true"></div>
+      <div class="doctor-orb doctor-orb-two" aria-hidden="true"></div>
+      <div class="doctor-layout section-shell">
+        <div class="doctor-copy">
+          <p class="eyebrow dark"><span></span>For dermatologists</p>
+          <h2 id="doctor-title">Your expertise.<br />Your schedule.<br /><em>Your digital practice.</em></h2>
+          <p>
+            Open availability when it suits you, receive prepared cases, choose your professional fee
+            and continue care from one clinical workspace.
+          </p>
+          <div class="doctor-pillars">
+            <span>Set availability</span>
+            <span>Review structured cases</span>
+            <span>Earn through consultations</span>
+          </div>
+          <div class="doctor-actions">
+            <a class="button button-dark magnetic" href="/doctors.html">Explore the clinician network <span>→</span></a>
+            <a class="text-link" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Open clinician portal ↗</a>
+          </div>
+          <p class="doctor-legal">Participation, consultation and payout availability depend on professional verification and local requirements.</p>
+        </div>
+        <div class="doctor-visual">
+          <ClinicianDashboard />
+        </div>
+      </div>
+    </section>
+
+    <section class="care-loop-section" aria-labelledby="care-loop-title">
+      <div class="care-loop-heading section-shell">
+        <p class="eyebrow"><span></span>One continuous care thread</p>
+        <h2 id="care-loop-title">From first worry to<br /><em>what happens next.</em></h2>
+      </div>
+
+      <div class="care-marquee" aria-label="The PelliScope care journey">
+        <div class="care-track">
+          {
+            [...Array(2)].flatMap(() => [
+              ["01", "Concern", "Something changed"],
+              ["02", "Photographs", "A clearer visual record"],
+              ["03", "First screen", "Information organised"],
+              ["04", "Dermatologist", "A qualified review"],
+              ["05", "Consultation", "Questions and direction"],
+              ["06", "Follow-up", "One continuing case"]
+            ]).map(([number, title, note]) => (
+              <article class="care-card">
+                <span>{number}</span>
+                <div class={`care-symbol symbol-${number}`} aria-hidden="true"><i></i><b></b></div>
+                <h3>{title}</h3>
+                <p>{note}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="clinic-section" aria-labelledby="clinic-title">
+      <div class="clinic-panel section-shell">
+        <div class="clinic-grid" aria-hidden="true"></div>
+        <div class="clinic-copy">
+          <p class="eyebrow dark"><span></span>For clinics</p>
+          <h2 id="clinic-title">A digital front door for your dermatology practice.</h2>
+          <p>Let patients begin with structured intake, then route each case into remote review or an appropriate clinic visit.</p>
+          <a class="button button-dark" href="/clinics.html">Explore clinic partnerships <span>→</span></a>
+        </div>
+        <div class="clinic-flow" aria-label="Clinic workflow">
+          <article><span>01</span><strong>Patient entry</strong><small>Clinic-linked intake</small></article>
+          <i>→</i>
+          <article><span>02</span><strong>Prepared case</strong><small>Photos + context</small></article>
+          <i>→</i>
+          <article><span>03</span><strong>Your team</strong><small>Review + route</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="final-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="final-inner section-shell">
+        <p class="eyebrow"><span></span>Your first step can be simple</p>
+        <h2 id="final-title">See it. Describe it.<br /><em>Get direction.</em></h2>
+        <p>Begin a guided skin check and decide when you are ready to involve a clinician.</p>
+        <div class="final-actions">
+          <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">Start my skin check <span>↗</span></a>
+          <a class="button button-outline" href="/doctors.html">Join as a dermatologist <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <aside class="trust-strip" aria-label="PelliScope safety information">
+      <span><i></i> AI-assisted preliminary screening</span>
+      <span><i></i> Clinician-led diagnosis and treatment</span>
+      <span><i></i> Not an emergency service</span>
+      <span><i></i> Availability varies by country</span>
+    </aside>
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "PelliScope",
+    applicationCategory: "HealthApplication",
+    operatingSystem: "Web",
+    url: "https://pelliscope.eu/",
+    description,
+    provider: {
+      "@type": "Organization",
+      name: "HawkFranklin",
+      url: "https://hawkfranklin.eu"
+    }
+  })} />
+</BaseLayout>

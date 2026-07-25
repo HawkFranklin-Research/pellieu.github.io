@@ -1,0 +1,144 @@
+<div class="phone-story" data-phone-story>
+  <div class="phone-aura" aria-hidden="true"></div>
+  <div class="phone-shell">
+    <div class="phone-hardware">
+      <span class="phone-speaker"></span>
+      <span class="phone-camera"></span>
+    </div>
+    <div class="phone-display">
+      <div class="phone-status" aria-hidden="true">
+        <span>09:41</span>
+        <span>● 5G ▰</span>
+      </div>
+      <div class="app-bar">
+        <span class="mini-mark"><img src="/brand/pelliscope.png" alt="" /></span>
+        <strong>PelliScope</strong>
+        <span class="private-chip">Private</span>
+      </div>
+
+      <div class="phone-screens" aria-live="polite">
+        <section class="phone-screen is-active" data-phone-screen="0" aria-label="Describe a skin concern">
+          <p class="screen-step">YOUR SKIN CHECK · 01</p>
+          <h3>What are you worried about?</h3>
+          <div class="concern-prompt">
+            <span class="prompt-orb"></span>
+            <p>“This appeared two days ago and feels itchy.”</p>
+          </div>
+          <div class="symptom-chips">
+            <span>Itchy</span><span>2 days</span><span>Forearm</span>
+          </div>
+          <button type="button" tabindex="-1">Continue <span>→</span></button>
+        </section>
+
+        <section class="phone-screen" data-phone-screen="1" aria-label="Add photographs">
+          <p class="screen-step">ADD PHOTOGRAPHS · 02</p>
+          <h3>Show what changed.</h3>
+          <div class="photo-grid">
+            <div class="skin-photo skin-one">
+              <img src="/samples/skin-case/case-context.webp" alt="" loading="eager" decoding="async" />
+              <i></i><span>Context</span>
+            </div>
+            <div class="skin-photo skin-two">
+              <img src="/samples/skin-case/case-close.webp" alt="" loading="eager" decoding="async" />
+              <i></i><span>Closer</span>
+            </div>
+            <div class="add-photo"><b>+</b><span>Add view</span></div>
+          </div>
+          <div class="capture-guide">
+            <span></span>
+            <p><strong>Good light detected</strong>Keep the area in focus.</p>
+          </div>
+          <button type="button" tabindex="-1">Review photos <span>→</span></button>
+        </section>
+
+        <section class="phone-screen analyzing-screen" data-phone-screen="2" aria-label="AI-assisted screening in progress">
+          <p class="screen-step">AI-ASSISTED SCREEN · 03</p>
+          <div class="analysis-visual" aria-hidden="true">
+            <div class="analysis-photo">
+              <img src="/samples/skin-case/case-angle.webp" alt="" loading="lazy" decoding="async" />
+              <i></i>
+            </div>
+            <div class="scan-beam"></div>
+            <span class="scan-corner corner-a"></span>
+            <span class="scan-corner corner-b"></span>
+            <span class="scan-corner corner-c"></span>
+            <span class="scan-corner corner-d"></span>
+          </div>
+          <h3>Organising your case…</h3>
+          <div class="analysis-list">
+            <span class="done">Photographs checked</span>
+            <span class="done">Symptoms organised</span>
+            <span class="working">Preparing first screen</span>
+          </div>
+        </section>
+
+        <section class="phone-screen result-screen" data-phone-screen="3" aria-label="Preliminary screening ready">
+          <p class="screen-step">FIRST SCREEN READY · 04</p>
+          <div class="result-orb"><span>✓</span></div>
+          <h3>Your case is ready for the next step.</h3>
+          <p class="screen-copy">The visible pattern and your answers have been organised for review.</p>
+          <div class="result-route">
+            <span class="route-dot"></span>
+            <p><strong>Clinician review recommended</strong>A dermatologist can interpret the case and advise what happens next.</p>
+          </div>
+          <button type="button" tabindex="-1">Find a dermatologist <span>→</span></button>
+          <small>Screening is not a diagnosis.</small>
+        </section>
+
+        <section class="phone-screen doctor-screen" data-phone-screen="4" aria-label="Choose a dermatologist">
+          <p class="screen-step">CHOOSE A CLINICIAN · 05</p>
+          <h3>Continue with someone qualified.</h3>
+          <article class="doctor-choice selected">
+            <span class="doctor-avatar">AM</span>
+            <div><strong>Dr. Anna M.</strong><small>Dermatology · Available today</small></div>
+            <span class="availability"></span>
+          </article>
+          <article class="doctor-choice">
+            <span class="doctor-avatar alt">LK</span>
+            <div><strong>Dr. Lukas K.</strong><small>Dermatology · Tomorrow</small></div>
+            <span class="availability muted"></span>
+          </article>
+          <div class="consent-row"><span>✓</span><p>You choose who receives your case.</p></div>
+          <button type="button" tabindex="-1">Send for review <span>→</span></button>
+        </section>
+
+        <section class="phone-screen sent-screen" data-phone-screen="5" aria-label="Case sent to a dermatologist">
+          <p class="screen-step">CONNECTED · 06</p>
+          <div class="sent-visual" aria-hidden="true">
+            <span class="sent-person">You</span>
+            <i><b></b></i>
+            <span class="sent-person doctor">Dr</span>
+          </div>
+          <h3>Your case is with a dermatologist.</h3>
+          <p class="screen-copy">Photographs, symptoms and screening context travel together in one private care thread.</p>
+          <div class="status-card">
+            <span></span>
+            <p><strong>Awaiting clinical review</strong>You can return to this case at any time.</p>
+          </div>
+          <button type="button" tabindex="-1">Open my case <span>→</span></button>
+        </section>
+      </div>
+
+      <div class="phone-home-indicator" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="phone-story-controls" aria-label="Patient journey animation">
+    {
+      ["Concern", "Photos", "Screen", "Direction", "Clinician", "Connected"].map((label, index) => (
+        <button
+          class:list={["phone-story-step", index === 0 && "is-active"]}
+          type="button"
+          data-phone-step={index}
+          aria-label={`Show ${label} stage`}
+          aria-current={index === 0 ? "step" : undefined}
+        >
+          <span></span>
+        </button>
+      ))
+    }
+    <button class="phone-story-toggle" type="button" data-phone-toggle aria-label="Pause animation">
+      <span class="pause-icon">Ⅱ</span><span class="play-icon">▶</span>
+    </button>
+  </div>
+</div>
