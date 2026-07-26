@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "PelliScope Europe | Refund policy";
+const description = "Payment and refund status for the PelliScope European controlled pilot.";
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/refunds.html">
+  <Header />
+  <main id="main-content" class="legal-main">
+    <section class="legal-hero section-shell">
+      <p class="eyebrow"><span></span>European operation · Last updated 26 July 2026</p>
+      <h1>Payment and<br /><em>refund status.</em></h1>
+      <p>
+        PelliScope does not currently offer routine paid patient consultations in any EU country. This page explains
+        what that means now and what must be disclosed before a future payment.
+      </p>
+    </section>
+
+    <div class="legal-layout section-shell">
+      <aside class="legal-summary">
+        <strong>Today</strong>
+        <p>No public EU consultation price. No routine paid consultation checkout. Pilot and community registration do not create a patient charge.</p>
+      </aside>
+      <article class="legal-copy">
+        <section>
+          <h2>1. No current public paid consultation</h2>
+          <p>
+            Exploring the website, applying to the professional community or registering interest in a pilot does not
+            create a paid patient consultation. Because no routine EU paid consultation is currently offered, there is
+            no standard EU consultation refund schedule in operation.
+          </p>
+        </section>
+        <section>
+          <h2>2. Before any future payment</h2>
+          <p>
+            If a country service launches, the checkout must show the total patient price, what is being purchased,
+            the participating clinician or provider, expected response range, cancellation rules and refund conditions
+            before payment is confirmed. Applicable mandatory consumer and healthcare rights will remain in force.
+          </p>
+        </section>
+        <section>
+          <h2>3. Free pilot and community activity</h2>
+          <p>
+            A free pilot interaction or voluntary open-community contribution has no purchase price and therefore no
+            payment to refund. It also does not guarantee future clinical availability or admission to a professional
+            programme.
+          </p>
+        </section>
+        <section>
+          <h2>4. Unexpected or mistaken charge</h2>
+          <p>
+            If you believe you have been charged in connection with PelliScope Europe, do not submit payment details
+            by email. Write to <a href="mailto:contact@hawkfranklin.in">contact@hawkfranklin.in</a> with the payment
+            date, amount and transaction reference so the charge can be investigated securely.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

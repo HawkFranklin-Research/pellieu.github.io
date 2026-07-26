@@ -7,7 +7,7 @@ import ClinicianDashboard from "../components/ClinicianDashboard.astro";
 
 const title = "PelliScope Europe | From skin concern to clinical direction";
 const description =
-  "Share photographs, receive an AI-assisted first screen, and connect with a participating dermatologist through one organised care journey.";
+  "Prepare a structured skin case with guided photographs and an AI-assisted preliminary screen. European clinical consultations remain in controlled pilot rollout.";
 ---
 
 <BaseLayout title={title} description={description} canonical="https://pelliscope.eu/">
@@ -31,12 +31,12 @@ const description =
           <p class="eyebrow hero-eyebrow"><span></span>A clearer first step for skin concerns</p>
           <h1 id="hero-title">Skin concern?<br /><em>Show us.</em></h1>
           <p class="hero-lede">
-            Share a few photographs, get an AI-assisted first screen, and connect with a dermatologist
-            when you need one.
+            Share a few photographs and prepare an organised first screen. Clinician consultation becomes
+            available only in countries where a verified PelliScope service is active.
           </p>
           <div class="hero-actions">
             <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
-              Start my skin check <span aria-hidden="true">↗</span>
+              Open the pilot app <span aria-hidden="true">↗</span>
             </a>
             <a class="button button-outline" href="#for-doctors">
               I’m a dermatologist <span aria-hidden="true">↓</span>
@@ -55,6 +55,42 @@ const description =
       </div>
 
       <a class="hero-scroll" href="#how-it-works"><span>Scroll the care journey</span><i>↓</i></a>
+    </section>
+
+    <section class="service-status-section" aria-labelledby="service-status-title">
+      <div class="service-status-panel section-shell">
+        <div class="service-status-heading">
+          <p class="eyebrow dark"><span></span>European service status</p>
+          <h2 id="service-status-title">Clear before you begin.</h2>
+          <p>
+            PelliScope Europe is in controlled pilot development. The screening experience can be explored,
+            but routine paid patient consultations have not yet launched country-wide in the EU.
+          </p>
+        </div>
+        <dl class="service-facts">
+          <div>
+            <dt>Currently available in</dt>
+            <dd>Pilot registration only. No EU country is currently open for routine paid consultations.</dd>
+          </div>
+          <div>
+            <dt>Typical clinician response</dt>
+            <dd>No response-time guarantee during the pilot.</dd>
+          </div>
+          <div>
+            <dt>Patient consultation price</dt>
+            <dd>No public EU consultation price yet. Any price and refund terms will be shown before payment.</dd>
+          </div>
+          <div>
+            <dt>Clinician verification</dt>
+            <dd>Registration number and issuing jurisdiction must be checked before live clinical access.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="care-boundaries section-shell" aria-label="Difference between screening, consultation and diagnosis">
+        <article><span>01</span><h3>Screening</h3><p>Organises photographs and context. It is informational and is not a diagnosis.</p></article>
+        <article><span>02</span><h3>Consultation</h3><p>Begins only when a verified clinician accepts a case within an active service jurisdiction.</p></article>
+        <article><span>03</span><h3>Diagnosis</h3><p>Remains a clinician-led medical decision after professional review.</p></article>
+      </div>
     </section>
 
     <section class="clarity-section" id="how-it-works" aria-labelledby="clarity-title">
@@ -86,7 +122,7 @@ const description =
           <span class="step-number">03</span>
           <div class="step-icon connect-icon" aria-hidden="true"><i></i><b></b><span></span></div>
           <h3>Continue with someone qualified.</h3>
-          <p>Choose a participating dermatologist and carry the complete case into a private review.</p>
+          <p>Where a country service is active, choose a verified dermatologist and carry the complete case into private review.</p>
         </article>
       </div>
     </section>
@@ -204,9 +240,9 @@ const description =
       <div class="final-inner section-shell">
         <p class="eyebrow"><span></span>Your first step can be simple</p>
         <h2 id="final-title">See it. Describe it.<br /><em>Get direction.</em></h2>
-        <p>Begin a guided skin check and decide when you are ready to involve a clinician.</p>
+        <p>Explore guided case preparation now. Clinician consultation is available only through an active country service.</p>
         <div class="final-actions">
-          <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">Start my skin check <span>↗</span></a>
+          <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">Open the pilot app <span>↗</span></a>
           <a class="button button-outline" href="/doctors.html">Explore clinician pathways <span>→</span></a>
         </div>
       </div>
@@ -216,7 +252,7 @@ const description =
       <span><i></i> AI-assisted preliminary screening</span>
       <span><i></i> Clinician-led diagnosis and treatment</span>
       <span><i></i> Not an emergency service</span>
-      <span><i></i> Availability varies by country</span>
+      <span><i></i> EU consultations not yet publicly launched</span>
     </aside>
   </main>
 

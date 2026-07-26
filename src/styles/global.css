@@ -3754,6 +3754,247 @@ button:focus-visible {
 
 /* Responsive */
 
+/* European service status */
+
+.service-status-section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  color: var(--night);
+  background:
+    radial-gradient(circle at 12% 30%, rgba(40, 230, 164, 0.12), transparent 26rem),
+    var(--porcelain);
+}
+
+.service-status-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border: 1px solid rgba(6, 16, 29, 0.12);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 2rem 6rem rgba(6, 16, 29, 0.09);
+}
+
+.service-status-heading h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  line-height: 0.95;
+}
+
+.service-status-heading > p:last-child {
+  max-width: 35rem;
+  margin: 1.5rem 0 0;
+  color: rgba(6, 16, 29, 0.62);
+  line-height: 1.75;
+}
+
+.service-facts {
+  margin: 0;
+  border-top: 1px solid rgba(6, 16, 29, 0.12);
+}
+
+.service-facts > div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1.25rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(6, 16, 29, 0.12);
+}
+
+.service-facts dt {
+  color: rgba(6, 16, 29, 0.44);
+  font-family: monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.service-facts dd {
+  margin: 0;
+  color: var(--night);
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.care-boundaries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(6, 16, 29, 0.12);
+  border-radius: 1.5rem;
+  background: rgba(6, 16, 29, 0.12);
+}
+
+.care-boundaries article {
+  min-height: 14rem;
+  padding: 1.5rem;
+  background: rgba(246, 244, 238, 0.97);
+}
+
+.care-boundaries span {
+  color: var(--coral);
+  font-family: monospace;
+  font-size: 0.65rem;
+}
+
+.care-boundaries h3 {
+  margin: 3rem 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+.care-boundaries p {
+  margin: 0;
+  color: rgba(6, 16, 29, 0.58);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.verification-example {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0.35rem 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid rgba(88, 185, 255, 0.16);
+  border-radius: 0.7rem;
+  background: rgba(88, 185, 255, 0.05);
+}
+
+.verification-example > span {
+  display: grid;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--night);
+  background: var(--blue);
+  font-size: 0.5rem;
+  font-weight: 900;
+}
+
+.verification-example p {
+  margin: 0;
+  color: rgba(246, 244, 238, 0.46);
+  font-size: 0.43rem;
+  line-height: 1.45;
+}
+
+.verification-example strong {
+  color: rgba(246, 244, 238, 0.75);
+}
+
+.demo-ribbon {
+  width: fit-content;
+  margin: 0 0 0.65rem auto;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid rgba(129, 117, 255, 0.24);
+  border-radius: 999px;
+  color: #9e95ff;
+  background: rgba(129, 117, 255, 0.07);
+  font-family: monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.06em;
+}
+
+/* European legal pages */
+
+.legal-main {
+  min-height: 100vh;
+  padding-top: 5rem;
+  color: var(--porcelain);
+  background:
+    radial-gradient(circle at 85% 7%, rgba(129, 117, 255, 0.13), transparent 30rem),
+    radial-gradient(circle at 8% 23%, rgba(40, 230, 164, 0.08), transparent 25rem),
+    var(--night);
+}
+
+.legal-hero {
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.legal-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 0.88;
+}
+
+.legal-hero > p:last-child {
+  max-width: 48rem;
+  margin: 2rem 0 0;
+  color: rgba(246, 244, 238, 0.58);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  padding-bottom: clamp(6rem, 12vw, 12rem);
+}
+
+.legal-summary {
+  position: sticky;
+  top: 7rem;
+  align-self: start;
+  padding: 1.2rem;
+  border: 1px solid var(--line-dark);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.legal-summary strong {
+  color: var(--mint);
+  font-family: monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.legal-summary p,
+.legal-summary a {
+  color: rgba(246, 244, 238, 0.55);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.legal-summary a {
+  color: var(--blue);
+}
+
+.legal-copy section {
+  padding: 0 0 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.legal-copy h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.05;
+}
+
+.legal-copy p,
+.legal-copy li {
+  color: rgba(246, 244, 238, 0.58);
+  font-size: 0.84rem;
+  line-height: 1.8;
+}
+
+.legal-copy a {
+  color: var(--blue);
+}
+
+.legal-copy ul {
+  padding-left: 1.15rem;
+}
+
 @media (max-width: 1180px) {
   .hero-inner {
     grid-template-columns: minmax(0, 1fr) minmax(330px, 0.7fr);
@@ -3936,6 +4177,19 @@ button:focus-visible {
 
   .footer-top {
     grid-template-columns: 1fr;
+  }
+
+  .service-status-panel,
+  .legal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-facts > div {
+    grid-template-columns: 9rem 1fr;
+  }
+
+  .legal-summary {
+    position: static;
   }
 
   .subpage-hero {
@@ -4160,6 +4414,38 @@ button:focus-visible {
 
   .trust-strip span:nth-child(-n + 2) {
     border-bottom: 1px solid var(--line-dark);
+  }
+
+  .service-status-panel {
+    width: calc(100% - 1rem);
+    padding: 1.35rem;
+    border-radius: 1.25rem;
+  }
+
+  .service-facts > div {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .care-boundaries {
+    width: calc(100% - 1rem);
+    grid-template-columns: 1fr;
+  }
+
+  .care-boundaries article {
+    min-height: 11rem;
+  }
+
+  .care-boundaries h3 {
+    margin-top: 2rem;
+  }
+
+  .legal-main {
+    padding-top: 3rem;
+  }
+
+  .legal-layout {
+    width: calc(100% - 1rem);
   }
 
   .site-footer {

@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "PelliScope Europe | Terms of use";
+const description = "Terms for the PelliScope European website and controlled pilot.";
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/terms.html">
+  <Header />
+  <main id="main-content" class="legal-main">
+    <section class="legal-hero section-shell">
+      <p class="eyebrow"><span></span>European operation · Last updated 26 July 2026</p>
+      <h1>Terms for the<br /><em>European pilot.</em></h1>
+      <p>
+        These terms govern the PelliScope European website and controlled pilot operated by HawkFranklin OÜ.
+        Country-specific clinical and consumer terms will apply before a paid consultation service launches.
+      </p>
+    </section>
+
+    <div class="legal-layout section-shell">
+      <aside class="legal-summary">
+        <strong>Current service status</strong>
+        <p>No EU country is currently open for routine paid PelliScope consultations. There is no public patient price or clinician response-time guarantee during the pilot.</p>
+      </aside>
+      <article class="legal-copy">
+        <section>
+          <h2>1. Operator</h2>
+          <p>
+            The European website and pilot are operated by HawkFranklin OÜ, registry code 17558108, Ahtri tn 12,
+            15551 Tallinn, Estonia. Contact: <a href="mailto:contact@hawkfranklin.in">contact@hawkfranklin.in</a>.
+          </p>
+        </section>
+        <section>
+          <h2>2. Pilot status and availability</h2>
+          <p>
+            The website presents a product and interface under controlled development. Pilot registration does not
+            guarantee admission, a clinician response, a consultation, a prescription, payment functionality or
+            availability in any particular country. A service is available only when PelliScope expressly identifies
+            that country and the relevant clinical pathway as active.
+          </p>
+        </section>
+        <section>
+          <h2>3. Screening, consultation and diagnosis</h2>
+          <ul>
+            <li><strong>Screening</strong> organises photographs and context and provides informational output.</li>
+            <li><strong>Consultation</strong> begins only when a verified clinician accepts a case within an active service jurisdiction.</li>
+            <li><strong>Diagnosis and treatment</strong> remain solely with the qualified clinician after professional review.</li>
+          </ul>
+          <p>PelliScope does not provide emergency care and its screening output must not be treated as medical advice or a diagnosis.</p>
+        </section>
+        <section>
+          <h2>4. User responsibilities</h2>
+          <p>
+            Users must provide information they are entitled to share, avoid submitting another person’s information
+            without authority, follow capture guidance honestly and use the service lawfully. Do not delay urgent or
+            in-person medical care because of a screening output or platform message.
+          </p>
+        </section>
+        <section>
+          <h2>5. Clinician and community participation</h2>
+          <p>
+            Professional access is subject to identity, registration and jurisdiction checks. Community discussion is
+            educational and does not itself create a treating-clinician relationship. A clinician remains responsible
+            for practising within their competence, registration and applicable professional rules.
+          </p>
+        </section>
+        <section>
+          <h2>6. Price, response and payment</h2>
+          <p>
+            There is currently no public EU patient consultation price and no clinician response-time guarantee. If a
+            paid service launches, the total price, clinician details, issuing jurisdiction, expected response range,
+            cancellation conditions and refund terms will be shown before payment.
+          </p>
+        </section>
+        <section>
+          <h2>7. Intellectual property and acceptable use</h2>
+          <p>
+            The PelliScope name, interface and website content are protected by applicable intellectual-property law.
+            You may not interfere with the service, bypass access controls, scrape protected clinical information,
+            impersonate a clinician or use the pilot to train another system without written permission.
+          </p>
+        </section>
+        <section>
+          <h2>8. Liability and governing law</h2>
+          <p>
+            The pilot is provided for evaluation and controlled use subject to mandatory law. Nothing in these terms
+            excludes liability that cannot legally be excluded or limits mandatory consumer or patient rights. These
+            terms are governed by Estonian law, while mandatory protections in a user’s country remain unaffected.
+          </p>
+        </section>
+        <section>
+          <h2>9. Changes</h2>
+          <p>
+            These terms may be updated as the service moves from pilot to country-specific clinical availability.
+            Material new paid or clinical terms will be presented before a user enters that service.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
