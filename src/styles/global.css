@@ -323,11 +323,18 @@ button:focus-visible {
   transform-origin: left;
 }
 
-.header-cta {
+.header-actions {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.header-cta,
+.header-clinic-cta {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
   padding: 0.8rem 1.1rem;
   border: 1px solid rgba(246, 244, 238, 0.2);
   border-radius: 999px;
@@ -336,10 +343,37 @@ button:focus-visible {
   transition: color 200ms ease, background 200ms ease, border-color 200ms ease;
 }
 
-.header-cta:hover {
+.header-cta {
+  gap: 1rem;
+}
+
+.header-clinic-cta {
+  min-width: 8.9rem;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-block: 0.58rem;
   color: var(--night);
   border-color: var(--mint);
   background: var(--mint);
+  line-height: 1.05;
+}
+
+.header-clinic-cta small,
+.mobile-menu small {
+  font-size: 0.56rem;
+  font-weight: 650;
+  opacity: 0.68;
+}
+
+.header-cta:hover,
+.header-clinic-cta:hover {
+  color: var(--night);
+  border-color: var(--mint);
+  background: var(--mint);
+}
+
+.header-clinic-cta:hover {
+  background: var(--porcelain);
 }
 
 .menu-toggle {
@@ -4035,7 +4069,7 @@ button:focus-visible {
   }
 
   .desktop-nav,
-  .header-cta {
+  .header-actions {
     display: none;
   }
 
