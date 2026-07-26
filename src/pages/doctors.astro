@@ -4,9 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ClinicianDashboard from "../components/ClinicianDashboard.astro";
 
-const title = "PelliScope for Dermatologists | Build your digital practice";
+const title = "PelliScope for Dermatologists | Community and digital practice";
 const description =
-  "Set your availability, receive organised skin cases, choose your professional fee and join the PelliScope European clinician network.";
+  "Join an open clinical community for learning and contribution, or establish a verified digital dermatology practice with PelliScope.";
 ---
 
 <BaseLayout title={title} description={description} canonical="https://pelliscope.eu/doctors.html">
@@ -19,22 +19,87 @@ const description =
           <p class="eyebrow"><span></span>PelliScope for dermatologists</p>
           <h1>Your expertise.<br /><em>On your terms.</em></h1>
           <p>
-            Receive prepared skin cases, consult during the hours you choose, and build a verified
-            digital practice around your professional scope.
+            Join an open clinical community to learn, discuss and contribute—or establish a verified
+            digital clinic where you control your availability and professional fees.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary magnetic" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Join the clinician network <span>→</span></a>
-            <a class="button button-outline" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Clinician sign in <span>↗</span></a>
+            <a class="button button-primary magnetic" href="https://app.pelliscope.eu/community" target="_blank" rel="noopener">Join the open clinical community <span>↗</span></a>
+            <a class="button button-outline" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Set up your digital clinic <span>↗</span></a>
           </div>
-          <p class="subpage-micro">Credential and regional eligibility review is required before accepting patient cases.</p>
+          <a class="existing-clinician-link" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Already registered? Clinician sign in ↗</a>
+          <p class="subpage-micro">Professional verification is required for community access and before accepting patient consultations.</p>
         </div>
         <div class="subpage-visual"><ClinicianDashboard /></div>
       </div>
     </section>
 
+    <section class="clinician-pathways-section" aria-labelledby="clinician-pathways-title">
+      <div class="section-shell">
+        <div class="clinician-pathways-heading">
+          <div>
+            <p class="eyebrow dark"><span></span>Two ways to take part</p>
+            <h2 id="clinician-pathways-title">Contribute freely.<br /><em>Or build your practice.</em></h2>
+          </div>
+          <p>Choose the relationship with PelliScope that fits your time, goals and professional scope. You can begin with the community and establish a digital clinic later.</p>
+        </div>
+
+        <div class="clinician-pathways-grid">
+          <article class="pathway-card pathway-community" data-reveal>
+            <div class="pathway-card-top">
+              <span>01 · OPEN COMMUNITY</span>
+              <b>Free</b>
+            </div>
+            <div class="pathway-symbol community-symbol" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+            <h3>Learn. Review.<br />Contribute.</h3>
+            <p>Review eligible, protected cases awaiting clinical availability. Exchange professional reasoning, learn from peers and contribute without opening a paid practice.</p>
+            <ul>
+              <li>Verified clinical community</li>
+              <li>Voluntary educational contribution</li>
+              <li>No consultation fee required</li>
+            </ul>
+            <a class="button button-dark magnetic" href="https://app.pelliscope.eu/community" target="_blank" rel="noopener">Join the open clinical community <span>↗</span></a>
+          </article>
+
+          <article class="pathway-card pathway-clinic" data-reveal>
+            <div class="pathway-card-top">
+              <span>02 · DIGITAL CLINIC</span>
+              <b>Professional practice</b>
+            </div>
+            <div class="pathway-symbol clinic-symbol" aria-hidden="true"><i></i><b></b><span></span></div>
+            <h3>Your practice,<br />online.</h3>
+            <p>Set your hours, receive assigned consultations, choose your professional fee and build a continuing digital relationship with patients.</p>
+            <ul>
+              <li>Your availability and professional fee</li>
+              <li>Assigned consultations and follow-up</li>
+              <li>Payments where supported</li>
+            </ul>
+            <a class="button button-primary magnetic" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Set up your digital clinic <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-workflow-section" aria-labelledby="community-workflow-title">
+      <div class="section-shell">
+        <div class="community-workflow-copy">
+          <p class="eyebrow"><span></span>How community review begins</p>
+          <h2 id="community-workflow-title">When a case needs<br /><em>a wider clinical view.</em></h2>
+          <p>Eligible, patient-consented and appropriately protected cases may be made available to verified members of the clinical community.</p>
+        </div>
+        <ol class="community-case-flow" aria-label="Open clinical community case workflow">
+          <li><span>01</span><strong>Eligible patient case</strong><small>A structured concern enters PelliScope.</small></li>
+          <li><span>02</span><strong>No clinician assigned</strong><small>A dermatologist is not currently available.</small></li>
+          <li><span>03</span><strong>Protected community case</strong><small>Consent and access rules are applied.</small></li>
+          <li><span>04</span><strong>Verified peer review</strong><small>Clinicians discuss and contribute voluntarily.</small></li>
+          <li><span>05</span><strong>Learning and direction</strong><small>Contributions can help inform an appropriate next step.</small></li>
+        </ol>
+        <p class="community-boundary">Community discussion is educational and collaborative. It does not by itself create a treating-clinician relationship or replace formal diagnosis and care.</p>
+      </div>
+    </section>
+
     <section class="doctor-value-section" aria-labelledby="doctor-value-title">
       <div class="section-shell">
-        <p class="eyebrow dark"><span></span>A practice that fits around yours</p>
+        <p class="eyebrow dark"><span></span>Digital clinic · A practice that fits around yours</p>
         <h2 id="doctor-value-title">Less administration.<br /><em>More clinical time.</em></h2>
         <div class="value-grid">
           <article><span>01</span><h3>Cases arrive prepared.</h3><p>Photographs, symptoms, duration and screening context stay together before review begins.</p></article>
@@ -47,7 +112,7 @@ const description =
     <section class="doctor-flow-section" aria-labelledby="doctor-flow-title">
       <div class="section-shell doctor-flow-layout">
         <div>
-          <p class="eyebrow"><span></span>The clinician flow</p>
+          <p class="eyebrow"><span></span>The digital clinic flow</p>
           <h2 id="doctor-flow-title">From available hour to <em>completed care.</em></h2>
         </div>
         <ol class="doctor-flow-list">
@@ -78,10 +143,13 @@ const description =
 
     <section class="network-cta">
       <div class="section-shell">
-        <p class="eyebrow"><span></span>European clinician network</p>
-        <h2>Bring your practice<br /><em>into the care journey.</em></h2>
-        <p>We are inviting qualified dermatologists to help shape country-by-country availability and responsible remote-care workflows.</p>
-        <a class="button button-primary magnetic" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Apply to join <span>→</span></a>
+        <p class="eyebrow"><span></span>Open clinical community</p>
+        <h2>Learn together.<br /><em>Contribute where care is waiting.</em></h2>
+        <p>Join verified clinical peers reviewing eligible cases, exchanging professional reasoning and helping shape a responsible community around dermatology access.</p>
+        <div class="network-actions">
+          <a class="button button-primary magnetic" href="https://app.pelliscope.eu/community" target="_blank" rel="noopener">Join the open clinical community <span>↗</span></a>
+          <a class="button button-outline" href="https://app.pelliscope.eu/clinician" target="_blank" rel="noopener">Set up your digital clinic <span>↗</span></a>
+        </div>
       </div>
     </section>
   </main>

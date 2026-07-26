@@ -119,8 +119,11 @@ if (!reduceMotion) {
       opacity: 0,
       rotateY: -5,
       duration: 1.2
-    }, "-=1.05")
-    .from(".phone-story-controls", { opacity: 0, y: 18, duration: 0.5 }, "-=0.45");
+    }, "-=1.05");
+
+  if (document.querySelector(".phone-story-controls")) {
+    heroTimeline.from(".phone-story-controls", { opacity: 0, y: 18, duration: 0.5 }, "-=0.45");
+  }
 
   if (document.querySelector(".hero-contours")) {
     gsap.to(".hero-contours", {
@@ -137,7 +140,7 @@ if (!reduceMotion) {
   }
 
   gsap.utils.toArray<HTMLElement>(
-    ".clarity-heading, .clarity-lede, .handoff-copy, .doctor-copy, .care-loop-heading, .clinic-copy, .final-inner, .doctor-value-section .section-shell > .eyebrow, .doctor-value-section .section-shell > h2, .doctor-flow-layout > div, .doctor-earn-section .earn-panel > div:first-child, .clinic-workflow-section .section-shell > .eyebrow, .clinic-workflow-section .section-shell > h2, .clinic-benefits-layout > div:first-child"
+    ".clarity-heading, .clarity-lede, .handoff-copy, .doctor-copy, .care-loop-heading, .clinic-copy, .final-inner, .clinician-pathways-heading, .community-workflow-copy, .doctor-value-section .section-shell > .eyebrow, .doctor-value-section .section-shell > h2, .doctor-flow-layout > div, .doctor-earn-section .earn-panel > div:first-child, .clinic-workflow-section .section-shell > .eyebrow, .clinic-workflow-section .section-shell > h2, .clinic-benefits-layout > div:first-child"
   ).forEach((element) => {
     gsap.from(element.children.length ? element.children : element, {
       y: 46,
@@ -199,16 +202,18 @@ if (!reduceMotion) {
       });
   });
 
-  gsap.to(".final-orbit", {
-    rotate: 18,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".final-cta",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 1
-    }
-  });
+  if (document.querySelector(".final-orbit") && document.querySelector(".final-cta")) {
+    gsap.to(".final-orbit", {
+      rotate: 18,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".final-cta",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+  }
 
   document.querySelectorAll<HTMLElement>(".magnetic").forEach((element) => {
     element.addEventListener("pointermove", (event) => {

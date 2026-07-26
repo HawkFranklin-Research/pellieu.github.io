@@ -497,6 +497,8 @@ button:focus-visible {
 .doctor-flow-section h2 em,
 .doctor-earn-section h2 em,
 .network-cta h2 em,
+.clinician-pathways-section h2 em,
+.community-workflow-section h2 em,
 .clinic-workflow-section h2 em,
 .clinic-benefits-section h2 em {
   color: var(--mint);
@@ -1397,6 +1399,8 @@ button:focus-visible {
 .doctor-flow-section h2,
 .doctor-earn-section h2,
 .network-cta h2,
+.clinician-pathways-section h2,
+.community-workflow-section h2,
 .clinic-workflow-section h2,
 .clinic-benefits-section h2 {
   margin: 0;
@@ -2825,6 +2829,19 @@ button:focus-visible {
   font-size: 0.62rem;
 }
 
+.existing-clinician-link {
+  display: inline-flex;
+  margin-top: 1.2rem;
+  color: rgba(246, 244, 238, 0.62);
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.existing-clinician-link:hover {
+  color: var(--mint);
+}
+
 .subpage-visual .dashboard-window {
   border-color: rgba(246, 244, 238, 0.15);
   box-shadow:
@@ -2834,6 +2851,344 @@ button:focus-visible {
 
 .subpage-visual .dashboard-caption {
   color: rgba(246, 244, 238, 0.32);
+}
+
+.clinician-pathways-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(7rem, 11vw, 11rem) 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(40, 230, 164, 0.13), transparent 30rem),
+    var(--porcelain);
+}
+
+.clinician-pathways-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: clamp(2rem, 6vw, 7rem);
+}
+
+.clinician-pathways-heading h2,
+.community-workflow-copy h2 {
+  margin: 0;
+}
+
+.clinician-pathways-section h2 em {
+  color: var(--coral);
+}
+
+.clinician-pathways-heading > p {
+  max-width: 38rem;
+  margin: 0 0 0.4rem;
+  color: #5c6a7d;
+  font-size: clamp(0.95rem, 1.3vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.clinician-pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: clamp(4rem, 7vw, 7rem);
+}
+
+.pathway-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 43rem;
+  overflow: hidden;
+  padding: clamp(1.8rem, 4vw, 4rem);
+  border-radius: 2rem;
+}
+
+.pathway-community {
+  border: 1px solid rgba(16, 23, 35, 0.12);
+  background:
+    radial-gradient(circle at 84% 14%, rgba(40, 230, 164, 0.34), transparent 17rem),
+    #dff8ee;
+}
+
+.pathway-clinic {
+  color: var(--porcelain);
+  border: 1px solid rgba(246, 244, 238, 0.13);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(129, 117, 255, 0.26), transparent 20rem),
+    var(--night);
+}
+
+.pathway-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.07em;
+}
+
+.pathway-card-top b {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pathway-community .pathway-card-top b {
+  color: var(--mint-deep);
+}
+
+.pathway-clinic .pathway-card-top {
+  color: rgba(246, 244, 238, 0.58);
+}
+
+.pathway-symbol {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: clamp(3rem, 6vw, 6rem) 0 2rem;
+}
+
+.community-symbol i {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid rgba(16, 23, 35, 0.32);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.community-symbol i:nth-child(1) {
+  top: 0;
+  left: 2.7rem;
+}
+
+.community-symbol i:nth-child(2) {
+  bottom: 0.5rem;
+  left: 0.3rem;
+}
+
+.community-symbol i:nth-child(3) {
+  right: 0.3rem;
+  bottom: 0.5rem;
+}
+
+.community-symbol b {
+  position: absolute;
+  top: 3.45rem;
+  left: 3.45rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--mint-deep);
+  box-shadow:
+    -2.3rem 1.7rem 0 -0.46rem var(--mint-deep),
+    2.3rem 1.7rem 0 -0.46rem var(--mint-deep),
+    0 -2.35rem 0 -0.46rem var(--mint-deep);
+}
+
+.clinic-symbol {
+  border: 1px solid rgba(129, 117, 255, 0.38);
+  border-radius: 1.7rem;
+  background: rgba(129, 117, 255, 0.08);
+}
+
+.clinic-symbol i,
+.clinic-symbol b,
+.clinic-symbol span {
+  position: absolute;
+  display: block;
+}
+
+.clinic-symbol i {
+  top: 1.4rem;
+  right: 1.4rem;
+  left: 1.4rem;
+  height: 0.55rem;
+  border-radius: 1rem;
+  background: rgba(246, 244, 238, 0.18);
+  box-shadow: 0 1.1rem 0 rgba(246, 244, 238, 0.08);
+}
+
+.clinic-symbol b {
+  bottom: 1.25rem;
+  left: 1.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.7rem;
+  background: var(--violet);
+}
+
+.clinic-symbol span {
+  right: 1.4rem;
+  bottom: 1.65rem;
+  width: 2.2rem;
+  height: 1.45rem;
+  border-bottom: 2px solid var(--mint);
+  border-left: 2px solid var(--mint);
+  transform: skewY(-24deg);
+}
+
+.pathway-card h3 {
+  margin: 0;
+  font-size: clamp(2.7rem, 4.8vw, 5.5rem);
+  font-weight: 580;
+  letter-spacing: -0.075em;
+  line-height: 0.92;
+}
+
+.pathway-clinic h3 {
+  color: var(--porcelain);
+}
+
+.pathway-card > p {
+  max-width: 38rem;
+  margin: 1.8rem 0 0;
+  color: #526175;
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.pathway-clinic > p {
+  color: rgba(246, 244, 238, 0.55);
+}
+
+.pathway-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 2rem 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.pathway-card li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.pathway-card li::before {
+  position: absolute;
+  top: 0.52rem;
+  left: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--mint-deep);
+  content: "";
+}
+
+.pathway-clinic li {
+  color: rgba(246, 244, 238, 0.7);
+}
+
+.pathway-clinic li::before {
+  background: var(--violet);
+}
+
+.pathway-card .button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.community-workflow-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(7rem, 11vw, 11rem) 0;
+  background:
+    radial-gradient(circle at 82% 30%, rgba(40, 230, 164, 0.11), transparent 30rem),
+    var(--night-deep);
+}
+
+.community-workflow-copy {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: end;
+}
+
+.community-workflow-copy .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -1.5rem;
+}
+
+.community-workflow-section h2 em {
+  color: var(--mint);
+}
+
+.community-workflow-copy > p:last-child {
+  max-width: 37rem;
+  margin: 0 0 0.4rem;
+  color: rgba(246, 244, 238, 0.54);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.community-case-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: clamp(4rem, 7vw, 7rem) 0 0;
+  padding: 1px;
+  list-style: none;
+  background: var(--line-dark);
+}
+
+.community-case-flow li {
+  position: relative;
+  min-height: 17rem;
+  padding: 1.5rem;
+  background: var(--night);
+}
+
+.community-case-flow li:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -0.62rem;
+  z-index: 2;
+  display: grid;
+  width: 1.2rem;
+  height: 1.2rem;
+  place-items: center;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  color: var(--mint);
+  background: var(--night-deep);
+  content: "→";
+  font-size: 0.55rem;
+}
+
+.community-case-flow span,
+.community-case-flow strong,
+.community-case-flow small {
+  display: block;
+}
+
+.community-case-flow span {
+  color: var(--mint);
+  font-family: monospace;
+  font-size: 0.58rem;
+}
+
+.community-case-flow strong {
+  margin-top: 6rem;
+  font-size: 0.88rem;
+}
+
+.community-case-flow small {
+  margin-top: 0.6rem;
+  color: rgba(246, 244, 238, 0.38);
+  font-size: 0.65rem;
+  line-height: 1.55;
+}
+
+.community-boundary {
+  max-width: 60rem;
+  margin: 1.5rem 0 0 auto;
+  color: rgba(246, 244, 238, 0.34);
+  font-size: 0.65rem;
+  line-height: 1.65;
+  text-align: right;
 }
 
 .doctor-value-section,
@@ -3067,6 +3422,13 @@ button:focus-visible {
   max-width: 40rem;
   margin: 2rem auto;
   color: rgba(246, 244, 238, 0.5);
+}
+
+.network-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 /* Clinic subpage */
@@ -3456,8 +3818,43 @@ button:focus-visible {
   .care-loop-heading,
   .doctor-flow-layout,
   .clinic-benefits-layout,
+  .clinician-pathways-heading,
+  .community-workflow-copy,
   .earn-panel {
     grid-template-columns: 1fr;
+  }
+
+  .clinician-pathways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-workflow-copy .eyebrow {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+
+  .community-case-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .community-case-flow li {
+    min-height: auto;
+  }
+
+  .community-case-flow li:not(:last-child)::after {
+    top: auto;
+    right: 50%;
+    bottom: -0.62rem;
+    transform: translateX(50%) rotate(90deg);
+  }
+
+  .community-case-flow strong {
+    margin-top: 3rem;
+  }
+
+  .community-boundary {
+    margin-left: 0;
+    text-align: left;
   }
 
   .hero-copy,
@@ -3587,7 +3984,8 @@ button:focus-visible {
   }
 
   .hero-actions,
-  .final-actions {
+  .final-actions,
+  .network-actions {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -3629,6 +4027,8 @@ button:focus-visible {
   .doctor-flow-section h2,
   .doctor-earn-section h2,
   .network-cta h2,
+  .clinician-pathways-section h2,
+  .community-workflow-section h2,
   .clinic-workflow-section h2,
   .clinic-benefits-section h2 {
     font-size: clamp(3rem, 15vw, 5rem);
@@ -3640,6 +4040,16 @@ button:focus-visible {
 
   .journey-step {
     padding: 1.5rem;
+  }
+
+  .pathway-card {
+    min-height: 39rem;
+    padding: 1.5rem;
+    border-radius: 1.4rem;
+  }
+
+  .pathway-symbol {
+    margin-top: 3.5rem;
   }
 
   .handoff-person {
