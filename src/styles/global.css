@@ -376,6 +376,17 @@ button:focus-visible {
   background: var(--porcelain);
 }
 
+.header-login {
+  color: rgba(246, 244, 238, 0.58);
+  font-size: 0.62rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-login:hover {
+  color: var(--mint);
+}
+
 .menu-toggle {
   display: none;
   width: 2.8rem;
