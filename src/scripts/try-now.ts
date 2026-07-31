@@ -293,12 +293,25 @@ document.querySelectorAll<HTMLElement>("[data-try-now]").forEach((root) => {
       const headers = new Headers();
       const token = await appCheckToken();
       if (token) headers.set("X-Firebase-AppCheck", token);
+
+      const sessionResponse = await fetch(`${apiBase}/public/v1/screen-session`, {
+        method: "POST",
+        headers,
+        signal: controller.signal
+      });
+      const sessionPayload = await sessionResponse.json().catch(() => ({}));
+      if (!sessionResponse.ok || !sessionPayload?.screeningToken) {
+        throw new Error(sessionPayload?.detail || `Screening session could not be established (${sessionResponse.status}).`);
+      }
+      headers.set("X-Screening-Token", sessionPayload.screeningToken);
+
       const response = await fetch(`${apiBase}/public/v1/screen`, {
         method: "POST",
         body: form,
         headers,
         signal: controller.signal
       });
+
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
         throw new Error(payload?.detail || `Screening could not be completed (${response.status}).`);
