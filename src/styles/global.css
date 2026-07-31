@@ -177,6 +177,7 @@ button:focus-visible {
   font-size: 0.83rem;
   font-weight: 750;
   letter-spacing: 0.01em;
+  cursor: pointer;
   transition:
     color 220ms ease,
     background 220ms ease,
@@ -345,6 +346,9 @@ button:focus-visible {
 
 .header-cta {
   gap: 1rem;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
 }
 
 .header-clinic-cta {
@@ -421,6 +425,20 @@ button:focus-visible {
   border-bottom: 1px solid var(--line-dark);
   font-size: 0.9rem;
   font-weight: 650;
+}
+
+.mobile-menu > button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.9rem 0.3rem;
+  color: var(--mint);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line-dark);
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
 }
 
 .mobile-menu a:last-child {

@@ -21,9 +21,7 @@ const { active = "home", tone = "dark" } = Astro.props;
     </nav>
 
     <div class="header-actions">
-      <a class="header-cta" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
-        App <span aria-hidden="true">↗</span>
-      </a>
+      <button class="header-cta" type="button" data-try-now-open>Try now <span aria-hidden="true">→</span></button>
       <a class="header-clinic-cta" href="https://app.pelliscope.eu/clinician/register" target="_blank" rel="noopener">
         <span>Register your clinic</span>
         <small>I’m a dermatologist</small>
@@ -40,6 +38,7 @@ const { active = "home", tone = "dark" } = Astro.props;
     <a href="/#how-it-works">How it works</a>
     <a href="/doctors.html">For doctors</a>
     <a href="/clinics.html">For clinics</a>
+    <button type="button" data-try-now-open>Try now →</button>
     <a href="https://app.pelliscope.eu" target="_blank" rel="noopener">App ↗</a>
     <a href="https://app.pelliscope.eu/clinician/register" target="_blank" rel="noopener">
       Register your clinic <small>I’m a dermatologist</small>

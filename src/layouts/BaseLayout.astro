@@ -6,6 +6,7 @@ import "@fontsource/manrope/700.css";
 import "@fontsource/manrope/800.css";
 import "@fontsource/instrument-serif/400.css";
 import "../styles/global.css";
+import TryNowModal from "../components/TryNowModal.astro";
 
 interface Props {
   title: string;
@@ -64,6 +65,7 @@ const {
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-grain" aria-hidden="true"></div>
     <slot />
+    <TryNowModal />
     <script>
       import "../scripts/motion.ts";
     </script>

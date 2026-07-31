@@ -32,6 +32,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          PUBLIC_SCREENING_API_BASE: ${{ vars.PUBLIC_SCREENING_API_BASE }}
+          PUBLIC_FIREBASE_APP_CHECK_SITE_KEY: ${{ vars.PUBLIC_FIREBASE_APP_CHECK_SITE_KEY }}
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload site
