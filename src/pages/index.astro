@@ -3,11 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PatientPhoneStory from "../components/PatientPhoneStory.astro";
+import JourneyPhone from "../components/JourneyPhone.astro";
 import ClinicianDashboard from "../components/ClinicianDashboard.astro";
 
 const title = "PelliScope Europe | From skin concern to clinical direction";
 const description =
-  "Prepare a structured skin case with guided photographs and an AI-assisted preliminary screen. European clinical consultations remain in controlled pilot rollout.";
+  "Prepare a structured skin case with guided photographs and an AI-assisted preliminary screen, then continue to clinician review where service is available.";
 ---
 
 <BaseLayout title={title} description={description} canonical="https://pelliscope.eu/">
@@ -57,35 +58,7 @@ const description =
       <a class="hero-scroll" href="#how-it-works"><span>Scroll the care journey</span><i>↓</i></a>
     </section>
 
-    <section class="service-status-section" aria-labelledby="service-status-title">
-      <div class="service-status-panel section-shell">
-        <div class="service-status-heading">
-          <p class="eyebrow dark"><span></span>European service status</p>
-          <h2 id="service-status-title">Clear before you begin.</h2>
-          <p>
-            PelliScope Europe is in controlled pilot development. The screening experience can be explored,
-            but routine paid patient consultations have not yet launched country-wide in the EU.
-          </p>
-        </div>
-        <dl class="service-facts">
-          <div>
-            <dt>Currently available in</dt>
-            <dd>Pilot registration only. No EU country is currently open for routine paid consultations.</dd>
-          </div>
-          <div>
-            <dt>Typical clinician response</dt>
-            <dd>No response-time guarantee during the pilot.</dd>
-          </div>
-          <div>
-            <dt>Patient consultation price</dt>
-            <dd>No public EU consultation price yet. Any price and refund terms will be shown before payment.</dd>
-          </div>
-          <div>
-            <dt>Clinician verification</dt>
-            <dd>Registration number and issuing jurisdiction must be checked before live clinical access.</dd>
-          </div>
-        </dl>
-      </div>
+    <section class="care-boundaries-section" aria-label="How PelliScope supports the care journey">
       <div class="care-boundaries section-shell" aria-label="Difference between screening, consultation and diagnosis">
         <article><span>01</span><h3>Screening</h3><p>Organises photographs and context. It is informational and is not a diagnosis.</p></article>
         <article><span>02</span><h3>Consultation</h3><p>Begins only when a verified clinician accepts a case within an active service jurisdiction.</p></article>
@@ -108,19 +81,19 @@ const description =
       <div class="journey-grid section-shell">
         <article class="journey-step" data-reveal>
           <span class="step-number">01</span>
-          <div class="step-icon capture-icon" aria-hidden="true"><i></i><b></b></div>
+          <JourneyPhone stage="capture" />
           <h3>Show what changed.</h3>
           <p>Add clear photographs and describe what you feel, where it is and when it began.</p>
         </article>
         <article class="journey-step" data-reveal>
           <span class="step-number">02</span>
-          <div class="step-icon signal-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+          <JourneyPhone stage="signal" />
           <h3>Understand the first signal.</h3>
           <p>Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it.</p>
         </article>
         <article class="journey-step" data-reveal>
           <span class="step-number">03</span>
-          <div class="step-icon connect-icon" aria-hidden="true"><i></i><b></b><span></span></div>
+          <JourneyPhone stage="clinician" />
           <h3>Continue with someone qualified.</h3>
           <p>Where a country service is active, choose a verified dermatologist and carry the complete case into private review.</p>
         </article>
@@ -253,7 +226,7 @@ const description =
       <span><i></i> AI-assisted preliminary screening</span>
       <span><i></i> Clinician-led diagnosis and treatment</span>
       <span><i></i> Not an emergency service</span>
-      <span><i></i> EU consultations not yet publicly launched</span>
+      <span><i></i> Availability varies by jurisdiction</span>
     </aside>
   </main>
 

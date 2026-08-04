@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "PelliScope API for Developers | Skin screening infrastructure";
+const description =
+  "Submit skin photographs to the PelliScope API and receive image-quality checks, infectious-signal screening and structured possible-match information.";
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/developers.html">
+  <Header active="developers" />
+  <main id="main-content">
+    <section class="developer-hero" aria-labelledby="developer-title">
+      <div class="developer-grid" aria-hidden="true"></div>
+      <div class="developer-intro section-shell">
+        <div>
+          <p class="eyebrow"><span></span>PelliScope for developers</p>
+          <h1 id="developer-title">Skin screening.<br /><em>One API call.</em></h1>
+        </div>
+        <div class="developer-intro-copy">
+          <p>
+            Send clear skin photographs and receive a structured screening response designed for health platforms,
+            care-navigation products and clinical intake workflows.
+          </p>
+          <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
+            Open developer console <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="developer-workflow section-shell" aria-label="PelliScope API workflow">
+        <article class="developer-stage input-stage" data-reveal>
+          <div class="developer-stage-top"><span>01</span><small>REQUEST</small></div>
+          <div class="api-request-window">
+            <div class="api-window-bar"><i></i><i></i><i></i><code>POST /screen</code></div>
+            <div class="api-photo-row">
+              <figure><img src="/samples/skin-case/case-context.webp" alt="" loading="lazy" decoding="async" /><span>context.webp</span></figure>
+              <figure><img src="/samples/skin-case/case-close.webp" alt="" loading="lazy" decoding="async" /><span>close.webp</span></figure>
+              <figure><img src="/samples/skin-case/case-angle.webp" alt="" loading="lazy" decoding="async" /><span>angle.webp</span></figure>
+            </div>
+            <div class="api-upload-status"><span>✓</span><p><strong>3 images ready</strong><small>Quality checks included</small></p></div>
+          </div>
+          <h2>Submit images.</h2>
+          <p>Send up to three JPG, PNG or WebP photographs with the request.</p>
+        </article>
+
+        <i class="developer-arrow" aria-hidden="true">→</i>
+
+        <article class="developer-stage signal-stage" data-reveal>
+          <div class="developer-stage-top"><span>02</span><small>SIGNAL</small></div>
+          <div class="api-signal-window">
+            <div class="api-signal-orbit" aria-hidden="true"><span><i></i></span></div>
+            <small>INFECTIOUS SIGNAL</small>
+            <strong>Infectious or<br />non-infectious</strong>
+            <div class="api-signal-meter"><i></i></div>
+            <div class="api-signal-labels"><span>Classification</span><span>Probability</span></div>
+          </div>
+          <h2>Read the first signal.</h2>
+          <p>Receive a classification and probability as structured response fields.</p>
+        </article>
+
+        <i class="developer-arrow" aria-hidden="true">→</i>
+
+        <article class="developer-stage matches-stage" data-reveal>
+          <div class="developer-stage-top"><span>03</span><small>RESULT</small></div>
+          <div class="api-matches-window">
+            <div class="api-matches-head"><span>25</span><p><strong>supported conditions</strong><small>Possible matches returned by confidence</small></p></div>
+            <ol>
+              <li><span>01</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 82%"></i></li>
+              <li><span>02</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 56%"></i></li>
+              <li><span>03</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 34%"></i></li>
+            </ol>
+            <code>{`{ guidance, disclaimer }`}</code>
+          </div>
+          <h2>Use structured output.</h2>
+          <p>Work with ranked possible matches, guidance and safety language in your own interface.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="api-package-section" aria-labelledby="api-package-title">
+      <div class="api-package section-shell">
+        <div>
+          <p class="eyebrow dark"><span></span>PelliScope API</p>
+          <h2 id="api-package-title">Simple input.<br /><em>Useful direction.</em></h2>
+          <p>Image-quality checks, infectious-signal classification and 25-condition screening in one request.</p>
+        </div>
+        <div class="api-price-card">
+          <span>API QUERY</span>
+          <p><strong>$0.05</strong><small>per query</small></p>
+          <ul>
+            <li>Up to three photographs</li>
+            <li>Structured JSON response</li>
+            <li>Screening guidance included</li>
+          </ul>
+          <a class="button button-dark magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
+            Open developer console <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <p class="api-boundary section-shell">
+        PelliScope API output is informational screening. It is not a diagnosis, treatment plan or emergency service.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

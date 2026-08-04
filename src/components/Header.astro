@@ -1,6 +1,6 @@
 ---
 interface Props {
-  active?: "home" | "doctors" | "clinics";
+  active?: "home" | "doctors" | "clinics" | "developers";
   tone?: "dark" | "light";
 }
 
@@ -18,6 +18,7 @@ const { active = "home", tone = "dark" } = Astro.props;
       <a href="/#how-it-works">How it works</a>
       <a href="/doctors.html" aria-current={active === "doctors" ? "page" : undefined}>For doctors</a>
       <a href="/clinics.html" aria-current={active === "clinics" ? "page" : undefined}>For clinics</a>
+      <a href="/developers.html" aria-current={active === "developers" ? "page" : undefined}>For developers</a>
     </nav>
 
     <div class="header-actions">
@@ -38,6 +39,7 @@ const { active = "home", tone = "dark" } = Astro.props;
     <a href="/#how-it-works">How it works</a>
     <a href="/doctors.html">For doctors</a>
     <a href="/clinics.html">For clinics</a>
+    <a href="/developers.html">For developers</a>
     <button type="button" data-try-now-open>Try now →</button>
     <a href="https://app.pelliscope.eu" target="_blank" rel="noopener">App ↗</a>
     <a href="https://app.pelliscope.eu/clinician/register" target="_blank" rel="noopener">

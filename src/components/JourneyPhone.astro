@@ -1,0 +1,91 @@
+---
+interface Props {
+  stage: "capture" | "signal" | "clinician";
+}
+
+const { stage } = Astro.props;
+
+const labels = {
+  capture: "Photographs and symptoms prepared in PelliScope",
+  signal: "AI-assisted preliminary screening result",
+  clinician: "Verified dermatologist selection and private hand-off"
+};
+---
+
+<div class:list={["journey-phone", `journey-phone-${stage}`]} role="img" aria-label={labels[stage]}>
+  <div class="journey-phone-hardware" aria-hidden="true">
+    <span></span>
+  </div>
+  <div class="journey-phone-screen">
+    <div class="journey-phone-status" aria-hidden="true"><span>09:41</span><span>5G ▰</span></div>
+    <div class="journey-phone-bar">
+      <span><img src="/brand/pelliscope.png" alt="" /></span>
+      <strong>PelliScope</strong>
+      <small>Private</small>
+    </div>
+
+    {
+      stage === "capture" && (
+        <div class="journey-phone-content capture-scene">
+          <p>SKIN CHECK · 02</p>
+          <h4>Show what changed.</h4>
+          <div class="journey-photo-pair">
+            <figure>
+              <img src="/samples/skin-case/case-context.webp" alt="" loading="lazy" decoding="async" />
+              <figcaption>Context</figcaption>
+            </figure>
+            <figure>
+              <img src="/samples/skin-case/case-close.webp" alt="" loading="lazy" decoding="async" />
+              <figcaption>Closer</figcaption>
+            </figure>
+          </div>
+          <div class="journey-capture-note"><i></i><span><strong>Clear photographs</strong>Good light and focus detected</span></div>
+          <div class="journey-symptoms"><span>Itchy</span><span>2 days</span><span>Forearm</span></div>
+        </div>
+      )
+    }
+
+    {
+      stage === "signal" && (
+        <div class="journey-phone-content signal-scene">
+          <p>FIRST SCREEN · 03</p>
+          <h4>First signal ready.</h4>
+          <div class="journey-signal-photo">
+            <img src="/samples/skin-case/case-angle.webp" alt="" loading="lazy" decoding="async" />
+            <span><i></i></span>
+          </div>
+          <div class="journey-signal-card">
+            <div><small>INFECTIOUS SIGNAL</small><strong>Not elevated</strong></div>
+            <span>✓</span>
+          </div>
+          <div class="journey-result-lines"><i></i><i></i><i></i></div>
+          <small class="journey-disclaimer">Informational screening · not a diagnosis</small>
+        </div>
+      )
+    }
+
+    {
+      stage === "clinician" && (
+        <div class="journey-phone-content clinician-scene">
+          <p>NEXT STEP · 04</p>
+          <h4>Choose who reviews it.</h4>
+          <div class="journey-case-chip">
+            <img src="/samples/skin-case/case-context.webp" alt="" loading="lazy" decoding="async" />
+            <span><strong>Prepared case</strong>Photos + screening context</span>
+          </div>
+          <article class="journey-clinician selected">
+            <b>AM</b>
+            <span><strong>Verified dermatologist</strong><small>Registration jurisdiction shown</small></span>
+            <i>✓</i>
+          </article>
+          <article class="journey-clinician">
+            <b>DR</b>
+            <span><strong>Dermatology practice</strong><small>Availability shown before sharing</small></span>
+          </article>
+          <div class="journey-consent"><span>✓</span>You choose who receives the case.</div>
+        </div>
+      )
+    }
+  </div>
+  <span class="journey-phone-home" aria-hidden="true"></span>
+</div>
