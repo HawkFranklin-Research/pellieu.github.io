@@ -2,7 +2,7 @@
   --mi-ink: #07111f;
   --mi-panel: #0d1a2a;
   --mi-paper: #f7f4ec;
-  --mi-molema: #5b8cff;
+  --mi-platform: #5b8cff;
   background: var(--mi-ink);
 }
 
@@ -103,7 +103,7 @@
 
 .mi-logo-m {
   color: white;
-  background: var(--mi-molema);
+  background: var(--mi-platform);
 }
 
 .mi-hero-copy h1 {
@@ -241,7 +241,7 @@
   place-items: center;
   color: white;
   border-radius: 0.75rem;
-  background: var(--mi-molema);
+  background: var(--mi-platform);
   font-size: 0.83rem;
   font-weight: 850;
 }
@@ -312,7 +312,7 @@
   font-weight: 900;
 }
 
-.mi-map-molema > .mi-ui-button,
+.mi-map-platform > .mi-ui-button,
 .mi-case-visual > .mi-ui-button {
   display: flex;
   width: 100%;
@@ -323,7 +323,7 @@
   color: white;
   border: 0;
   border-radius: 0.7rem;
-  background: var(--mi-molema);
+  background: var(--mi-platform);
   font-size: 0.61rem;
   font-weight: 800;
 }
@@ -607,7 +607,7 @@
   place-items: center;
   color: white;
   border-radius: 1rem;
-  background: var(--mi-molema);
+  background: var(--mi-platform);
   font-size: 1rem;
   font-weight: 850;
 }
@@ -1567,7 +1567,7 @@
     border-radius: 1.5rem;
   }
 
-  .mi-map-molema,
+  .mi-map-platform,
   .mi-map-pelliscope,
   .mi-map-bridge,
   .mi-map-topline,
