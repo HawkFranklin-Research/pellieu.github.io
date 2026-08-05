@@ -3098,6 +3098,35 @@ button:focus-visible {
   font-size: 0.9rem;
 }
 
+.clinic-integration-example {
+  display: grid;
+  width: fit-content;
+  gap: 0.1rem;
+  margin-top: 1.25rem;
+  padding-left: 0.2rem;
+  color: rgba(16, 23, 35, 0.7);
+  transition: color 180ms ease, transform 180ms var(--ease);
+}
+
+.clinic-integration-example small {
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.clinic-integration-example strong {
+  font-size: 0.7rem;
+}
+
+.clinic-integration-example strong span {
+  color: rgba(16, 23, 35, 0.42);
+}
+
+.clinic-integration-example:hover {
+  color: var(--ink);
+  transform: translateX(0.25rem);
+}
+
 .clinic-flow {
   display: flex;
   align-items: center;

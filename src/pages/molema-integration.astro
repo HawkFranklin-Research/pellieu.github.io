@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/molema-integration.css";
+
+const title = "PelliScope × Molema | Telehealth skin-screening integration";
+const description =
+  "A visual integration blueprint showing how the PelliScope screening API can prepare Skin, Hair and Nails cases inside Molema's existing telehealth workflow.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="https://pelliscope.eu/molema-integration.html"
+  themeColor="#07111f"
+>
+  <Header active="developers" />
+
+  <main id="main-content" class="mi-page">
+    <section class="mi-hero" aria-labelledby="mi-title">
+      <div class="mi-hero-grid" aria-hidden="true"></div>
+      <div class="mi-orb mi-orb-mint" aria-hidden="true"></div>
+      <div class="mi-orb mi-orb-blue" aria-hidden="true"></div>
+
+      <div class="mi-hero-shell section-shell">
+        <div class="mi-hero-copy">
+          <div class="mi-partnership-mark" aria-label="PelliScope and Molema integration">
+            <span class="mi-logo mi-logo-p">P</span>
+            <i>×</i>
+            <span class="mi-logo mi-logo-m">M</span>
+            <strong>PelliScope × Molema</strong>
+          </div>
+          <p class="eyebrow"><span></span>Integration blueprint</p>
+          <h1 id="mi-title">Molema stays the platform.<br /><em>PelliScope prepares the skin case.</em></h1>
+          <p class="mi-hero-lede">
+            Add an API-powered preliminary screen before a Skin, Hair and Nails consultation—inside the patient
+            journey Molema already owns.
+          </p>
+          <div class="mi-hero-actions">
+            <a class="button button-primary" href="#integration-flow">See the integration flow <span>↓</span></a>
+            <a
+              class="button button-outline"
+              href="mailto:partnerships@hawkfranklin.in?subject=PelliScope%20%C3%97%20Molema%20integration"
+            >Discuss the API integration <span>↗</span></a>
+          </div>
+          <div class="mi-hero-assurance" aria-label="Integration boundaries">
+            <span><i></i>Molema patient experience</span>
+            <span><i></i>PelliScope screening API</span>
+            <span><i></i>Molema clinician decision</span>
+          </div>
+        </div>
+
+        <div class="mi-system-map" aria-label="High-level Molema and PelliScope system connection">
+          <div class="mi-map-topline">
+            <span>LIVE INTEGRATION CONCEPT</span>
+            <i><b></b> API ready</i>
+          </div>
+
+          <article class="mi-map-card mi-map-molema">
+            <header><span class="mi-mini-logo">M</span><div><small>MOLEMA APP</small><strong>Skin, Hair &amp; Nails</strong></div></header>
+            <div class="mi-upload-preview">
+              <div class="mi-skin-frame" aria-hidden="true"><i></i><b></b><span></span></div>
+              <div><strong>3 images added</strong><small>Symptoms · duration · location</small></div>
+              <span class="mi-check">✓</span>
+            </div>
+            <div class="mi-ui-button" aria-hidden="true">Prepare my consultation <span>→</span></div>
+          </article>
+
+          <div class="mi-map-bridge" aria-hidden="true">
+            <span class="mi-packet packet-one">IMG</span>
+            <span class="mi-packet packet-two">JSON</span>
+            <i></i>
+            <div><small>SECURE API CALL</small><strong>PelliScope screen</strong></div>
+          </div>
+
+          <article class="mi-map-card mi-map-pelliscope">
+            <header><span class="mi-mini-logo mi-mini-p">P</span><div><small>PELLISCOPE API</small><strong>Preliminary screen</strong></div></header>
+            <div class="mi-signal-row">
+              <div class="mi-signal-ring"><span>81<small>%</small></span></div>
+              <div><small>INFECTIOUS SIGNAL</small><strong>Elevated signal</strong><span>Precaution prompt available</span></div>
+            </div>
+            <div class="mi-match-preview">
+              <span><i>01</i><strong>Possible match</strong><b>92%</b></span>
+              <span><i>02</i><strong>Possible match</strong><b>71%</b></span>
+              <span><i>03</i><strong>Possible match</strong><b>48%</b></span>
+            </div>
+          </article>
+
+          <article class="mi-clinician-output">
+            <div class="mi-doctor-avatar">Dr</div>
+            <div><small>BACK INSIDE MOLEMA</small><strong>Prepared case ready for clinical review</strong></div>
+            <span>Photos + context + screen <b>→</b></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mi-boundary" aria-labelledby="mi-boundary-title">
+      <div class="section-shell">
+        <div class="mi-section-heading mi-section-heading-dark">
+          <p class="eyebrow dark"><span></span>Designed around Molema</p>
+          <h2 id="mi-boundary-title">An added intelligence layer.<br /><em>Not another platform.</em></h2>
+          <p>PelliScope works behind Molema’s interface. Patients and doctors continue using the product they already know.</p>
+        </div>
+
+        <div class="mi-boundary-grid">
+          <article class="mi-owner-card mi-owner-molema">
+            <header><span>M</span><div><small>REMAINS IN MOLEMA</small><h3>Your complete care platform</h3></div></header>
+            <ul>
+              <li><i>01</i><span><strong>Patient accounts</strong><small>Registration and health records</small></span></li>
+              <li><i>02</i><span><strong>Doctor network</strong><small>Selection, availability and appointments</small></span></li>
+              <li><i>03</i><span><strong>Teleconsultation</strong><small>Private video consultation and follow-up</small></span></li>
+              <li><i>04</i><span><strong>Clinical services</strong><small>Diagnosis, prescriptions, records and payments</small></span></li>
+            </ul>
+          </article>
+
+          <div class="mi-layer-connector" aria-hidden="true"><span>+</span><small>API LAYER</small></div>
+
+          <article class="mi-owner-card mi-owner-pelliscope">
+            <header><span>P</span><div><small>ADDED BY PELLISCOPE</small><h3>Skin-screening intelligence</h3></div></header>
+            <ul>
+              <li><i>01</i><span><strong>Guided image intake</strong><small>Clearer photographs with case context</small></span></li>
+              <li><i>02</i><span><strong>Infectious signal</strong><small>Infectious versus non-infectious screening</small></span></li>
+              <li><i>03</i><span><strong>Differential identification</strong><small>Top possibilities across 25 condition categories</small></span></li>
+              <li><i>04</i><span><strong>Structured output</strong><small>Preliminary case data returned to Molema</small></span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mi-flow" id="integration-flow" aria-labelledby="mi-flow-title">
+      <div class="section-shell">
+        <div class="mi-section-heading">
+          <p class="eyebrow"><span></span>One patient journey</p>
+          <h2 id="mi-flow-title">Four moments.<br /><em>One seamless consultation flow.</em></h2>
+          <p>The API exchange happens between intake and consultation. Molema remains the visible home of the case.</p>
+        </div>
+
+        <div class="mi-flow-track">
+          <article class="mi-flow-card">
+            <header><span>01</span><small>MOLEMA INTAKE</small></header>
+            <div class="mi-flow-visual mi-capture-visual">
+              <div class="mi-camera-view"><i></i><b></b><span>+</span></div>
+              <div class="mi-camera-meta"><span>Forearm</span><span>2 days</span><span>Itchy</span></div>
+            </div>
+            <h3>Patient intake &amp; instant screening</h3>
+            <p>The patient submits guided images and short symptom context before the appointment.</p>
+          </article>
+
+          <i class="mi-flow-arrow" aria-hidden="true">→</i>
+
+          <article class="mi-flow-card">
+            <header><span>02</span><small>API SCREEN</small></header>
+            <div class="mi-flow-visual mi-split-visual">
+              <div class="mi-split-top"><span>INFECTIOUS SIGNAL</span><strong>81%</strong></div>
+              <div class="mi-split-meter"><i></i><b></b></div>
+              <div class="mi-split-labels"><span>Infectious</span><span>Non-infectious</span></div>
+              <small>Preliminary informational signal</small>
+            </div>
+            <h3>Immediate practical awareness</h3>
+            <p>Molema can surface configured precaution messaging while the patient waits for clinician review.</p>
+          </article>
+
+          <i class="mi-flow-arrow" aria-hidden="true">→</i>
+
+          <article class="mi-flow-card">
+            <header><span>03</span><small>DIFFERENTIAL</small></header>
+            <div class="mi-flow-visual mi-differential-visual">
+              <div class="mi-differential-head"><span>TOP 3</span><small>of 25 categories</small></div>
+              <ol>
+                <li><i>01</i><span><strong>Possible match</strong><small>Highest signal</small></span><b>92%</b></li>
+                <li><i>02</i><span><strong>Possible match</strong><small>Secondary signal</small></span><b>71%</b></li>
+                <li><i>03</i><span><strong>Possible match</strong><small>Additional signal</small></span><b>48%</b></li>
+              </ol>
+            </div>
+            <h3>Differential identification</h3>
+            <p>The API organises possible matches and pre-fills structured preliminary case data.</p>
+          </article>
+
+          <i class="mi-flow-arrow" aria-hidden="true">→</i>
+
+          <article class="mi-flow-card mi-flow-clinician">
+            <header><span>04</span><small>MOLEMA CLINICIAN</small></header>
+            <div class="mi-flow-visual mi-case-visual">
+              <div class="mi-case-head"><span>CASE · MS-2048</span><i>Prepared</i></div>
+              <div class="mi-case-patient"><b>JM</b><span><strong>Skin concern · Forearm</strong><small>3 photos · context complete</small></span></div>
+              <ul><li>✓ Images organised</li><li>✓ Symptoms structured</li><li>✓ Preliminary screen attached</li></ul>
+              <div class="mi-ui-button" aria-hidden="true">Begin focused review →</div>
+            </div>
+            <h3>Optimized doctor consultations</h3>
+            <p>The doctor opens a prepared case inside Molema and remains responsible for every clinical decision.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mi-exchange" aria-labelledby="mi-exchange-title">
+      <div class="section-shell mi-exchange-shell">
+        <div class="mi-section-heading mi-section-heading-dark">
+          <p class="eyebrow dark"><span></span>The API hand-off</p>
+          <h2 id="mi-exchange-title">Small exchange.<br /><em>Useful clinical preparation.</em></h2>
+          <p>A focused request leaves Molema and a structured screening result returns to the same patient record.</p>
+        </div>
+
+        <div class="mi-data-exchange" aria-label="Conceptual PelliScope API data exchange">
+          <article class="mi-data-card mi-data-request">
+            <header><span>→</span><div><small>MOLEMA SENDS</small><strong>Screening request</strong></div></header>
+            <div class="mi-code-lines">
+              <p><i>images</i><span>[ context, close, angle ]</span></p>
+              <p><i>location</i><span>"forearm"</span></p>
+              <p><i>duration</i><span>"2 days"</span></p>
+              <p><i>symptoms</i><span>[ "itchy" ]</span></p>
+            </div>
+          </article>
+
+          <div class="mi-api-core" aria-hidden="true">
+            <span>P</span>
+            <small>PELLISCOPE</small>
+            <strong>API</strong>
+            <i></i>
+          </div>
+
+          <article class="mi-data-card mi-data-response">
+            <header><span>←</span><div><small>MOLEMA RECEIVES</small><strong>Structured result</strong></div></header>
+            <div class="mi-code-lines">
+              <p><i>image_quality</i><span>"ready"</span></p>
+              <p><i>infectious_signal</i><span>0.81</span></p>
+              <p><i>possible_matches</i><span>[ top 3 of 25 ]</span></p>
+              <p><i>safety_language</i><span>included</span></p>
+            </div>
+          </article>
+        </div>
+        <p class="mi-concept-note">Conceptual integration payload. Final fields, consent flow and security controls are agreed during technical integration.</p>
+      </div>
+    </section>
+
+    <section class="mi-impact" aria-labelledby="mi-impact-title">
+      <div class="section-shell">
+        <div class="mi-impact-heading">
+          <div>
+            <p class="eyebrow"><span></span>Operational model</p>
+            <h2 id="mi-impact-title">Less discovery during the call.<br /><em>More focused review.</em></h2>
+          </div>
+          <p>Pre-organised case information can reduce repetitive intake work before the doctor begins the consultation.</p>
+        </div>
+
+        <div class="mi-impact-grid">
+          <article class="mi-workflow-comparison">
+            <header><small>WORKFLOW COMPARISON</small><strong>Illustrative five-hour shift</strong></header>
+            <div class="mi-workflow-row mi-traditional-row">
+              <div><strong>Traditional intake</strong><small>10 min / patient</small></div>
+              <span><i>History + consultation · 10m</i></span>
+              <b>6<small>/ hour</small></b>
+            </div>
+            <div class="mi-workflow-row mi-prepared-row">
+              <div><strong>With PelliScope</strong><small>Prepared + focused</small></div>
+              <span><i>AI intake · 3m</i><i>Focused consult · 7m</i></span>
+              <b>8<small>/ hour</small></b>
+            </div>
+          </article>
+
+          <article class="mi-impact-stat mi-stat-mint"><small>TIME PREPARED</small><strong>~3<span>min</span></strong><p>of initial discovery organised before each consultation</p></article>
+          <article class="mi-impact-stat mi-stat-blue"><small>MODELED CAPACITY</small><strong>~30<span>%</span></strong><p>more patient intakes while preserving clinician-led decisions</p></article>
+          <article class="mi-impact-stat mi-stat-coral"><small>5-HOUR SHIFT</small><strong>+10</strong><p>additional consultations in the illustrative workflow model</p></article>
+        </div>
+        <p class="mi-model-note">Illustrative operational model, not a throughput guarantee. Actual impact depends on Molema’s workflow, clinicians and implementation.</p>
+      </div>
+    </section>
+
+    <section class="mi-final" aria-labelledby="mi-final-title">
+      <div class="mi-final-grid" aria-hidden="true"></div>
+      <div class="section-shell mi-final-shell">
+        <div>
+          <p class="eyebrow"><span></span>A focused integration</p>
+          <h2 id="mi-final-title">Molema delivers the care.<br /><em>PelliScope prepares the skin case.</em></h2>
+        </div>
+        <div class="mi-final-action">
+          <p>Start with one API workflow for Skin, Hair and Nails consultations, then measure the impact with Molema’s clinical team.</p>
+          <a
+            class="button button-primary"
+            href="mailto:partnerships@hawkfranklin.in?subject=PelliScope%20%C3%97%20Molema%20integration"
+          >Discuss the integration <span>↗</span></a>
+          <a href="/developers.html">Review API evidence and economics →</a>
+        </div>
+      </div>
+    </section>
+
+    <aside class="mi-safety-strip" aria-label="PelliScope screening boundaries">
+      <span><i></i>Preliminary informational screening</span>
+      <span><i></i>Not a diagnosis or emergency service</span>
+      <span><i></i>Clinical decisions remain with Molema clinicians</span>
+    </aside>
+  </main>
+
+  <Footer />
+</BaseLayout>
