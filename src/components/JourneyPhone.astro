@@ -8,7 +8,7 @@ const { stage } = Astro.props;
 const labels = {
   capture: "Photographs and symptoms prepared in PelliScope",
   signal: "AI-assisted preliminary screening result",
-  clinician: "Verified dermatologist selection and private hand-off"
+  clinician: "Dermatologist selection and private hand-off"
 };
 ---
 
@@ -48,7 +48,7 @@ const labels = {
     {
       stage === "signal" && (
         <div class="journey-phone-content signal-scene">
-          <p>FIRST SCREEN · 03</p>
+          <p>AI SCREENING</p>
           <h4>First signal ready.</h4>
           <div class="journey-signal-photo">
             <img src="/samples/skin-case/case-angle.webp" alt="" loading="lazy" decoding="async" />
@@ -67,7 +67,7 @@ const labels = {
     {
       stage === "clinician" && (
         <div class="journey-phone-content clinician-scene">
-          <p>NEXT STEP · 04</p>
+          <p>TELE CONSULTATION</p>
           <h4>Choose who reviews it.</h4>
           <div class="journey-case-chip">
             <img src="/samples/skin-case/case-context.webp" alt="" loading="lazy" decoding="async" />
@@ -75,12 +75,12 @@ const labels = {
           </div>
           <article class="journey-clinician selected">
             <b>AM</b>
-            <span><strong>Verified dermatologist</strong><small>Registration jurisdiction shown</small></span>
+            <span><strong>Dr. Anna Müller</strong><small>Dermatologist · Verified</small></span>
             <i>✓</i>
           </article>
           <article class="journey-clinician">
             <b>DR</b>
-            <span><strong>Dermatology practice</strong><small>Availability shown before sharing</small></span>
+            <span><strong>Dr. Daniel Rossi</strong><small>Dermatologist · Available today</small></span>
           </article>
           <div class="journey-consent"><span>✓</span>You choose who receives the case.</div>
         </div>

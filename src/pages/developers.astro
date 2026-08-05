@@ -23,7 +23,7 @@ const description =
             Send clear skin photographs and receive a structured screening response designed for health platforms,
             care-navigation products and clinical intake workflows.
           </p>
-          <a class="button button-primary magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
+          <a class="button button-primary magnetic" href="https://console.pelliscope.eu" target="_blank" rel="noopener">
             Open developer console <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -79,6 +79,69 @@ const description =
       </div>
     </section>
 
+    <section class="developer-proof-section" aria-labelledby="developer-proof-title">
+      <div class="section-shell">
+        <div class="developer-proof-heading">
+          <p class="eyebrow dark"><span></span>Operational infographic</p>
+          <h2 id="developer-proof-title">One query.<br /><em>More focused clinical time.</em></h2>
+          <p>See how prepared intake, model output and API economics fit together before a teleconsultation begins.</p>
+        </div>
+
+        <div class="developer-proof-grid">
+          <article class="developer-proof-card workflow-proof" data-reveal>
+            <header>
+              <div><small>WORKFLOW COMPARISON</small><h3>Pre-consultation efficiency.</h3></div>
+              <span>+10 patients / 5hr shift</span>
+            </header>
+            <div class="developer-workflow-compare">
+              <div>
+                <p><strong>Traditional (No AI)</strong><span>10 Min / Patient</span></p>
+                <div class="developer-timebar"><i>Consultation (10m)</i></div>
+                <b>6 patients / hour</b>
+              </div>
+              <div class="is-pelliscope">
+                <p><strong>With PelliScope</strong><span>~10 Min Total (Parallelized)</span></p>
+                <div class="developer-timebar split"><i>Preliminary screen (3m)</i><i>Focused consult (7m)</i></div>
+                <div class="developer-workflow-result"><small>AI triage saves 3 mins of discovery time per patient</small><b>8 Patients / Hour</b></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="developer-proof-card auc-proof" data-reveal>
+            <header><div><small>MODEL PERFORMANCE (AUC)</small><h3>Zero-shot comparison on dermatology benchmarks.</h3></div></header>
+            <div class="developer-auc-bars">
+              <div><span>Grok-4</span><i><b style="--auc: 70%"></b></i><strong>0.70</strong></div>
+              <div><span>GPT-5</span><i><b style="--auc: 81%"></b></i><strong>0.81</strong></div>
+              <div><span>Gemini 2.5</span><i><b style="--auc: 82%"></b></i><strong>0.82</strong></div>
+              <div class="is-pelliscope"><span>PelliScope</span><i><b style="--auc: 86%"></b></i><strong>0.86</strong></div>
+            </div>
+          </article>
+
+          <article class="developer-proof-card validation-proof" data-reveal>
+            <header><div><small>INTERNAL VALIDATION</small><h3>Locked-test summary.</h3></div></header>
+            <div class="developer-validation-stats">
+              <div><strong>2,336</strong><span>Cases</span></div>
+              <div><strong>0.849</strong><span>Micro AUC</span></div>
+              <div><strong>0.800</strong><span>Macro AUC</span></div>
+            </div>
+            <div class="developer-proof-tags"><span>Internal validation only</span><span>Preprint · not peer reviewed</span></div>
+            <p>AUC measures ranking discrimination across thresholds, not the percentage of correct diagnoses.</p>
+            <a href="https://pelliscope.in/clinical-validation.html" target="_blank" rel="noopener">Read methods and limitations <span>↗</span></a>
+          </article>
+
+          <article class="developer-proof-card economics-proof" data-reveal>
+            <header><div><small>API ECONOMICS</small><h3>Low query cost. More review capacity.</h3></div></header>
+            <div class="developer-economics-stats">
+              <div><strong>$0.05</strong><span>per query</span></div>
+              <div><strong>$5</strong><span>per 100 cases</span></div>
+              <div><strong>5–8.3h</strong><span>discovery time prepared per 100 cases</span></div>
+            </div>
+            <p>At three to five minutes prepared per case, clinical time can move from repetitive discovery toward focused review and additional consultations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="api-package-section" aria-labelledby="api-package-title">
       <div class="api-package section-shell">
         <div>
@@ -94,7 +157,7 @@ const description =
             <li>Structured JSON response</li>
             <li>Screening guidance included</li>
           </ul>
-          <a class="button button-dark magnetic" href="https://app.pelliscope.eu" target="_blank" rel="noopener">
+          <a class="button button-dark magnetic" href="https://console.pelliscope.eu" target="_blank" rel="noopener">
             Open developer console <span aria-hidden="true">↗</span>
           </a>
         </div>

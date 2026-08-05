@@ -1,0 +1,57 @@
+---
+import JourneyPhone from "./JourneyPhone.astro";
+
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+const steps = [
+  {
+    number: "01",
+    boundary: "Screening",
+    boundaryCopy: "Organises photographs and context. It is informational and is not a diagnosis.",
+    stage: "capture" as const,
+    title: "Show what changed.",
+    copy: "Add clear photographs and describe what you feel, where it is and when it began."
+  },
+  {
+    number: "02",
+    boundary: "Consultation",
+    boundaryCopy: "Begins only when a verified clinician accepts a case within an active service jurisdiction.",
+    stage: "signal" as const,
+    title: "Understand the first signal.",
+    copy: "Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it."
+  },
+  {
+    number: "03",
+    boundary: "Diagnosis",
+    boundaryCopy: "Remains a clinician-led medical decision after professional review.",
+    stage: "clinician" as const,
+    title: "Continue with someone qualified.",
+    copy: "Where a country service is active, choose a verified dermatologist and carry the complete case into private review."
+  }
+];
+---
+
+<div class:list={["journey-grid", className]} aria-label="Screening, consultation and diagnosis journey">
+  {
+    steps.map((step) => (
+      <article class="journey-step" data-reveal>
+        <div class="journey-boundary">
+          <span class="step-number">{step.number}</span>
+          <div>
+            <h3>{step.boundary}</h3>
+            <p>{step.boundaryCopy}</p>
+          </div>
+        </div>
+        <JourneyPhone stage={step.stage} />
+        <div class="journey-step-copy">
+          <h3>{step.title}</h3>
+          <p>{step.copy}</p>
+        </div>
+      </article>
+    ))
+  }
+</div>

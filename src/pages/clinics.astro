@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ClinicPatientStory from "../components/ClinicPatientStory.astro";
-import JourneyPhone from "../components/JourneyPhone.astro";
+import CareJourneyGrid from "../components/CareJourneyGrid.astro";
 
 const title = "PelliScope for Clinics | A digital front door for dermatology";
 const description =
@@ -36,25 +36,43 @@ const description =
       <div class="section-shell">
         <p class="eyebrow dark"><span></span>Before the first appointment</p>
         <h2 id="clinic-workflow-title">A better arrival<br /><em>for every skin concern.</em></h2>
-        <div class="journey-grid clinic-journey-grid">
-          <article class="journey-step" data-reveal>
-            <span class="step-number">01</span>
-            <JourneyPhone stage="capture" />
-            <h3>Show what changed.</h3>
-            <p>Add clear photographs and describe what you feel, where it is and when it began.</p>
-          </article>
-          <article class="journey-step" data-reveal>
-            <span class="step-number">02</span>
-            <JourneyPhone stage="signal" />
-            <h3>Understand the first signal.</h3>
-            <p>Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it.</p>
-          </article>
-          <article class="journey-step" data-reveal>
-            <span class="step-number">03</span>
-            <JourneyPhone stage="clinician" />
-            <h3>Continue with someone qualified.</h3>
-            <p>Where a country service is active, choose a verified dermatologist and carry the complete case into private review.</p>
-          </article>
+        <CareJourneyGrid className="clinic-journey-grid" />
+
+        <div class="clinic-operational-proof" aria-label="Clinic workflow and model performance">
+          <div class="clinic-operational-heading">
+            <p class="eyebrow dark"><span></span>Operational view</p>
+            <h3>Prepared intake.<br /><em>Measured model output.</em></h3>
+          </div>
+          <div class="developer-proof-grid clinic-proof-grid">
+            <article class="developer-proof-card workflow-proof" data-reveal>
+              <header>
+                <div><small>WORKFLOW COMPARISON</small><h3>Pre-consultation efficiency.</h3></div>
+                <span>+10 patients / 5hr shift</span>
+              </header>
+              <div class="developer-workflow-compare">
+                <div>
+                  <p><strong>Traditional (No AI)</strong><span>10 Min / Patient</span></p>
+                  <div class="developer-timebar"><i>Consultation (10m)</i></div>
+                  <b>6 Patients / Hour</b>
+                </div>
+                <div class="is-pelliscope">
+                  <p><strong>With PelliScope</strong><span>~10 Min Total (Parallelized)</span></p>
+                  <div class="developer-timebar split"><i>Preliminary screen (3m)</i><i>Focused consult (7m)</i></div>
+                  <div class="developer-workflow-result"><small>AI triage saves 3 mins of discovery time per patient</small><b>8 Patients / Hour</b></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="developer-proof-card auc-proof" data-reveal>
+              <header><div><small>MODEL PERFORMANCE (AUC)</small><h3>Zero-shot comparison on dermatology benchmarks.</h3></div></header>
+              <div class="developer-auc-bars">
+                <div><span>Grok-4</span><i><b style="--auc: 70%"></b></i><strong>0.70</strong></div>
+                <div><span>GPT-5</span><i><b style="--auc: 81%"></b></i><strong>0.81</strong></div>
+                <div><span>Gemini 2.5</span><i><b style="--auc: 82%"></b></i><strong>0.82</strong></div>
+                <div class="is-pelliscope"><span>PelliScope</span><i><b style="--auc: 86%"></b></i><strong>0.86</strong></div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>

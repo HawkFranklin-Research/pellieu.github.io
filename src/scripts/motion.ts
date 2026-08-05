@@ -171,6 +171,27 @@ if (!reduceMotion) {
     });
   });
 
+  gsap.utils
+    .toArray<HTMLElement>(".handoff-efficiency, .developer-proof-section")
+    .forEach((section) => {
+      const bars = section.querySelectorAll<HTMLElement>(
+        ".handoff-timebar i, .handoff-auc-bars i b, .developer-timebar i, .developer-auc-bars i b"
+      );
+      if (!bars.length) return;
+      gsap.from(bars, {
+        scaleX: 0,
+        transformOrigin: "left center",
+        duration: 1,
+        stagger: 0.08,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 78%",
+          once: true
+        }
+      });
+    });
+
   const caseCard = document.querySelector<HTMLElement>("[data-travelling-case]");
   const handoff = document.querySelector<HTMLElement>("[data-handoff]");
   if (caseCard && handoff) {

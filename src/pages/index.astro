@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PatientPhoneStory from "../components/PatientPhoneStory.astro";
-import JourneyPhone from "../components/JourneyPhone.astro";
+import CareJourneyGrid from "../components/CareJourneyGrid.astro";
 import ClinicianDashboard from "../components/ClinicianDashboard.astro";
 
 const title = "PelliScope Europe | From skin concern to clinical direction";
@@ -58,35 +58,8 @@ const description =
       <a class="hero-scroll" href="#how-it-works"><span>Scroll the care journey</span><i>↓</i></a>
     </section>
 
-    <section class="care-boundaries-section" aria-label="How PelliScope supports the care journey">
-      <div class="care-boundaries section-shell" aria-label="Difference between screening, consultation and diagnosis">
-        <article><span>01</span><h3>Screening</h3><p>Organises photographs and context. It is informational and is not a diagnosis.</p></article>
-        <article><span>02</span><h3>Consultation</h3><p>Begins only when a verified clinician accepts a case within an active service jurisdiction.</p></article>
-        <article><span>03</span><h3>Diagnosis</h3><p>Remains a clinician-led medical decision after professional review.</p></article>
-      </div>
-    </section>
-
     <section class="clarity-section" id="how-it-works" aria-label="How it works">
-      <div class="journey-grid section-shell">
-        <article class="journey-step" data-reveal>
-          <span class="step-number">01</span>
-          <JourneyPhone stage="capture" />
-          <h3>Show what changed.</h3>
-          <p>Add clear photographs and describe what you feel, where it is and when it began.</p>
-        </article>
-        <article class="journey-step" data-reveal>
-          <span class="step-number">02</span>
-          <JourneyPhone stage="signal" />
-          <h3>Understand the first signal.</h3>
-          <p>Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it.</p>
-        </article>
-        <article class="journey-step" data-reveal>
-          <span class="step-number">03</span>
-          <JourneyPhone stage="clinician" />
-          <h3>Continue with someone qualified.</h3>
-          <p>Where a country service is active, choose a verified dermatologist and carry the complete case into private review.</p>
-        </article>
-      </div>
+      <CareJourneyGrid className="section-shell home-care-journey" />
     </section>
 
     <section class="handoff-section" aria-labelledby="handoff-title">
@@ -118,6 +91,43 @@ const description =
 
       <div class="handoff-note section-shell">
         <span>Screening</span><i></i><span>Professional review</span><i></i><span>Digital or in-person care</span>
+      </div>
+
+      <div class="handoff-efficiency section-shell" data-reveal aria-label="Illustrative consultation workflow comparison">
+        <div class="handoff-efficiency-head">
+          <div>
+            <small>WORKFLOW COMPARISON</small>
+            <h3>Prepared intake makes clinical time more focused.</h3>
+          </div>
+          <span>+10 patients / 5hr shift</span>
+        </div>
+
+        <div class="handoff-evidence-layout">
+          <div class="handoff-workflow-table">
+            <div class="handoff-workflow-row traditional">
+              <div class="handoff-workflow-label"><strong>Traditional (No AI)</strong><span>10 Min / Patient</span></div>
+              <div class="handoff-timebar"><i>Consultation (10m)</i></div>
+              <b>6 Patients / Hour</b>
+            </div>
+
+            <div class="handoff-workflow-row prepared">
+              <div class="handoff-workflow-label"><strong>With PelliScope</strong><span>~10 Min Total (Parallelized)</span></div>
+              <div class="handoff-timebar split"><i>Preliminary screen (3m)</i><i>Focused consult (7m)</i></div>
+              <div class="handoff-workflow-summary"><small>AI triage saves 3 mins of discovery time per patient</small><b>8 Patients / Hour</b></div>
+            </div>
+          </div>
+
+          <div class="handoff-auc-proof">
+            <small>MODEL PERFORMANCE (AUC)</small>
+            <h3>Zero-shot comparison on dermatology benchmarks</h3>
+            <div class="handoff-auc-bars">
+              <div><span>Grok-4</span><i><b style="--handoff-auc: 70%"></b></i><strong>0.70</strong></div>
+              <div><span>GPT-5</span><i><b style="--handoff-auc: 81%"></b></i><strong>0.81</strong></div>
+              <div><span>Gemini 2.5</span><i><b style="--handoff-auc: 82%"></b></i><strong>0.82</strong></div>
+              <div class="is-pelliscope"><span>PelliScope</span><i><b style="--handoff-auc: 86%"></b></i><strong>0.86</strong></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
