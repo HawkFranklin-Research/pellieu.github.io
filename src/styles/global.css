@@ -4449,7 +4449,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
   gap: clamp(0.5rem, 1.3vw, 1.2rem);
-  align-items: center;
+  align-items: stretch;
   margin-top: clamp(5rem, 9vw, 8rem);
 }
 
@@ -4494,6 +4494,7 @@ button:focus-visible {
 }
 
 .developer-arrow {
+  align-self: center;
   color: rgba(40, 230, 164, 0.62);
   font-family: monospace;
   font-size: 1.25rem;
@@ -4703,6 +4704,165 @@ button:focus-visible {
   font-size: 0.42rem;
 }
 
+.api-signal-window.api-signal-readable {
+  display: block;
+  min-height: 27rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.api-readable-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(246, 244, 238, 0.08);
+}
+
+.api-readable-heading small,
+.api-condition-results > small,
+.api-live-doctors > small {
+  color: rgba(246, 244, 238, 0.43);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.api-readable-heading > span {
+  padding: 0.28rem 0.48rem;
+  color: var(--mint);
+  border-radius: 999px;
+  background: rgba(40, 230, 164, 0.08);
+  font-size: 0.5rem;
+  font-weight: 750;
+}
+
+.api-readable-status {
+  display: grid;
+  gap: 0.12rem;
+  padding: 1rem 0 0.75rem;
+}
+
+.api-readable-status small {
+  color: var(--coral);
+  font-size: 0.5rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.api-readable-status strong {
+  font-size: 1.05rem;
+  letter-spacing: -0.025em;
+}
+
+.api-signal-comparison {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.api-signal-comparison article {
+  padding: 0.7rem;
+  border: 1px solid rgba(246, 244, 238, 0.08);
+  border-radius: 0.72rem;
+  background: rgba(246, 244, 238, 0.035);
+}
+
+.api-signal-comparison article p {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.api-signal-comparison article p strong {
+  font-size: 0.7rem;
+}
+
+.api-signal-comparison article p span {
+  color: var(--coral);
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.api-signal-comparison article > i {
+  display: block;
+  height: 0.55rem;
+  overflow: hidden;
+  margin: 0.4rem 0;
+  border-radius: 999px;
+  background: rgba(246, 244, 238, 0.08);
+}
+
+.api-signal-comparison article > i > b {
+  display: block;
+  width: 81%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d54e5d, var(--coral));
+}
+
+.api-signal-comparison .is-noninfectious p span {
+  color: var(--gold);
+}
+
+.api-signal-comparison .is-noninfectious > i > b {
+  width: 19%;
+  background: var(--gold);
+}
+
+.api-signal-comparison article > small {
+  color: rgba(246, 244, 238, 0.4);
+  font-size: 0.5rem;
+}
+
+.api-precaution-note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 116, 103, 0.16);
+  border-radius: 0.72rem;
+  background: rgba(255, 116, 103, 0.06);
+}
+
+.api-precaution-note > span {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  color: var(--night);
+  border-radius: 50%;
+  background: var(--coral);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.api-precaution-note > p {
+  display: grid;
+  margin: 0;
+}
+
+.api-precaution-note strong {
+  font-size: 0.61rem;
+}
+
+.api-precaution-note small {
+  color: rgba(246, 244, 238, 0.42);
+  font-size: 0.48rem;
+  line-height: 1.4;
+}
+
+.api-readable-disclaimer {
+  display: block;
+  margin-top: 0.65rem;
+  color: rgba(246, 244, 238, 0.32);
+  font-size: 0.46rem;
+  text-align: center;
+}
+
 .api-matches-head {
   display: flex;
   align-items: center;
@@ -4766,8 +4926,176 @@ button:focus-visible {
   font-size: 0.5rem;
 }
 
+.api-matches-window.api-care-result {
+  min-height: 27rem;
+  padding: 1rem;
+}
+
+.api-condition-count {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(246, 244, 238, 0.08);
+}
+
+.api-condition-count > span {
+  color: var(--mint);
+  font-family: "Instrument Serif", serif;
+  font-size: 3rem;
+  line-height: 0.85;
+}
+
+.api-condition-count > p {
+  display: grid;
+  margin: 0;
+}
+
+.api-condition-count strong {
+  font-size: 0.68rem;
+}
+
+.api-condition-count small {
+  color: rgba(246, 244, 238, 0.4);
+  font-size: 0.49rem;
+}
+
+.api-urgency-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 116, 103, 0.18);
+  border-radius: 0.72rem;
+  background: linear-gradient(90deg, rgba(255, 116, 103, 0.11), rgba(255, 116, 103, 0.04));
+}
+
+.api-urgency-card > span {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: var(--night);
+  border-radius: 0.65rem;
+  background: var(--coral);
+  font-weight: 900;
+}
+
+.api-urgency-card > p {
+  display: grid;
+  margin: 0;
+}
+
+.api-urgency-card p small {
+  color: var(--coral);
+  font-size: 0.45rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+}
+
+.api-urgency-card p strong {
+  font-size: 0.68rem;
+}
+
+.api-urgency-card p b {
+  color: rgba(246, 244, 238, 0.4);
+  font-size: 0.48rem;
+  font-weight: 500;
+}
+
+.api-condition-results {
+  margin-top: 0.75rem;
+}
+
+.api-condition-results ol {
+  display: grid;
+  gap: 0.32rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.api-condition-results li {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.46rem 0.55rem;
+  border-radius: 0.5rem;
+  background: rgba(246, 244, 238, 0.035);
+}
+
+.api-condition-results li > span {
+  color: rgba(246, 244, 238, 0.3);
+  font-family: monospace;
+  font-size: 0.44rem;
+}
+
+.api-condition-results li > strong {
+  font-size: 0.59rem;
+}
+
+.api-condition-results li > b {
+  color: var(--mint);
+  font-size: 0.62rem;
+}
+
+.api-live-doctors {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(246, 244, 238, 0.08);
+}
+
+.api-live-doctors > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(40, 230, 164, 0.04);
+}
+
+.api-live-doctors > div > span {
+  display: grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  color: var(--night);
+  border-radius: 50%;
+  background: var(--mint-soft);
+  font-size: 0.45rem;
+  font-weight: 850;
+}
+
+.api-live-doctors > div > p {
+  display: grid;
+  margin: 0;
+}
+
+.api-live-doctors > div strong {
+  font-size: 0.56rem;
+}
+
+.api-live-doctors > div small {
+  color: rgba(246, 244, 238, 0.38);
+  font-size: 0.45rem;
+}
+
+.api-live-doctors > div > i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 0 0.22rem rgba(40, 230, 164, 0.08);
+}
+
 .developer-proof-section {
-  padding: clamp(6rem, 10vw, 10rem) 0;
+  padding: clamp(3.5rem, 6vw, 6rem) 0 clamp(6rem, 10vw, 10rem);
   color: var(--ink);
   background:
     radial-gradient(circle at 90% 8%, rgba(129, 117, 255, 0.09), transparent 28rem),
@@ -4808,7 +5136,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: clamp(4rem, 7vw, 7rem);
+  margin-top: 0;
 }
 
 .developer-proof-card {

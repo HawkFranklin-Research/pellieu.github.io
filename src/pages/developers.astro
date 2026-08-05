@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 
 const title = "PelliScope API for Developers | Skin screening infrastructure";
 const description =
-  "Submit skin photographs to the PelliScope API and receive image-quality checks, infectious-signal screening and structured possible-match information.";
+  "Submit skin photographs to the PelliScope API and receive image-quality checks, infectious-signal screening, leading condition signals and clear consultation guidance.";
 ---
 
 <BaseLayout title={title} description={description} canonical="https://pelliscope.eu/developers.html">
@@ -20,8 +20,8 @@ const description =
         </div>
         <div class="developer-intro-copy">
           <p>
-            Send clear skin photographs and receive a structured screening response designed for health platforms,
-            care-navigation products and clinical intake workflows.
+            Send clear skin photographs and receive an infectious-versus-non-infectious signal, leading signals
+            across 25 skin conditions and a clear route into clinician review.
           </p>
           <a class="button button-primary magnetic" href="https://console.pelliscope.eu" target="_blank" rel="noopener">
             Open developer console <span aria-hidden="true">↗</span>
@@ -50,44 +50,57 @@ const description =
 
         <article class="developer-stage signal-stage" data-reveal>
           <div class="developer-stage-top"><span>02</span><small>SIGNAL</small></div>
-          <div class="api-signal-window">
-            <div class="api-signal-orbit" aria-hidden="true"><span><i></i></span></div>
-            <small>INFECTIOUS SIGNAL</small>
-            <strong>Infectious or<br />non-infectious</strong>
-            <div class="api-signal-meter"><i></i></div>
-            <div class="api-signal-labels"><span>Classification</span><span>Probability</span></div>
+          <div class="api-signal-window api-signal-readable">
+            <div class="api-readable-heading"><small>INFECTION SCREEN</small><span>Example result</span></div>
+            <div class="api-readable-status"><small>FIRST SIGNAL</small><strong>Infectious signal elevated</strong></div>
+            <div class="api-signal-comparison">
+              <article class="is-infectious">
+                <p><strong>Infectious</strong><span>81%</span></p>
+                <i><b></b></i>
+                <small>Higher screening signal</small>
+              </article>
+              <article class="is-noninfectious">
+                <p><strong>Non-infectious</strong><span>19%</span></p>
+                <i><b></b></i>
+                <small>Lower screening signal</small>
+              </article>
+            </div>
+            <div class="api-precaution-note"><span>!</span><p><strong>Added precautions may be appropriate</strong><small>Show practical guidance while the patient waits for clinical review.</small></p></div>
+            <small class="api-readable-disclaimer">Preliminary informational screen · not a diagnosis</small>
           </div>
-          <h2>Read the first signal.</h2>
-          <p>Receive a classification and probability as structured response fields.</p>
+          <h2>Understand the first direction.</h2>
+          <p>Show the infectious and non-infectious signals clearly so patients know when added precautions and prompt review may matter.</p>
         </article>
 
         <i class="developer-arrow" aria-hidden="true">→</i>
 
         <article class="developer-stage matches-stage" data-reveal>
           <div class="developer-stage-top"><span>03</span><small>RESULT</small></div>
-          <div class="api-matches-window">
-            <div class="api-matches-head"><span>25</span><p><strong>supported conditions</strong><small>Possible matches returned by confidence</small></p></div>
-            <ol>
-              <li><span>01</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 82%"></i></li>
-              <li><span>02</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 56%"></i></li>
-              <li><span>03</span><strong>Possible match</strong><small>confidence</small><i style="--api-match: 34%"></i></li>
-            </ol>
-            <code>{`{ guidance, disclaimer }`}</code>
+          <div class="api-matches-window api-care-result">
+            <div class="api-condition-count"><span>25</span><p><strong>skin conditions screened</strong><small>The three strongest signals are organised for review</small></p></div>
+            <div class="api-urgency-card"><span>!</span><p><small>NEXT STEP</small><strong>Urgent consultation suggested</strong><b>Clinical review recommended today</b></p></div>
+            <div class="api-condition-results">
+              <small>TOP SCREENING SIGNALS</small>
+              <ol>
+                <li><span>01</span><strong>Herpes zoster</strong><b>92%</b></li>
+                <li><span>02</span><strong>Contact dermatitis</strong><b>64%</b></li>
+                <li><span>03</span><strong>Herpes simplex</strong><b>41%</b></li>
+              </ol>
+            </div>
+            <div class="api-live-doctors">
+              <small>DERMATOLOGISTS AVAILABLE</small>
+              <div><span>AM</span><p><strong>Dr. Anna Müller</strong><small>Available now</small></p><i></i></div>
+              <div><span>DR</span><p><strong>Dr. Daniel Rossi</strong><small>Available in ~30 min</small></p><i></i></div>
+            </div>
           </div>
-          <h2>Use structured output.</h2>
-          <p>Work with ranked possible matches, guidance and safety language in your own interface.</p>
+          <h2>Move directly to clinical review.</h2>
+          <p>Give people understandable direction and a visible path to an available dermatologist. Diagnosis remains with the clinician.</p>
         </article>
       </div>
     </section>
 
-    <section class="developer-proof-section" aria-labelledby="developer-proof-title">
+    <section class="developer-proof-section" aria-label="Workflow, model performance and API economics">
       <div class="section-shell">
-        <div class="developer-proof-heading">
-          <p class="eyebrow dark"><span></span>Operational infographic</p>
-          <h2 id="developer-proof-title">One query.<br /><em>More focused clinical time.</em></h2>
-          <p>See how prepared intake, model output and API economics fit together before a teleconsultation begins.</p>
-        </div>
-
         <div class="developer-proof-grid">
           <article class="developer-proof-card workflow-proof" data-reveal>
             <header>
