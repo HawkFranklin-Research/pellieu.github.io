@@ -96,37 +96,54 @@ const description =
       </div>
     </section>
 
-    <section class="mi-boundary" aria-labelledby="mi-boundary-title">
+    <section class="mi-proof" aria-labelledby="mi-proof-title">
       <div class="section-shell">
-        <div class="mi-section-heading mi-section-heading-dark">
-          <p class="eyebrow dark"><span></span>Designed around your platform</p>
-          <h2 id="mi-boundary-title">An added intelligence layer.<br /><em>Not another platform.</em></h2>
-          <p>PelliScope works behind your interface. Patients and doctors continue using the product they already know.</p>
+        <div class="mi-proof-heading">
+          <div>
+            <p class="eyebrow dark"><span></span>Operational infographic</p>
+            <h2 id="mi-proof-title">Prepared intake.<br /><em>More focused clinical time.</em></h2>
+          </div>
+          <p>See the modeled workflow difference and the benchmark comparison at a glance.</p>
         </div>
 
-        <div class="mi-boundary-grid">
-          <article class="mi-owner-card mi-owner-platform">
-            <header><span>T</span><div><small>REMAINS IN YOUR PLATFORM</small><h3>Your complete care experience</h3></div></header>
-            <ul>
-              <li><i>01</i><span><strong>Patient accounts</strong><small>Registration and health records</small></span></li>
-              <li><i>02</i><span><strong>Doctor network</strong><small>Selection, availability and appointments</small></span></li>
-              <li><i>03</i><span><strong>Teleconsultation</strong><small>Private video consultation and follow-up</small></span></li>
-              <li><i>04</i><span><strong>Clinical services</strong><small>Diagnosis, prescriptions, records and payments</small></span></li>
-            </ul>
+        <div class="mi-proof-grid">
+          <article class="mi-proof-card mi-proof-workflow">
+            <header>
+              <div><small>WORKFLOW COMPARISON</small><h3>Pre-consultation efficiency</h3></div>
+              <span>+10 Patients / 5hr Shift</span>
+            </header>
+
+            <div class="mi-proof-lane mi-proof-traditional">
+              <div class="mi-proof-lane-head"><strong>Traditional (No AI)</strong><span>10 Min / Patient</span></div>
+              <div class="mi-proof-timeline"><i>Consultation (10m)</i></div>
+              <div class="mi-proof-lane-result"><small>History and information gathered during the call</small><strong>6 Patients / Hour</strong></div>
+            </div>
+
+            <div class="mi-proof-lane mi-proof-pelliscope">
+              <div class="mi-proof-lane-head"><strong>With PelliScope</strong><span>~10 Min Total (Parallelized)</span></div>
+              <div class="mi-proof-timeline mi-proof-timeline-split"><i>Preliminary<br />screen (3m)</i><b>Focused<br />consult (7m)</b></div>
+              <div class="mi-proof-lane-result"><small>AI triage prepares 3 mins of discovery time per patient</small><strong>8 Patients / Hour</strong></div>
+            </div>
+
+            <div class="mi-proof-summary">
+              <div><small>TIME PREPARED</small><strong>~3<span>min</span></strong><p>before each consultation</p></div>
+              <div><small>MODELED CAPACITY</small><strong>~30<span>%</span></strong><p>more patient intakes</p></div>
+              <div><small>5-HOUR SHIFT</small><strong>+10</strong><p>additional consultations</p></div>
+            </div>
           </article>
 
-          <div class="mi-layer-connector" aria-hidden="true"><span>+</span><small>API LAYER</small></div>
-
-          <article class="mi-owner-card mi-owner-pelliscope">
-            <header><span>P</span><div><small>ADDED BY PELLISCOPE</small><h3>Skin-screening intelligence</h3></div></header>
-            <ul>
-              <li><i>01</i><span><strong>Guided image intake</strong><small>Clearer photographs with case context</small></span></li>
-              <li><i>02</i><span><strong>Infectious signal</strong><small>Infectious versus non-infectious screening</small></span></li>
-              <li><i>03</i><span><strong>Differential identification</strong><small>Top possibilities across 25 condition categories</small></span></li>
-              <li><i>04</i><span><strong>Structured output</strong><small>Preliminary case data returned to your platform</small></span></li>
-            </ul>
+          <article class="mi-proof-card mi-proof-auc">
+            <header><div><small>MODEL PERFORMANCE (AUC)</small><h3>Zero-shot comparison on dermatology benchmarks</h3></div></header>
+            <div class="mi-proof-auc-bars">
+              <div><span>Grok-4</span><i><b style="--mi-auc: 70%"></b></i><strong>0.70</strong></div>
+              <div><span>GPT-5</span><i><b style="--mi-auc: 81%"></b></i><strong>0.81</strong></div>
+              <div><span>Gemini 2.5</span><i><b style="--mi-auc: 82%"></b></i><strong>0.82</strong></div>
+              <div class="mi-proof-auc-pelliscope"><span>PelliScope</span><i><b style="--mi-auc: 86%"></b></i><strong>0.86</strong></div>
+            </div>
+            <div class="mi-proof-auc-callout"><span>P</span><p><small>PELLISCOPE</small><strong>Highest AUC in this comparison</strong></p><b>0.86</b></div>
           </article>
         </div>
+        <p class="mi-proof-note">Illustrative workflow model, not a throughput guarantee. AUC measures ranking discrimination across thresholds, not diagnostic accuracy.</p>
       </div>
     </section>
 
@@ -142,7 +159,7 @@ const description =
           <article class="mi-flow-card">
             <header><span>01</span><small>PLATFORM INTAKE</small></header>
             <div class="mi-flow-visual mi-capture-visual">
-              <div class="mi-camera-view"><i></i><b></b><span>+</span></div>
+              <div class="mi-camera-view"><img src="/samples/skin-case/case-context.webp" alt="Example skin concern photograph framed for guided intake" loading="lazy" decoding="async" /><i></i><b></b><span>+</span></div>
               <div class="mi-camera-meta"><span>Forearm</span><span>2 days</span><span>Itchy</span></div>
             </div>
             <h3>Patient intake &amp; instant screening</h3>
@@ -233,39 +250,6 @@ const description =
           </article>
         </div>
         <p class="mi-concept-note">Conceptual integration payload. Final fields, consent flow and security controls are agreed during technical integration.</p>
-      </div>
-    </section>
-
-    <section class="mi-impact" aria-labelledby="mi-impact-title">
-      <div class="section-shell">
-        <div class="mi-impact-heading">
-          <div>
-            <p class="eyebrow"><span></span>Operational model</p>
-            <h2 id="mi-impact-title">Less discovery during the call.<br /><em>More focused review.</em></h2>
-          </div>
-          <p>Pre-organised case information can reduce repetitive intake work before the doctor begins the consultation.</p>
-        </div>
-
-        <div class="mi-impact-grid">
-          <article class="mi-workflow-comparison">
-            <header><small>WORKFLOW COMPARISON</small><strong>Illustrative five-hour shift</strong></header>
-            <div class="mi-workflow-row mi-traditional-row">
-              <div><strong>Traditional intake</strong><small>10 min / patient</small></div>
-              <span><i>History + consultation · 10m</i></span>
-              <b>6<small>/ hour</small></b>
-            </div>
-            <div class="mi-workflow-row mi-prepared-row">
-              <div><strong>With PelliScope</strong><small>Prepared + focused</small></div>
-              <span><i>AI intake · 3m</i><i>Focused consult · 7m</i></span>
-              <b>8<small>/ hour</small></b>
-            </div>
-          </article>
-
-          <article class="mi-impact-stat mi-stat-mint"><small>TIME PREPARED</small><strong>~3<span>min</span></strong><p>of initial discovery organised before each consultation</p></article>
-          <article class="mi-impact-stat mi-stat-blue"><small>MODELED CAPACITY</small><strong>~30<span>%</span></strong><p>more patient intakes while preserving clinician-led decisions</p></article>
-          <article class="mi-impact-stat mi-stat-coral"><small>5-HOUR SHIFT</small><strong>+10</strong><p>additional consultations in the illustrative workflow model</p></article>
-        </div>
-        <p class="mi-model-note">Illustrative operational model, not a throughput guarantee. Actual impact depends on your workflow, clinicians and implementation.</p>
       </div>
     </section>
 
