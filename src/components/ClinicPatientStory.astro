@@ -1,0 +1,116 @@
+---
+const stages = ["Concern", "Photos", "Screening", "Clinicians"];
+---
+
+<div class="phone-story clinic-patient-story" data-phone-story>
+  <div class="phone-aura" aria-hidden="true"></div>
+  <div class="phone-shell">
+    <div class="phone-hardware">
+      <span class="phone-speaker"></span>
+      <span class="phone-camera"></span>
+    </div>
+    <div class="phone-display">
+      <div class="phone-status" aria-hidden="true"><span>09:41</span><span>● 5G ▰</span></div>
+      <div class="app-bar">
+        <span class="mini-mark"><img src="/brand/pelliscope.png" alt="" /></span>
+        <strong>PelliScope</strong>
+        <span class="private-chip">Private</span>
+      </div>
+
+      <div class="phone-screens" aria-live="polite">
+        <section class="phone-screen is-active" data-phone-screen="0" aria-label="Describe a skin concern">
+          <p class="screen-step">YOUR SKIN CHECK · 01</p>
+          <h3>What are you worried about?</h3>
+          <div class="concern-prompt">
+            <span class="prompt-orb"></span>
+            <p>“This appeared two days ago and feels itchy.”</p>
+          </div>
+          <div class="symptom-chips"><span>Itchy</span><span>2 days</span><span>Forearm</span></div>
+          <button type="button" tabindex="-1">Continue <span>→</span></button>
+        </section>
+
+        <section class="phone-screen" data-phone-screen="1" aria-label="Add guided photographs">
+          <p class="screen-step">ADD PHOTOGRAPHS · 02</p>
+          <h3>Show what changed.</h3>
+          <div class="photo-grid">
+            <div class="skin-photo skin-one">
+              <img src="/samples/skin-case/case-context.webp" alt="" loading="eager" decoding="async" />
+              <i></i><span>Context</span>
+            </div>
+            <div class="skin-photo skin-two">
+              <img src="/samples/skin-case/case-close.webp" alt="" loading="eager" decoding="async" />
+              <i></i><span>Closer</span>
+            </div>
+            <div class="add-photo"><b>+</b><span>Add view</span></div>
+          </div>
+          <div class="capture-guide"><span></span><p><strong>Good light detected</strong>Keep the area in focus.</p></div>
+          <button type="button" tabindex="-1">Review photographs <span>→</span></button>
+        </section>
+
+        <section class="phone-screen clinic-result-screen" data-phone-screen="2" aria-label="Illustrative preliminary screening result">
+          <p class="screen-step">SCREENING RESULT · 03</p>
+          <div class="clinic-story-verdict">
+            <span aria-hidden="true">!</span>
+            <div><small>PRELIMINARY SIGNAL</small><strong>Infectious</strong></div>
+          </div>
+          <div class="clinic-story-scores" aria-label="Illustrative infectious and non-infectious scores">
+            <div class="clinic-story-score is-red"><p><span>Infectious</span><strong>81%</strong></p><i><b></b></i></div>
+            <div class="clinic-story-score is-amber"><p><span>Non-infectious</span><strong>23%</strong></p><i><b></b></i></div>
+          </div>
+          <div class="clinic-story-matches">
+            <p>TOP POSSIBLE MATCHES <small>Illustrative</small></p>
+            <ol>
+              <li><span>01</span><strong>Herpes Zoster</strong><b>92%</b><i style="--story-match: 92%"></i></li>
+              <li><span>02</span><strong>Herpes Simplex</strong><b>68%</b><i style="--story-match: 68%"></i></li>
+              <li><span>03</span><strong>Viral Exanthem</strong><b>41%</b><i style="--story-match: 41%"></i></li>
+            </ol>
+          </div>
+          <small class="clinic-story-boundary">Informational screening · not a diagnosis</small>
+        </section>
+
+        <section class="phone-screen clinic-selector-screen" data-phone-screen="3" aria-label="Illustrative available dermatologists">
+          <p class="screen-step">SELECT A CLINICIAN · 04</p>
+          <h3>Available for teleconsultation.</h3>
+          <p class="clinic-selector-copy">Choose a verified dermatologist to review this screening case.</p>
+          <div class="clinic-story-doctors">
+            <article>
+              <span class="clinic-story-avatar">AM</span>
+              <div><strong>Illustrative clinician A</strong><small>General dermatology · Verified</small><em>8 yrs · ~2h response</em></div>
+              <b>Available now</b>
+            </article>
+            <article>
+              <span class="clinic-story-avatar alt">NS</span>
+              <div><strong>Illustrative clinician B</strong><small>Dermatology · Verified</small><em>11 yrs · Available today</em></div>
+              <b>Today</b>
+            </article>
+            <article>
+              <span class="clinic-story-avatar soft">RI</span>
+              <div><strong>Illustrative clinician C</strong><small>Clinical dermatology · Verified</small><em>6 yrs · ~4h response</em></div>
+              <b>Available now</b>
+            </article>
+          </div>
+          <button type="button" tabindex="-1">View teleconsultation <span>→</span></button>
+        </section>
+      </div>
+      <div class="phone-home-indicator" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="phone-story-controls" aria-label="Clinic patient journey animation">
+    {
+      stages.map((stage, index) => (
+        <button
+          class:list={["phone-story-step", index === 0 && "is-active"]}
+          type="button"
+          data-phone-step={index}
+          aria-label={`Show ${stage} stage`}
+        >
+          <span></span>
+        </button>
+      ))
+    }
+    <button class="phone-story-toggle" type="button" data-phone-toggle aria-label="Pause animation">
+      <span class="pause-icon">Ⅱ</span><span class="play-icon">▶</span>
+    </button>
+  </div>
+</div>

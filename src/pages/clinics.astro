@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ClinicPatientStory from "../components/ClinicPatientStory.astro";
+import JourneyPhone from "../components/JourneyPhone.astro";
 
 const title = "PelliScope for Clinics | A digital front door for dermatology";
 const description =
@@ -24,21 +26,8 @@ const description =
           </div>
         </div>
 
-        <div class="clinic-console" aria-label="Illustrative PelliScope clinic intake overview">
-          <div class="console-bar"><span><img src="/brand/pelliscope.png" alt="" /> PelliScope <b>Clinic</b></span><i>Interface demonstration</i></div>
-          <div class="console-body">
-            <div class="console-metrics">
-              <article><span>NEW INTAKES</span><strong>08</strong><small>Ready for routing</small></article>
-              <article><span>REMOTE REVIEW</span><strong>05</strong><small>Within clinical scope</small></article>
-              <article><span>CLINIC ROUTE</span><strong>03</strong><small>Examination needed</small></article>
-            </div>
-            <div class="console-list">
-              <div class="console-list-head"><span>RECENT PATIENT INTAKES</span><span>ROUTE</span></div>
-              <article><i class="intake-avatar">P</i><p><strong>Skin concern · Arm</strong><small>3 photos · answers complete</small></p><span class="route-chip remote">Remote review</span></article>
-              <article><i class="intake-avatar alt">P</i><p><strong>Follow-up · Face</strong><small>2 photos · returning patient</small></p><span class="route-chip clinic">Clinic visit</span></article>
-              <article><i class="intake-avatar soft">P</i><p><strong>Skin concern · Back</strong><small>4 photos · answers complete</small></p><span class="route-chip pending">Triage</span></article>
-            </div>
-          </div>
+        <div class="subpage-visual clinic-phone-visual">
+          <ClinicPatientStory />
         </div>
       </div>
     </section>
@@ -47,12 +36,25 @@ const description =
       <div class="section-shell">
         <p class="eyebrow dark"><span></span>Before the first appointment</p>
         <h2 id="clinic-workflow-title">A better arrival<br /><em>for every skin concern.</em></h2>
-        <div class="clinic-workflow">
-          <article><span>01</span><div class="workflow-symbol entry"><i></i></div><h3>Patient entry</h3><p>Your branded link begins a guided intake from any phone.</p></article>
-          <i>→</i>
-          <article><span>02</span><div class="workflow-symbol prepare"><i></i><b></b></div><h3>Prepared case</h3><p>Photographs and context arrive in one consistent format.</p></article>
-          <i>→</i>
-          <article><span>03</span><div class="workflow-symbol route"><i></i><b></b></div><h3>Appropriate route</h3><p>Your team chooses remote review, follow-up or physical examination.</p></article>
+        <div class="journey-grid clinic-journey-grid">
+          <article class="journey-step" data-reveal>
+            <span class="step-number">01</span>
+            <JourneyPhone stage="capture" />
+            <h3>Show what changed.</h3>
+            <p>Add clear photographs and describe what you feel, where it is and when it began.</p>
+          </article>
+          <article class="journey-step" data-reveal>
+            <span class="step-number">02</span>
+            <JourneyPhone stage="signal" />
+            <h3>Understand the first signal.</h3>
+            <p>Receive an AI-assisted preliminary screen that organises the concern without pretending to diagnose it.</p>
+          </article>
+          <article class="journey-step" data-reveal>
+            <span class="step-number">03</span>
+            <JourneyPhone stage="clinician" />
+            <h3>Continue with someone qualified.</h3>
+            <p>Where a country service is active, choose a verified dermatologist and carry the complete case into private review.</p>
+          </article>
         </div>
       </div>
     </section>

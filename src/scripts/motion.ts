@@ -114,7 +114,7 @@ if (!reduceMotion) {
     .from(".hero-lede, .subpage-copy > p", { y: 28, opacity: 0, duration: 0.75 }, "-=0.52")
     .from(".hero-actions", { y: 24, opacity: 0, duration: 0.65 }, "-=0.42")
     .from(".hero-assurance, .subpage-micro", { y: 18, opacity: 0, duration: 0.6 }, "-=0.36")
-    .from(".hero-product .phone-shell, .subpage-visual, .clinic-console", {
+    .from(".hero-product .phone-shell, .subpage-visual", {
       y: 70,
       opacity: 0,
       rotateY: -5,
@@ -187,7 +187,7 @@ if (!reduceMotion) {
   }
 
   gsap.utils
-    .toArray<HTMLElement>(".doctor-visual, .clinic-flow, .earn-flow, .clinic-workflow")
+    .toArray<HTMLElement>(".doctor-visual, .clinic-flow, .earn-flow")
     .forEach((element) => {
       gsap.from(element, {
         y: 65,
