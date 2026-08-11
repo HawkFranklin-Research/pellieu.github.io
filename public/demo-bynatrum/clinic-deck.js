@@ -11,7 +11,7 @@
   const nextButton = document.querySelector("[data-next]");
   const clinicianScene = document.querySelector(".scene-clinician-combined");
   const clinicianPanels = [...document.querySelectorAll("[data-clinician-panel]")];
-  const clinicianProgress = [...document.querySelectorAll(".clinician-phase-progress i")];
+  const clinicianProgress = [...document.querySelectorAll("[data-clinician-phase-control]")];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
   let clinicianPhase = "queue";
@@ -363,7 +363,9 @@
       panel.classList.toggle("is-active", panel.dataset.clinicianPanel === clinicianPhase);
     });
     clinicianProgress.forEach((mark, index) => {
-      mark.classList.toggle("is-active", index === (clinicianPhase === "queue" ? 0 : 1));
+      const isActive = index === (clinicianPhase === "queue" ? 0 : 1);
+      mark.classList.toggle("is-active", isActive);
+      mark.setAttribute("aria-pressed", String(isActive));
     });
 
     if (activeIndex !== 2) return;
@@ -376,10 +378,19 @@
     }
   };
 
+  clinicianProgress.forEach((control) => {
+    control.addEventListener("click", () => {
+      setClinicianPhase(control.dataset.clinicianPhaseControl);
+    });
+  });
+
   reel.addEventListener(
     "wheel",
     (event) => {
-      if (activeIndex !== 2 || Math.abs(event.deltaY) < 18) return;
+      const eventTarget = event.target instanceof Node ? event.target : null;
+      const isClinicianInteraction = activeIndex === 2
+        || Boolean(eventTarget && clinicianScene?.contains(eventTarget));
+      if (!isClinicianInteraction || Math.abs(event.deltaY) < 12) return;
       const now = performance.now();
       if (now < clinicianWheelLockedUntil) {
         event.preventDefault();

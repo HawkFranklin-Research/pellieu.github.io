@@ -340,7 +340,10 @@
               </div>
             </div>
 
-            <div class="clinician-phase-progress" aria-hidden="true"><i class="is-active"></i><i></i></div>
+            <div class="clinician-phase-progress" role="group" aria-label="Clinician workspace views">
+              <button class="is-active" type="button" data-clinician-phase-control="queue" aria-label="Show review queue" aria-pressed="true"><span>Queue</span></button>
+              <button type="button" data-clinician-phase-control="review" aria-label="Show patient record" aria-pressed="false"><span>Patient record</span></button>
+            </div>
           </div>
         </section>
 

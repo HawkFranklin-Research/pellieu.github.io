@@ -1799,15 +1799,40 @@ img {
   transform: translateX(50%);
 }
 
-.clinician-phase-progress i {
-  width: 34px;
-  height: 3px;
+.clinician-phase-progress button {
+  position: relative;
+  width: 38px;
+  height: 12px;
+  padding: 0;
+  border: 0;
   border-radius: 999px;
-  background: rgba(245, 248, 245, 0.22);
-  transition: width 300ms ease, background 300ms ease;
+  color: transparent;
+  background: rgba(245, 248, 245, 0.24);
+  cursor: pointer;
+  transition: width 300ms ease, background 300ms ease, transform 180ms ease;
 }
 
-.clinician-phase-progress i.is-active {
+.clinician-phase-progress button:hover,
+.clinician-phase-progress button:focus-visible {
+  background: rgba(245, 248, 245, 0.5);
+  transform: scaleY(1.25);
+}
+
+.clinician-phase-progress button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.clinician-phase-progress button span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.clinician-phase-progress button.is-active {
   width: 58px;
   background: var(--mint);
 }
@@ -1906,11 +1931,13 @@ img {
   gap: 15px;
   margin: 0 0 10px;
   color: #9bb4b6;
-  font-size: 12px;
+  font-size: clamp(14px, 1.05vw, 17px);
+  line-height: 1.3;
 }
 
 .developer-workflow-compare > div > p strong {
   color: #fff;
+  font-size: clamp(16px, 1.2vw, 19px);
 }
 
 .developer-timebar {
@@ -1928,7 +1955,7 @@ img {
   padding: 10px;
   color: #fff;
   background: #586b75;
-  font-size: 11px;
+  font-size: clamp(13px, 1vw, 16px);
   font-style: normal;
   font-weight: 750;
   text-align: center;
@@ -1954,7 +1981,7 @@ img {
   display: block;
   margin-top: 10px;
   color: #99aaae;
-  font-size: 12px;
+  font-size: clamp(15px, 1.1vw, 18px);
   text-align: right;
 }
 
@@ -1968,13 +1995,14 @@ img {
 
 .developer-workflow-result small {
   color: #a6babc;
-  font-size: 10px;
+  font-size: clamp(13px, 0.95vw, 15px);
+  line-height: 1.35;
 }
 
 .developer-workflow-result b {
   flex: 0 0 auto;
   color: var(--mint);
-  font-size: 13px;
+  font-size: clamp(16px, 1.15vw, 19px);
 }
 
 .developer-auc-bars {
@@ -2051,30 +2079,30 @@ img {
 .condition-catalogue > p {
   margin: 0 0 13px;
   color: var(--mint);
-  font: 750 9px/1 "Geist Mono", monospace;
+  font: 750 11px/1 "Geist Mono", monospace;
   letter-spacing: 0.12em;
 }
 
 .condition-catalogue > div {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 7px 13px;
+  gap: 9px 16px;
 }
 
 .condition-catalogue span {
   position: relative;
-  padding-left: 11px;
+  padding-left: 14px;
   color: #b9c9ca;
-  font-size: 8px;
-  line-height: 1.3;
+  font-size: clamp(11px, 0.78vw, 13px);
+  line-height: 1.35;
 }
 
 .condition-catalogue span::before {
   position: absolute;
   top: 0.45em;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgba(43, 224, 173, 0.75);
   content: "";
