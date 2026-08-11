@@ -1,0 +1,322 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "PelliScope | Presentation downloads";
+const description = "Download the PelliScope sample case photographs and Naturalium interpreter briefing script.";
+
+const sampleCases = [
+  {
+    number: "01",
+    title: "Patient capture",
+    detail: "Context and angled photographs used in the opening patient-capture sequence.",
+    images: 2,
+  },
+  {
+    number: "02",
+    title: "Digital submission",
+    detail: "Context, close and angled photographs used in the digital-submission workflow.",
+    images: 3,
+  },
+  {
+    number: "03",
+    title: "Clinician review · insect-bite scenario",
+    detail: "Two photographs used in the simulated infectious clinician-review case.",
+    images: 2,
+  },
+  {
+    number: "04",
+    title: "Clinician review · eczema scenario",
+    detail: "Two photographs used in the simulated non-infectious clinician-review case.",
+    images: 2,
+  },
+];
+---
+
+<BaseLayout title={title} description={description} canonical="https://pelliscope.eu/downloads.html">
+  <Header />
+  <main id="main-content" class="downloads-main">
+    <section class="downloads-hero">
+      <div class="downloads-copy">
+        <p class="downloads-kicker"><span></span>Presentation resources</p>
+        <h1>Presentation resources,<br /><em>ready to download.</em></h1>
+        <p class="downloads-lede">
+          Download the demonstration photographs used throughout the PelliScope clinic presentation or the
+          Naturalium interpreter briefing document.
+        </p>
+        <div class="downloads-actions">
+          <div>
+            <a class="downloads-primary" href="/downloads/pelliscope-sample-cases.zip" download>
+              Download sample images <span>↓</span>
+            </a>
+            <p class="downloads-format">ZIP archive · 4 folders · 9 images · JPEG and WebP</p>
+          </div>
+          <div>
+            <a class="downloads-secondary" href="/downloads/naturalium-interpreter-briefing-script.docx" download>
+              Download briefing script <span>↓</span>
+            </a>
+            <p class="downloads-format">Microsoft Word document · Naturalium interpreter briefing</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="downloads-cases" aria-label="Included sample cases">
+        {sampleCases.map((sampleCase) => (
+          <article>
+            <span>{sampleCase.number}</span>
+            <div>
+              <h2>{sampleCase.title}</h2>
+              <p>{sampleCase.detail}</p>
+            </div>
+            <strong>{sampleCase.images} images</strong>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="downloads-notice">
+      <strong>Illustrative material only</strong>
+      <p>
+        Folder names describe simulated presentation scenarios and are not verified diagnoses. These photographs
+        and any AI-assisted output must not be used for diagnosis, treatment or emergency decisions.
+      </p>
+      <a href="/demo-bynatrum.html">View the clinic presentation →</a>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .downloads-main {
+    min-height: 100vh;
+    color: #edf8f4;
+    background:
+      radial-gradient(circle at 82% 16%, rgba(43, 224, 173, 0.16), transparent 34%),
+      linear-gradient(145deg, #061820, #0b3037 60%, #102b35);
+  }
+
+  .downloads-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(480px, 1.15fr);
+    gap: clamp(42px, 7vw, 110px);
+    width: min(100% - 40px, 1420px);
+    margin: 0 auto;
+    padding: clamp(140px, 16vh, 190px) 0 clamp(70px, 10vh, 110px);
+  }
+
+  .downloads-copy {
+    align-self: center;
+  }
+
+  .downloads-kicker {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0 0 22px;
+    color: #2be0ad;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .downloads-kicker span {
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .downloads-copy h1 {
+    max-width: 720px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(55px, 6.5vw, 98px);
+    font-weight: 600;
+    letter-spacing: -0.075em;
+    line-height: 0.9;
+  }
+
+  .downloads-copy h1 em {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+  }
+
+  .downloads-lede {
+    max-width: 620px;
+    margin: 32px 0 0;
+    color: #a9bfc1;
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.6;
+  }
+
+  .downloads-actions {
+    display: grid;
+    gap: 14px;
+    max-width: 390px;
+    margin-top: 34px;
+  }
+
+  .downloads-primary,
+  .downloads-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    padding: 17px 19px;
+    border-radius: 13px;
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .downloads-primary {
+    color: #032d26;
+    background: #2be0ad;
+  }
+
+  .downloads-secondary {
+    border: 1px solid rgba(237, 248, 244, 0.2);
+    color: #edf8f4;
+    background: rgba(237, 248, 244, 0.07);
+  }
+
+  .downloads-primary span,
+  .downloads-secondary span {
+    font-size: 20px;
+  }
+
+  .downloads-format {
+    margin: 13px 0 0;
+    color: #79979a;
+    font-size: 12px;
+  }
+
+  .downloads-cases {
+    display: grid;
+    align-content: center;
+    gap: 12px;
+  }
+
+  .downloads-cases article {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    min-height: 122px;
+    padding: 22px;
+    border: 1px solid rgba(237, 248, 244, 0.14);
+    border-radius: 18px;
+    background: rgba(237, 248, 244, 0.055);
+    backdrop-filter: blur(14px);
+  }
+
+  .downloads-cases article > span {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 13px;
+    color: #2be0ad;
+    background: rgba(43, 224, 173, 0.1);
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .downloads-cases h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(18px, 1.5vw, 24px);
+    letter-spacing: -0.035em;
+  }
+
+  .downloads-cases p {
+    margin: 7px 0 0;
+    color: #9bb3b5;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .downloads-cases strong {
+    padding: 8px 10px;
+    border-radius: 999px;
+    color: #cde2df;
+    background: rgba(237, 248, 244, 0.08);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .downloads-notice {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 28px;
+    width: min(100% - 40px, 1420px);
+    margin: 0 auto;
+    padding: 28px 0 70px;
+    border-top: 1px solid rgba(237, 248, 244, 0.14);
+  }
+
+  .downloads-notice strong {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .downloads-notice p {
+    max-width: 850px;
+    margin: 0;
+    color: #8fa7aa;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .downloads-notice a {
+    color: #2be0ad;
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .downloads-hero {
+      grid-template-columns: 1fr;
+      padding-top: 120px;
+    }
+
+    .downloads-cases {
+      width: 100%;
+    }
+
+    .downloads-notice {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .downloads-hero,
+    .downloads-notice {
+      width: min(100% - 28px, 1420px);
+    }
+
+    .downloads-copy h1 {
+      font-size: 53px;
+    }
+
+    .downloads-cases article {
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 13px;
+      padding: 16px;
+    }
+
+    .downloads-cases article > span {
+      width: 40px;
+      height: 40px;
+    }
+
+    .downloads-cases strong {
+      grid-column: 2;
+      justify-self: start;
+    }
+  }
+</style>
