@@ -263,7 +263,7 @@
                 <p class="sr-only">A simulated review queue contains prepared dermatology cases with screening and urgency information.</p>
                 <div class="interface-paper dashboard-paper" aria-hidden="true">
                   <header class="product-header">
-                    <div class="product-brand"><img src="/demo-bynatrum/brand/pelliscope.png" alt="" /><span><strong>PelliScope</strong><small>Clinician workspace</small></span></div>
+                    <div class="product-brand"><img src="/demo-bynatrum/brand/pelliscope.png" alt="" /><strong>PelliScope Clinician Workspace</strong></div>
                     <div class="availability-pill"><i></i>Available for reviews</div>
                   </header>
                   <div class="queue-heading"><div><span>REVIEW QUEUE</span><h3><strong>3 new</strong> prepared cases</h3></div><button type="button" tabindex="-1">↻ Refresh</button></div>
@@ -328,18 +328,13 @@
                           <div class="differential-row"><p><strong data-diff-name="0">Insect Bite</strong><span data-diff-value="0">61%</span></p><i><b data-diff-bar="0" style="--bar:61%"></b></i></div>
                           <div class="differential-row"><p><strong data-diff-name="1">Urticaria</strong><span data-diff-value="1">23%</span></p><i><b data-diff-bar="1" style="--bar:23%"></b></i></div>
                           <div class="differential-row"><p><strong data-diff-name="2">Folliculitis</strong><span data-diff-value="2">11%</span></p><i><b data-diff-bar="2" style="--bar:11%"></b></i></div>
+                          <div class="differential-row"><p><strong data-diff-name="3">Allergic contact dermatitis</strong><span data-diff-value="3">8%</span></p><i><b data-diff-bar="3" style="--bar:8%"></b></i></div>
+                          <div class="differential-row"><p><strong data-diff-name="4">Scabies</strong><span data-diff-value="4">5%</span></p><i><b data-diff-bar="4" style="--bar:5%"></b></i></div>
                         </div>
                         <div class="care-timeline"><span>CARE TIMELINE</span><div><i></i><p><strong>Intake received</strong><small>Today · 09:24</small></p></div><div><i></i><p><strong>Prepared for review</strong><small>Today · 09:26</small></p></div></div>
                       </section>
                     </div>
                     <footer class="case-actions"><span>Clinical note</span><span>Prescribe</span><span>Request clinic visit</span></footer>
-                  </article>
-                  <article class="interface-paper screening-paper">
-                    <span>SCREENING CONTEXT</span>
-                    <div class="screening-verdict infectious" data-screening-paper><i></i><p><strong data-paper-title>Infectious</strong><small data-paper-copy>Signal for prompt review</small></p></div>
-                    <div class="paper-score"><span>LEADING DIFFERENTIAL</span><strong data-paper-differential>Insect Bite</strong><i><b data-paper-bar style="--bar:61%"></b></i><small data-paper-percent>61%</small></div>
-                    <p>AI-assisted screening supports preparation. Clinical interpretation remains with the dermatologist.</p>
-                    <footer><i></i>Simulated data · Interface demonstration</footer>
                   </article>
                 </div>
               </div>
@@ -370,12 +365,22 @@
               </article>
 
               <article class="developer-proof-card auc-proof scene-reveal">
-                <header><div><small>MODEL PERFORMANCE (AUC)</small><h3>Zero-shot comparison on dermatology benchmarks.</h3></div></header>
+                <header><div><small>MODEL PERFORMANCE (AUC)</small><h3>Performance comparison with other AI models.</h3></div></header>
                 <div class="developer-auc-bars">
                   <div><span>Grok-4</span><i><b style="--auc: 70%"></b></i><strong>0.70</strong></div>
                   <div><span>GPT-5</span><i><b style="--auc: 81%"></b></i><strong>0.81</strong></div>
                   <div><span>Gemini 2.5</span><i><b style="--auc: 82%"></b></i><strong>0.82</strong></div>
                   <div class="is-pelliscope"><span>PelliScope</span><i><b style="--auc: 86%"></b></i><strong>0.86</strong></div>
+                </div>
+                <div class="condition-catalogue">
+                  <p>25 DERMATOLOGICAL CONDITIONS</p>
+                  <div>
+                    <span>Acne</span><span>Acute dermatitis NOS</span><span>Allergic contact dermatitis</span><span>Contact dermatitis</span><span>Drug rash</span>
+                    <span>Eczema</span><span>Folliculitis</span><span>Herpes simplex</span><span>Herpes zoster</span><span>Hypersensitivity</span>
+                    <span>Impetigo</span><span>Insect bite</span><span>Irritant contact dermatitis</span><span>Keratosis pilaris</span><span>Leukocytoclastic vasculitis</span>
+                    <span>Lichen planus / lichenoid eruption</span><span>Lichen simplex chronicus</span><span>Pigmented purpuric eruption</span><span>Pityriasis rosea</span><span>Psoriasis</span>
+                    <span>Scabies</span><span>Stasis dermatitis</span><span>Tinea</span><span>Urticaria</span><span>Viral exanthem</span>
+                  </div>
                 </div>
               </article>
             </div>

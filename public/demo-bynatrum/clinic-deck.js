@@ -250,9 +250,7 @@
       chips: ["Itchy", "2 days", "Upper arm"],
       screenTitle: "Infectious signal detected",
       screenCopy: "Clinical review required promptly.",
-      paperTitle: "Infectious",
-      paperCopy: "Signal for prompt review",
-      differentials: [["Insect Bite", 61], ["Urticaria", 23], ["Folliculitis", 11]],
+      differentials: [["Insect Bite", 61], ["Urticaria", 23], ["Folliculitis", 11], ["Allergic contact dermatitis", 8], ["Scabies", 5]],
     },
     {
       state: "clear",
@@ -269,9 +267,7 @@
       chips: ["Dry", "1 week", "Ankle"],
       screenTitle: "Non-infectious likely",
       screenCopy: "No immediate contagion markers found.",
-      paperTitle: "Non-infectious",
-      paperCopy: "Routine clinical review",
-      differentials: [["Eczema", 58], ["Contact dermatitis", 24], ["Psoriasis", 10]],
+      differentials: [["Eczema", 58], ["Contact dermatitis", 24], ["Psoriasis", 10], ["Lichen simplex chronicus", 7], ["Tinea", 4]],
     },
   ];
   let clinicalCaseIndex = 0;
@@ -311,20 +307,13 @@
     setText("[data-case-complaint]", currentCase.complaint);
     setText("[data-case-screen-title]", currentCase.screenTitle);
     setText("[data-case-screen-copy]", currentCase.screenCopy);
-    setText("[data-paper-title]", currentCase.paperTitle);
-    setText("[data-paper-copy]", currentCase.paperCopy);
-    setText("[data-paper-differential]", currentCase.differentials[0][0]);
-    setText("[data-paper-percent]", `${currentCase.differentials[0][1]}%`);
 
     const chipRow = clinicalDemo.querySelector("[data-case-chips]");
     if (chipRow) chipRow.innerHTML = currentCase.chips.map((chip) => `<i>${chip}</i>`).join("");
 
     const banner = clinicalDemo.querySelector("[data-case-banner]");
-    const paperVerdict = clinicalDemo.querySelector("[data-screening-paper]");
-    [banner, paperVerdict].forEach((node) => {
-      node?.classList.toggle("infectious", currentCase.state === "infectious");
-      node?.classList.toggle("clear", currentCase.state === "clear");
-    });
+    banner?.classList.toggle("infectious", currentCase.state === "infectious");
+    banner?.classList.toggle("clear", currentCase.state === "clear");
 
     currentCase.images.forEach((source, imageIndex) => {
       const image = clinicalDemo.querySelector(`[data-case-image="${imageIndex}"]`);
@@ -337,8 +326,6 @@
       const bar = clinicalDemo.querySelector(`[data-diff-bar="${differentialIndex}"]`);
       if (bar) bar.style.setProperty("--bar", `${value}%`);
     });
-    const paperBar = clinicalDemo.querySelector("[data-paper-bar]");
-    if (paperBar) paperBar.style.setProperty("--bar", `${currentCase.differentials[0][1]}%`);
     renderClinicalImage(0);
   };
 
