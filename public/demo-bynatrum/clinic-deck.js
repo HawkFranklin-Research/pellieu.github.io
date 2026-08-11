@@ -23,12 +23,14 @@
   const teamScene = document.querySelector(".team-traction-scene");
   const teamPanels = [...document.querySelectorAll("[data-team-panel]")];
   const teamProgress = [...document.querySelectorAll("[data-team-phase-control]")];
+  const tractionPhotos = [...document.querySelectorAll("[data-traction-photo]")];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
   let clinicianPhase = "queue";
   let clinicianWheelLockedUntil = 0;
   let teamPhase = "team";
   let teamWheelLockedUntil = 0;
+  let tractionPhotoTimer;
 
   if (!reel || scenes.length === 0) return;
 
@@ -446,7 +448,39 @@
       control.classList.toggle("is-active", isActive);
       control.setAttribute("aria-pressed", String(isActive));
     });
+    scheduleTractionPhotos();
   };
+
+  const tractionPhotoSources = [
+    "/demo-bynatrum/traction/whx-01.jpg",
+    "/demo-bynatrum/traction/whx-02.jpg",
+    "/demo-bynatrum/traction/whx-03.jpg",
+    "/demo-bynatrum/traction/whx-04.jpg",
+  ];
+  function stopTractionPhotos() {
+    window.clearInterval(tractionPhotoTimer);
+  }
+
+  function rotateTractionPhotos() {
+    if (tractionPhotos.length !== 2) return;
+    const nextSources = [];
+    tractionPhotos.forEach((photo) => {
+      const availableSources = tractionPhotoSources.filter((source) => source !== photo.getAttribute("src") && !nextSources.includes(source));
+      const nextSource = availableSources[Math.floor(Math.random() * availableSources.length)];
+      nextSources.push(nextSource);
+      photo.classList.add("is-switching");
+      window.setTimeout(() => {
+        photo.src = nextSource;
+        photo.classList.remove("is-switching");
+      }, 280);
+    });
+  }
+
+  function scheduleTractionPhotos() {
+    stopTractionPhotos();
+    if (reducedMotion.matches || activeIndex !== 5 || teamPhase !== "engagement") return;
+    tractionPhotoTimer = window.setInterval(rotateTractionPhotos, 4200);
+  }
 
   teamProgress.forEach((control) => {
     control.addEventListener("click", () => {
@@ -500,6 +534,9 @@
       stopQueue();
       stopClinical();
     }
+
+    if (event.detail.index === 5) scheduleTractionPhotos();
+    else stopTractionPhotos();
   });
 
   // The final scene embeds the unchanged Naturalium demo. Cross-origin access is
