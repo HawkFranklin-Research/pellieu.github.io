@@ -16,13 +16,19 @@
   const liveDemoTabs = [...document.querySelectorAll("[data-live-demo-tab]")];
   const liveDemoRefresh = document.querySelector("[data-live-demo-refresh]");
   const liveDemoExternal = document.querySelector("[data-live-demo-external]");
+  const liveDemoContinue = document.querySelector("[data-live-demo-continue]");
   const clinicianScene = document.querySelector(".scene-clinician-combined");
   const clinicianPanels = [...document.querySelectorAll("[data-clinician-panel]")];
   const clinicianProgress = [...document.querySelectorAll("[data-clinician-phase-control]")];
+  const teamScene = document.querySelector(".team-traction-scene");
+  const teamPanels = [...document.querySelectorAll("[data-team-panel]")];
+  const teamProgress = [...document.querySelectorAll("[data-team-phase-control]")];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
   let clinicianPhase = "queue";
   let clinicianWheelLockedUntil = 0;
+  let teamPhase = "team";
+  let teamWheelLockedUntil = 0;
 
   if (!reel || scenes.length === 0) return;
 
@@ -69,6 +75,10 @@
       setClinicianPhase(previousIndex > 2 ? "review" : "queue");
     }
 
+    if (activeIndex === 5 && previousIndex !== 5) {
+      setTeamPhase(previousIndex > 5 ? "engagement" : "team");
+    }
+
     document.dispatchEvent(new CustomEvent("deck:scene", { detail: { index: activeIndex, id } }));
   };
 
@@ -98,12 +108,20 @@
         setClinicianPhase("review");
         return;
       }
+      if (activeIndex === 5 && teamPhase === "team") {
+        setTeamPhase("engagement");
+        return;
+      }
       goTo(activeIndex + 1);
     }
     if (["ArrowUp", "PageUp"].includes(event.key)) {
       event.preventDefault();
       if (activeIndex === 2 && clinicianPhase === "review") {
         setClinicianPhase("queue");
+        return;
+      }
+      if (activeIndex === 5 && teamPhase === "engagement") {
+        setTeamPhase("team");
         return;
       }
       goTo(activeIndex - 1);
@@ -417,6 +435,51 @@
     { passive: false },
   );
 
+  const setTeamPhase = (phase) => {
+    teamPhase = phase === "engagement" ? "engagement" : "team";
+    teamScene?.setAttribute("data-team-phase", teamPhase);
+    teamPanels.forEach((panel) => {
+      panel.classList.toggle("is-active", panel.dataset.teamPanel === teamPhase);
+    });
+    teamProgress.forEach((control) => {
+      const isActive = control.dataset.teamPhaseControl === teamPhase;
+      control.classList.toggle("is-active", isActive);
+      control.setAttribute("aria-pressed", String(isActive));
+    });
+  };
+
+  teamProgress.forEach((control) => {
+    control.addEventListener("click", () => {
+      setTeamPhase(control.dataset.teamPhaseControl);
+    });
+  });
+
+  reel.addEventListener(
+    "wheel",
+    (event) => {
+      const eventTarget = event.target instanceof Node ? event.target : null;
+      const isTeamInteraction = activeIndex === 5
+        || Boolean(eventTarget && teamScene?.contains(eventTarget));
+      if (!isTeamInteraction || Math.abs(event.deltaY) < 12) return;
+      const now = performance.now();
+      if (now < teamWheelLockedUntil) {
+        event.preventDefault();
+        return;
+      }
+
+      if (event.deltaY > 0 && teamPhase === "team") {
+        event.preventDefault();
+        teamWheelLockedUntil = now + 520;
+        setTeamPhase("engagement");
+      } else if (event.deltaY < 0 && teamPhase === "engagement") {
+        event.preventDefault();
+        teamWheelLockedUntil = now + 520;
+        setTeamPhase("team");
+      }
+    },
+    { passive: false },
+  );
+
   document.addEventListener("deck:scene", (event) => {
     if (event.detail.index === 0) {
       renderCapture(reducedMotion.matches ? 3 : 0);
@@ -491,6 +554,8 @@
   liveDemoFrame?.addEventListener("load", () => {
     liveDemoViewport?.classList.remove("is-loading");
   });
+
+  liveDemoContinue?.addEventListener("click", () => goTo(5));
 
   setLiveDemoView("patient");
 
