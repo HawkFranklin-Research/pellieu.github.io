@@ -912,26 +912,34 @@ img {
   --demo-violet: #8175ff;
 }
 
+.demo-deck-page .deck-topbar {
+  grid-template-columns: 310px 1fr 70px;
+}
+
+.demo-deck-brand {
+  gap: 13px;
+}
+
 .demo-deck-brand img {
-  width: 46px;
-  height: 46px;
-  border-radius: 0;
-  object-fit: contain;
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+  border: 1px solid rgba(180, 123, 17, 0.26);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 22px rgba(180, 123, 17, 0.1);
+  object-fit: cover;
 }
 
-.demo-deck-brand span {
-  margin-left: 2px;
-}
-
-.demo-deck-brand strong {
-  color: #b47b11;
-  font-size: 16px;
+.demo-deck-brand > strong {
+  color: var(--demo-ink);
+  font-size: 23px;
+  font-weight: 720;
   letter-spacing: -0.025em;
 }
 
-.demo-deck-brand small {
-  color: #8b681f;
-  opacity: 0.78;
+.demo-deck-brand > strong span {
+  color: #b47b11;
 }
 
 .demo-opening {
@@ -1005,6 +1013,20 @@ img {
   font-size: clamp(14px, 1.25vw, 19px);
 }
 
+.demo-opening-copy .scene-lede strong,
+.demo-opening-copy .scene-lede span {
+  display: block;
+}
+
+.demo-opening-copy .scene-lede strong {
+  color: #173f3a;
+  font-size: clamp(17px, 1.45vw, 22px);
+}
+
+.demo-opening-copy .scene-lede span {
+  margin-top: 5px;
+}
+
 .demo-opening-benefits {
   display: flex;
   flex-wrap: wrap;
@@ -1040,6 +1062,14 @@ img {
 .demo-opening-copy .patient-steps {
   max-width: 680px;
   margin-top: 14px;
+}
+
+.demo-opening-copy .patient-steps span {
+  font-size: 10px;
+}
+
+.demo-opening-copy .patient-steps strong {
+  font-size: clamp(13px, 1vw, 16px);
 }
 
 .demo-opening-copy .scroll-cue {
@@ -1153,19 +1183,19 @@ img {
   display: grid;
   grid-template-columns: 27px minmax(0, 1fr);
   gap: 10px;
-  min-height: 90px;
+  min-height: 66px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(8, 36, 43, 0.1);
 }
 
 .step-number {
   color: #748884;
-  font: 700 9px/1 "Geist Mono", monospace;
+  font: 700 11px/1 "Geist Mono", monospace;
 }
 
 .journey-boundary h3 {
   margin: 0 0 5px;
-  font-size: clamp(17px, 1.5vw, 23px);
+  font-size: clamp(20px, 1.7vw, 28px);
   letter-spacing: -0.045em;
 }
 
@@ -1178,8 +1208,8 @@ img {
 
 .journey-phone {
   position: relative;
-  width: min(100%, 300px);
-  height: min(54vh, 520px);
+  width: min(100%, 340px);
+  height: min(58vh, 600px);
   margin: 13px auto 15px;
   padding: 7px;
   border: 1px solid rgba(245, 248, 245, 0.2);
@@ -1237,7 +1267,7 @@ img {
 .journey-phone-status {
   padding: 9px 16px 4px;
   color: rgba(245, 248, 245, 0.5);
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .journey-phone-bar {
@@ -1246,16 +1276,16 @@ img {
 }
 
 .journey-phone-bar > span {
-  width: 21px;
-  height: 21px;
+  width: 28px;
+  height: 28px;
   padding: 3px;
   border-radius: 6px;
   background: rgba(245, 248, 245, 0.08);
 }
 
 .journey-phone-bar strong {
-  margin-left: -32px;
-  font-size: 9px;
+  margin-left: -38px;
+  font-size: 13px;
 }
 
 .journey-phone-bar small {
@@ -1263,7 +1293,7 @@ img {
   border: 1px solid rgba(43, 224, 173, 0.18);
   border-radius: 999px;
   color: var(--mint);
-  font-size: 6px;
+  font-size: 8px;
 }
 
 .journey-phone-content {
@@ -1273,13 +1303,13 @@ img {
 .journey-phone-content > p {
   margin: 0 0 7px;
   color: var(--mint);
-  font: 700 6px/1 "Geist Mono", monospace;
+  font: 700 10px/1 "Geist Mono", monospace;
   letter-spacing: 0.08em;
 }
 
 .journey-phone-content h4 {
   margin: 0 0 12px;
-  font-size: clamp(17px, 1.35vw, 22px);
+  font-size: clamp(22px, 1.65vw, 28px);
   letter-spacing: -0.045em;
   line-height: 1.05;
 }
@@ -1292,7 +1322,7 @@ img {
 
 .journey-photo-pair figure {
   position: relative;
-  height: min(18vh, 170px);
+  height: min(20vh, 205px);
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(245, 248, 245, 0.12);
@@ -1316,7 +1346,7 @@ img {
   border-radius: 6px;
   color: #eef7f5;
   background: rgba(2, 7, 17, 0.72);
-  font-size: 7px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -1346,14 +1376,14 @@ img {
 .journey-capture-note strong,
 .journey-case-chip strong,
 .journey-clinician strong {
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .journey-capture-note span,
 .journey-case-chip span,
 .journey-clinician small {
   color: rgba(245, 248, 245, 0.52);
-  font-size: 6px;
+  font-size: 9px;
   line-height: 1.45;
 }
 
@@ -1368,7 +1398,7 @@ img {
   border-radius: 999px;
   color: rgba(245, 248, 245, 0.62);
   background: rgba(245, 248, 245, 0.06);
-  font-size: 6px;
+  font-size: 9px;
 }
 
 .journey-signal-photo {
@@ -1398,49 +1428,61 @@ img {
 
 .journey-signal-card {
   justify-content: space-between;
-  padding: 10px;
+  padding: 13px;
   border: 1px solid rgba(88, 185, 255, 0.16);
   border-radius: 11px;
   background: rgba(88, 185, 255, 0.06);
 }
 
-.journey-signal-card div {
-  display: grid;
-}
-
-.journey-signal-card small,
 .journey-disclaimer {
-  font-size: 6px;
+  font-size: 8px;
 }
 
 .journey-signal-card strong {
-  font-size: 10px;
+  font-size: 17px;
 }
 
 .journey-signal-card > span {
   display: grid;
-  width: 23px;
-  height: 23px;
+  width: 31px;
+  height: 31px;
   place-items: center;
   border-radius: 50%;
   color: var(--ink);
   background: var(--mint);
 }
 
-.journey-result-lines {
+.journey-condition-signals {
   display: grid;
-  gap: 5px;
-  margin: 10px 0;
+  gap: 7px;
+  margin: 13px 0 11px;
 }
 
-.journey-result-lines i {
-  height: 5px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(129, 117, 255, 0.8) 0 68%, rgba(245, 248, 245, 0.07) 68%);
+.journey-condition-signals > p {
+  margin: 0 0 2px;
+  color: rgba(245, 248, 245, 0.48);
+  font: 700 8px/1.2 "Geist Mono", monospace;
+  letter-spacing: 0.07em;
 }
 
-.journey-result-lines i:nth-child(2) { background: linear-gradient(90deg, rgba(88, 185, 255, 0.7) 0 44%, rgba(245, 248, 245, 0.07) 44%); }
-.journey-result-lines i:nth-child(3) { background: linear-gradient(90deg, rgba(255, 116, 94, 0.65) 0 29%, rgba(245, 248, 245, 0.07) 29%); }
+.journey-condition-signals > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 29px;
+  padding: 5px 8px;
+  border: 1px solid rgba(245, 248, 245, 0.07);
+  border-radius: 8px;
+  color: rgba(245, 248, 245, 0.76);
+  background: rgba(245, 248, 245, 0.03);
+  font-size: 10px;
+}
+
+.journey-condition-signals strong {
+  color: var(--mint);
+  font: 750 10px/1 "Geist Mono", monospace;
+}
+
 .journey-disclaimer { display: block; color: rgba(245, 248, 245, 0.4); text-align: center; }
 
 .journey-case-chip {
@@ -1452,8 +1494,8 @@ img {
 }
 
 .journey-case-chip img {
-  width: 42px;
-  height: 42px;
+  width: 54px;
+  height: 54px;
   border-radius: 8px;
 }
 
@@ -1473,14 +1515,14 @@ img {
 
 .journey-clinician b {
   display: grid;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
   color: var(--ink);
   background: var(--demo-blue);
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .journey-clinician i {
@@ -1493,7 +1535,7 @@ img {
   gap: 7px;
   margin-top: 11px;
   color: rgba(245, 248, 245, 0.55);
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .journey-consent span {
@@ -1519,15 +1561,23 @@ img {
 
 .journey-step-copy h3 {
   margin: 0 0 6px;
-  font-size: clamp(16px, 1.35vw, 22px);
+  font-size: clamp(19px, 1.55vw, 26px);
   letter-spacing: -0.05em;
 }
 
 .journey-step-copy p {
   margin: 0;
   color: #637875;
-  font-size: clamp(9px, 0.7vw, 11px);
+  font-size: clamp(11px, 0.9vw, 14px);
   line-height: 1.5;
+}
+
+.journey-step-copy p span {
+  display: block;
+}
+
+.journey-step-copy p span + span {
+  margin-top: 4px;
 }
 
 /* Full-width clinician scene with a queue -> patient record internal step */
@@ -1944,6 +1994,14 @@ img {
 }
 
 @media (max-width: 1100px) {
+  .demo-deck-page .deck-topbar {
+    grid-template-columns: 230px 1fr 60px;
+  }
+
+  .demo-deck-brand > strong {
+    font-size: 18px;
+  }
+
   .demo-opening-layout {
     grid-template-columns: minmax(0, 1fr) minmax(290px, 0.68fr);
     gap: 30px;
@@ -1963,6 +2021,7 @@ img {
 
   .journey-phone {
     width: min(100%, 250px);
+    height: min(55vh, 520px);
   }
 
   .scene-clinician-combined .dashboard-paper {
@@ -2038,8 +2097,8 @@ img {
     height: 38px;
   }
 
-  .demo-deck-brand span {
-    display: none;
+  .demo-deck-brand > strong {
+    font-size: 15px;
   }
 
   .demo-opening-layout {
@@ -3296,6 +3355,10 @@ img {
 
 /* Keep the demo-specific responsive layout authoritative over copied deck rules. */
 @media (max-width: 900px) {
+  .demo-deck-page .deck-topbar {
+    grid-template-columns: 210px 1fr 54px;
+  }
+
   .demo-deck-brand img {
     width: 44px;
     height: 44px;
