@@ -6,6 +6,315 @@
   font-display: swap;
 }
 
+/* Final live demonstration scene */
+
+.live-demo-scene {
+  color: var(--porcelain);
+  background: #071d24;
+}
+
+.live-demo-background {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(43, 224, 173, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 82%, rgba(129, 117, 255, 0.16), transparent 38%),
+    linear-gradient(135deg, #071d24, #0b3037 62%, #102a35);
+}
+
+.scene-inner.live-demo-layout {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: clamp(13px, 1.8vh, 22px);
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  padding: clamp(74px, 8vh, 94px) clamp(16px, 3vw, 48px) clamp(18px, 2.5vh, 30px);
+}
+
+.demo-deck-page .deck-progress {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.live-demo-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(94vw, 1740px);
+  margin: 0 auto;
+}
+
+.live-demo-heading p {
+  margin: 0 0 7px;
+  color: var(--mint);
+  font: 750 10px/1 "Geist Mono", monospace;
+  letter-spacing: 0.14em;
+}
+
+.live-demo-scene .live-demo-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(27px, 3.2vw, 52px);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.live-demo-heading > span {
+  padding-bottom: 3px;
+  color: #a9bec1;
+  font-size: clamp(11px, 0.9vw, 14px);
+}
+
+.live-browser {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(94vw, 1740px);
+  min-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(245, 248, 245, 0.19);
+  border-radius: clamp(16px, 1.5vw, 24px);
+  background: #f7faf8;
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.38);
+}
+
+.live-browser-toolbar {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) auto minmax(220px, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 62px;
+  padding: 9px 13px;
+  border-bottom: 1px solid #dce5e1;
+  color: #17353a;
+  background: #eef4f1;
+}
+
+.live-browser-identity {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.live-browser-identity i {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #ff745e;
+}
+
+.live-browser-identity i:nth-child(2) { background: #e9bc54; }
+.live-browser-identity i:nth-child(3) { margin-right: 13px; background: #36bd8f; }
+
+.live-browser-identity span {
+  overflow: hidden;
+  color: #607579;
+  font: 650 11px/1 "Geist Mono", monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-browser-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid #d4dfdb;
+  border-radius: 13px;
+  background: #e4ece8;
+}
+
+.live-browser-tabs button,
+.live-browser-actions button,
+.live-browser-actions a {
+  min-height: 38px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.live-browser-tabs button {
+  padding: 9px 15px;
+  color: #587074;
+  background: transparent;
+  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.live-browser-tabs button:hover,
+.live-browser-tabs button:focus-visible {
+  color: #0b3a34;
+}
+
+.live-browser-tabs button.is-active {
+  color: #073c32;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(13, 54, 51, 0.1);
+}
+
+.live-browser-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.live-browser-actions button,
+.live-browser-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+}
+
+.live-browser-actions button {
+  color: #38575a;
+  background: #dde8e3;
+}
+
+.live-browser-actions a {
+  color: #032d26;
+  background: var(--mint);
+}
+
+.live-browser-tabs button:focus-visible,
+.live-browser-actions button:focus-visible,
+.live-browser-actions a:focus-visible {
+  outline: 3px solid rgba(8, 120, 93, 0.38);
+  outline-offset: 2px;
+}
+
+.live-browser-viewport {
+  position: relative;
+  min-height: 0;
+  background: #fff;
+}
+
+.live-browser-viewport iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  background: #fff;
+}
+
+.live-browser-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 13px;
+  color: #34595b;
+  background: rgba(247, 250, 248, 0.94);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.live-browser-viewport.is-loading .live-browser-loading {
+  opacity: 1;
+}
+
+.live-browser-loading i {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #cbdad4;
+  border-top-color: #08785d;
+  border-radius: 50%;
+  animation: live-demo-spin 720ms linear infinite;
+}
+
+.live-browser-loading span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@keyframes live-demo-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .scene-inner.live-demo-layout {
+    height: 100svh;
+    min-height: 0;
+    padding: 72px 12px 14px;
+  }
+
+  .live-demo-heading {
+    width: 96vw;
+  }
+
+  .live-demo-heading > span {
+    display: none;
+  }
+
+  .live-browser {
+    width: 96vw;
+  }
+
+  .live-browser-toolbar {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  .live-browser-identity {
+    display: none;
+  }
+
+  .live-browser-actions button span {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .scene-inner.live-demo-layout {
+    gap: 9px;
+    padding-top: 68px;
+  }
+
+  .live-demo-heading p {
+    margin-bottom: 4px;
+    font-size: 8px;
+  }
+
+  .live-demo-heading h2 {
+    font-size: 24px;
+  }
+
+  .live-browser-toolbar {
+    grid-template-columns: 1fr;
+    min-height: 98px;
+    padding: 7px;
+  }
+
+  .live-browser-tabs,
+  .live-browser-actions {
+    width: 100%;
+  }
+
+  .live-browser-tabs button,
+  .live-browser-actions a {
+    flex: 1 1 0;
+  }
+
+  .live-browser-actions button {
+    flex: 0 0 42px;
+    padding-inline: 8px;
+  }
+
+  .live-browser-actions a {
+    font-size: 11px;
+  }
+}
+
 @font-face {
   font-family: "Geist Mono";
   src: url("./fonts/geist-mono.woff2") format("woff2");

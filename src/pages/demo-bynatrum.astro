@@ -7,7 +7,7 @@
     <title>PelliScope Dermatology Telemedicine Platform | HawkFranklin OÜ</title>
     <meta
       name="description"
-      content="A four-scene introduction to PelliScope digital dermatology intake, AI-assisted screening, clinical review and operational workflow."
+      content="A five-scene introduction to PelliScope digital dermatology intake, AI-assisted screening, clinical review, operational workflow and a live demonstration."
     />
     <link rel="canonical" href="https://pelliscope.eu/demo-bynatrum.html" />
     <meta property="og:title" content="PelliScope Dermatology Telemedicine Platform | HawkFranklin OÜ" />
@@ -37,9 +37,10 @@
           <button type="button" aria-label="Go to the patient journey"><span></span></button>
           <button type="button" aria-label="Go to the clinician workspace"><span></span></button>
           <button type="button" aria-label="Go to workflow evidence"><span></span></button>
+          <button type="button" aria-label="Go to the live demonstration"><span></span></button>
         </nav>
 
-        <span class="deck-counter" aria-live="polite">01 / 04</span>
+        <span class="deck-counter" aria-live="polite">01 / 05</span>
       </header>
 
       <aside class="deck-actions" aria-label="Page actions">
@@ -386,6 +387,68 @@
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="deck-scene live-demo-scene" id="live-demo" data-tone="dark" aria-labelledby="live-demo-title">
+          <div class="live-demo-background" aria-hidden="true"></div>
+          <div class="scene-inner live-demo-layout">
+            <header class="live-demo-heading scene-reveal">
+              <div>
+                <p>05 / LIVE DEMONSTRATION</p>
+                <h2 id="live-demo-title">Experience the complete workflow.</h2>
+              </div>
+              <span>Live application · Manual clinician sign-in</span>
+            </header>
+
+            <div class="live-browser scene-reveal" data-live-demo>
+              <header class="live-browser-toolbar">
+                <div class="live-browser-identity" aria-hidden="true">
+                  <i></i><i></i><i></i>
+                  <span data-live-demo-address>demo.pelliscope.eu</span>
+                </div>
+
+                <div class="live-browser-tabs" role="tablist" aria-label="Live demonstration views">
+                  <button
+                    class="is-active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    data-live-demo-tab="patient"
+                  >Patient Demo</button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    data-live-demo-tab="clinician"
+                  >Clinician Portal</button>
+                </div>
+
+                <div class="live-browser-actions">
+                  <button type="button" data-live-demo-refresh aria-label="Refresh the embedded demonstration">↻ <span>Refresh</span></button>
+                  <a
+                    href="https://demo.pelliscope.eu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-live-demo-external
+                  >Open in new tab <span>↗</span></a>
+                </div>
+              </header>
+
+              <div class="live-browser-viewport is-loading" data-live-demo-viewport>
+                <div class="live-browser-loading" role="status" aria-live="polite">
+                  <i aria-hidden="true"></i>
+                  <span>Loading the live demonstration…</span>
+                </div>
+                <iframe
+                  src="https://demo.pelliscope.eu/"
+                  title="Naturalium patient demonstration"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  loading="lazy"
+                  data-live-demo-frame
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>

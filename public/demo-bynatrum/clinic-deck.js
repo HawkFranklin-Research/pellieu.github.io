@@ -9,6 +9,13 @@
   const shareButton = document.querySelector("[data-share]");
   const toast = document.querySelector(".deck-toast");
   const nextButton = document.querySelector("[data-next]");
+  const liveDemo = document.querySelector("[data-live-demo]");
+  const liveDemoFrame = document.querySelector("[data-live-demo-frame]");
+  const liveDemoViewport = document.querySelector("[data-live-demo-viewport]");
+  const liveDemoAddress = document.querySelector("[data-live-demo-address]");
+  const liveDemoTabs = [...document.querySelectorAll("[data-live-demo-tab]")];
+  const liveDemoRefresh = document.querySelector("[data-live-demo-refresh]");
+  const liveDemoExternal = document.querySelector("[data-live-demo-external]");
   const clinicianScene = document.querySelector(".scene-clinician-combined");
   const clinicianPanels = [...document.querySelectorAll("[data-clinician-panel]")];
   const clinicianProgress = [...document.querySelectorAll("[data-clinician-phase-control]")];
@@ -431,6 +438,61 @@
       stopClinical();
     }
   });
+
+  // The final scene embeds the unchanged Naturalium demo. Cross-origin access is
+  // intentionally limited to navigation and load-state events.
+  const liveDemoViews = {
+    patient: {
+      url: "https://demo.pelliscope.eu/",
+      title: "Naturalium patient demonstration",
+      address: "demo.pelliscope.eu",
+    },
+    clinician: {
+      url: "https://demo.pelliscope.eu/clinician",
+      title: "Naturalium clinician portal demonstration",
+      address: "demo.pelliscope.eu/clinician",
+    },
+  };
+  let liveDemoView = "patient";
+
+  const markLiveDemoLoading = () => liveDemoViewport?.classList.add("is-loading");
+
+  const setLiveDemoView = (view) => {
+    if (!liveDemo || !liveDemoFrame || !liveDemoViews[view]) return;
+    liveDemoView = view;
+    const selected = liveDemoViews[liveDemoView];
+
+    liveDemoTabs.forEach((tab) => {
+      const isActive = tab.dataset.liveDemoTab === liveDemoView;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    if (liveDemoAddress) liveDemoAddress.textContent = selected.address;
+    if (liveDemoExternal) liveDemoExternal.href = selected.url;
+    liveDemoFrame.title = selected.title;
+
+    if (liveDemoFrame.src !== selected.url) {
+      markLiveDemoLoading();
+      liveDemoFrame.src = selected.url;
+    }
+  };
+
+  liveDemoTabs.forEach((tab) => {
+    tab.addEventListener("click", () => setLiveDemoView(tab.dataset.liveDemoTab));
+  });
+
+  liveDemoRefresh?.addEventListener("click", () => {
+    if (!liveDemoFrame) return;
+    markLiveDemoLoading();
+    liveDemoFrame.src = liveDemoViews[liveDemoView].url;
+  });
+
+  liveDemoFrame?.addEventListener("load", () => {
+    liveDemoViewport?.classList.remove("is-loading");
+  });
+
+  setLiveDemoView("patient");
 
   shareButton?.addEventListener("click", async () => {
     const data = {
