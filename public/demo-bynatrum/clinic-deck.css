@@ -913,14 +913,25 @@ img {
 }
 
 .demo-deck-brand img {
-  width: clamp(112px, 10vw, 158px);
-  height: auto;
+  width: 46px;
+  height: 46px;
   border-radius: 0;
   object-fit: contain;
 }
 
 .demo-deck-brand span {
-  margin-left: 3px;
+  margin-left: 2px;
+}
+
+.demo-deck-brand strong {
+  color: #b47b11;
+  font-size: 16px;
+  letter-spacing: -0.025em;
+}
+
+.demo-deck-brand small {
+  color: #8b681f;
+  opacity: 0.78;
 }
 
 .demo-opening {
@@ -958,21 +969,34 @@ img {
   align-self: center;
 }
 
-.demo-hawk-logo {
-  width: clamp(190px, 20vw, 310px);
-  height: auto;
+.demo-product-lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 15px;
+  color: var(--demo-teal);
+}
+
+.demo-product-lockup img {
+  width: clamp(52px, 4.6vw, 72px);
+  height: clamp(52px, 4.6vw, 72px);
+  border-radius: 18px;
+  object-fit: contain;
+}
+
+.demo-product-lockup strong {
+  font-size: clamp(44px, 4.5vw, 70px);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
 }
 
 .demo-opening-copy h1 {
   max-width: 760px;
   margin-bottom: 18px;
-  font-size: clamp(52px, 5.6vw, 88px);
-  line-height: 0.9;
-}
-
-.demo-opening-copy h1 > span {
-  color: var(--demo-teal);
+  color: var(--demo-ink);
+  font-size: clamp(50px, 5.15vw, 82px);
+  line-height: 0.91;
 }
 
 .demo-opening-copy .scene-lede {
@@ -989,12 +1013,12 @@ img {
 }
 
 .demo-opening-benefits span {
-  padding: 8px 11px;
+  padding: 10px 14px;
   border: 1px solid rgba(8, 36, 43, 0.14);
   border-radius: 999px;
   color: #315e58;
   background: rgba(255, 255, 255, 0.42);
-  font-size: 9px;
+  font-size: clamp(11px, 0.86vw, 14px);
   font-weight: 720;
 }
 
@@ -1002,11 +1026,11 @@ img {
   display: inline-flex;
   width: fit-content;
   margin-top: 13px;
-  padding: 9px 12px;
+  padding: 11px 15px;
   border-left: 3px solid var(--demo-teal);
   color: #073f32;
   background: rgba(255, 255, 255, 0.5);
-  font-size: 11px;
+  font-size: clamp(13px, 1vw, 16px);
 }
 
 .demo-opening-copy .clinical-boundary {
@@ -1026,7 +1050,7 @@ img {
 }
 
 .demo-opening .phone-story {
-  width: min(30vw, 390px);
+  width: min(34vw, 470px);
 }
 
 .demo-possible-matches {
@@ -2010,7 +2034,8 @@ img {
 
 @media (max-width: 620px) {
   .demo-deck-brand img {
-    width: 95px;
+    width: 38px;
+    height: 38px;
   }
 
   .demo-deck-brand span {
@@ -3272,8 +3297,8 @@ img {
 /* Keep the demo-specific responsive layout authoritative over copied deck rules. */
 @media (max-width: 900px) {
   .demo-deck-brand img {
-    width: 96px;
-    height: auto;
+    width: 44px;
+    height: 44px;
   }
 
   .demo-opening-layout {
@@ -3301,8 +3326,396 @@ img {
     text-align: center;
   }
 
+  .demo-product-lockup {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .demo-product-lockup img {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .demo-product-lockup strong {
+    font-size: 36px;
+  }
+
   .demo-opening .phone-story {
     width: min(76vw, 300px);
     margin: 0 auto;
+  }
+}
+
+/* Scene 1 desktop phone: use the available handset space for legible content. */
+@media (min-width: 1200px) {
+  .demo-opening .phone-story {
+    width: min(34vw, 470px);
+  }
+
+  .demo-opening .phone-hardware {
+    top: 20px;
+    width: 96px;
+    height: 28px;
+  }
+
+  .demo-opening .phone-hardware span {
+    top: 12px;
+    left: 35px;
+    width: 34px;
+    height: 4px;
+  }
+
+  .demo-opening .phone-hardware i {
+    top: 10px;
+    right: 11px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .demo-opening .phone-status {
+    top: 16px;
+    padding-inline: 28px;
+    font-size: 10px;
+  }
+
+  .demo-opening .phone-app-bar {
+    top: 51px;
+    right: 17px;
+    left: 17px;
+    gap: 10px;
+    padding-bottom: 15px;
+  }
+
+  .demo-opening .phone-app-bar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+
+  .demo-opening .phone-app-bar strong {
+    font-size: 15px;
+  }
+
+  .demo-opening .phone-app-bar span {
+    padding: 6px 9px;
+    font-size: 7px;
+  }
+
+  .demo-opening .phone-screens {
+    inset: 100px 16px 25px;
+  }
+
+  .demo-opening .phone-screen {
+    padding: 21px 14px 14px;
+  }
+
+  .demo-opening .screen-step {
+    margin-bottom: 15px !important;
+    font-size: 10px;
+  }
+
+  .demo-opening .phone-screen h3 {
+    max-width: 360px;
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: 1.01;
+  }
+
+  .demo-opening .phone-screen > button {
+    min-height: 54px;
+    padding-inline: 18px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  .demo-opening .capture-camera-screen {
+    padding: 17px 12px 12px;
+  }
+
+  .demo-opening .capture-camera-screen .screen-step {
+    margin-bottom: 12px !important;
+  }
+
+  .demo-opening .capture-camera-screen h3 {
+    margin-bottom: 14px;
+    font-size: 28px;
+  }
+
+  .demo-opening .camera-capture-view {
+    height: 355px;
+    border-radius: 20px;
+  }
+
+  .demo-opening .camera-guidance {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    gap: 11px;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .demo-opening .camera-guidance > span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .demo-opening .camera-guidance p {
+    font-size: 11px;
+  }
+
+  .demo-opening .camera-guidance strong {
+    font-size: 13px;
+  }
+
+  .demo-opening .camera-controls {
+    grid-template-columns: 1fr 72px 1fr;
+    min-height: 94px;
+  }
+
+  .demo-opening .camera-mode {
+    font-size: 9px;
+  }
+
+  .demo-opening .camera-shutter {
+    width: 68px;
+    height: 68px;
+  }
+
+  .demo-opening .camera-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .demo-opening .camera-captured {
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 13px;
+  }
+
+  .demo-opening .camera-captured > i {
+    width: 29px;
+    height: 29px;
+    font-size: 12px;
+  }
+
+  .demo-opening .camera-captured p {
+    font-size: 10px;
+  }
+
+  .demo-opening .camera-captured strong {
+    font-size: 13px;
+  }
+
+  .demo-opening .phone-photo-grid {
+    grid-template-rows: 205px 96px;
+    gap: 10px;
+  }
+
+  .demo-opening .phone-photo-grid figure,
+  .demo-opening .phone-photo-grid > div {
+    border-radius: 15px;
+  }
+
+  .demo-opening .phone-photo-grid figure span {
+    left: 10px;
+    bottom: 10px;
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .demo-opening .phone-photo-grid figure i {
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .demo-opening .phone-photo-grid > div b {
+    font-size: 30px;
+  }
+
+  .demo-opening .phone-photo-grid > div span {
+    font-size: 11px;
+  }
+
+  .demo-opening .capture-guide {
+    gap: 12px;
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 13px;
+  }
+
+  .demo-opening .capture-guide i {
+    width: 10px;
+    height: 10px;
+  }
+
+  .demo-opening .capture-guide p {
+    font-size: 11px;
+  }
+
+  .demo-opening .capture-guide strong {
+    font-size: 13px;
+  }
+
+  .demo-opening .screening-result-screen,
+  .demo-opening .clinician-list-screen {
+    padding: 17px 12px 12px;
+  }
+
+  .demo-opening .screening-result-screen .screen-step,
+  .demo-opening .clinician-list-screen .screen-step {
+    margin-bottom: 13px !important;
+  }
+
+  .demo-opening .screening-verdict {
+    gap: 14px;
+    padding: 15px 16px;
+    border-radius: 15px;
+  }
+
+  .demo-opening .screening-verdict > span {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .demo-opening .screening-verdict small {
+    font-size: 8px;
+  }
+
+  .demo-opening .screening-verdict strong {
+    font-size: 23px;
+  }
+
+  .demo-opening .signal-scores {
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .demo-opening .signal-score > p {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+
+  .demo-opening .signal-score > p strong {
+    font-size: 14px;
+  }
+
+  .demo-opening .signal-score > i {
+    height: 10px;
+  }
+
+  .demo-opening .demo-possible-matches {
+    margin-top: 17px;
+    padding: 15px 16px;
+    border-radius: 15px;
+  }
+
+  .demo-opening .demo-possible-matches > p {
+    margin-bottom: 9px;
+    font-size: 9px;
+  }
+
+  .demo-opening .demo-possible-matches > p small {
+    font-size: 8px;
+  }
+
+  .demo-opening .demo-possible-matches ol {
+    gap: 6px;
+  }
+
+  .demo-opening .demo-possible-matches li {
+    grid-template-columns: 30px 1fr auto;
+    min-height: 58px;
+    padding: 10px 0 13px;
+  }
+
+  .demo-opening .demo-possible-matches li > span {
+    font-size: 9px;
+  }
+
+  .demo-opening .demo-possible-matches li > strong {
+    font-size: 16px;
+  }
+
+  .demo-opening .demo-possible-matches li > b {
+    font-size: 14px;
+  }
+
+  .demo-opening .demo-possible-matches li > i {
+    left: 36px;
+    height: 4px;
+  }
+
+  .demo-opening .screening-result-screen > small {
+    font-size: 9px;
+  }
+
+  .demo-opening .clinician-list-screen h3 {
+    margin-bottom: 8px;
+    font-size: 29px;
+  }
+
+  .demo-opening .clinician-list-copy {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .demo-opening .teleconsult-list {
+    gap: 11px;
+  }
+
+  .demo-opening .teleconsult-list article {
+    grid-template-columns: 46px minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 76px;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .demo-opening .teleconsult-avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 11px;
+  }
+
+  .demo-opening .demo-teleconsult-list article > div {
+    gap: 3px;
+  }
+
+  .demo-opening .demo-teleconsult-list article > div strong {
+    font-size: 15px;
+  }
+
+  .demo-opening .demo-teleconsult-list article > div small {
+    font-size: 9px;
+  }
+
+  .demo-opening .demo-teleconsult-list article > div em {
+    font-size: 8px;
+  }
+
+  .demo-opening .teleconsult-list article > b {
+    max-width: 82px;
+    padding: 7px 9px;
+    font-size: 8px;
+  }
+
+  .demo-opening .clinician-list-screen > button {
+    min-height: 52px;
+  }
+
+  .demo-opening .phone-controls {
+    margin-top: 14px;
+  }
+
+  .demo-opening .phone-controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 10px;
   }
 }
