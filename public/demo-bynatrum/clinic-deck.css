@@ -24,47 +24,16 @@
 
 .scene-inner.live-demo-layout {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  gap: clamp(13px, 1.8vh, 22px);
+  grid-template-rows: minmax(0, 1fr);
   width: 100%;
   max-width: none;
   height: 100%;
   min-height: 0;
-  padding: clamp(74px, 8vh, 94px) clamp(16px, 3vw, 48px) clamp(18px, 2.5vh, 30px);
+  padding: clamp(82px, 8.5vh, 90px) clamp(16px, 3vw, 48px) clamp(14px, 2vh, 24px);
 }
 
 .demo-deck-page .deck-progress {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.live-demo-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  width: min(94vw, 1740px);
-  margin: 0 auto;
-}
-
-.live-demo-heading p {
-  margin: 0 0 7px;
-  color: var(--mint);
-  font: 750 10px/1 "Geist Mono", monospace;
-  letter-spacing: 0.14em;
-}
-
-.live-demo-scene .live-demo-heading h2 {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(27px, 3.2vw, 52px);
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-}
-
-.live-demo-heading > span {
-  padding-bottom: 3px;
-  color: #a9bec1;
-  font-size: clamp(11px, 0.9vw, 14px);
 }
 
 .live-browser {
@@ -85,8 +54,8 @@
   grid-template-columns: minmax(170px, 1fr) auto minmax(220px, 1fr);
   align-items: center;
   gap: 16px;
-  min-height: 62px;
-  padding: 9px 13px;
+  min-height: 44px;
+  padding: 3px 10px;
   border-bottom: 1px solid #dce5e1;
   color: #17353a;
   background: #eef4f1;
@@ -121,7 +90,7 @@
 .live-browser-tabs {
   display: flex;
   gap: 5px;
-  padding: 4px;
+  padding: 2px;
   border: 1px solid #d4dfdb;
   border-radius: 13px;
   background: #e4ece8;
@@ -130,7 +99,7 @@
 .live-browser-tabs button,
 .live-browser-actions button,
 .live-browser-actions a {
-  min-height: 38px;
+  min-height: 32px;
   border: 0;
   border-radius: 9px;
   cursor: pointer;
@@ -140,7 +109,7 @@
 }
 
 .live-browser-tabs button {
-  padding: 9px 15px;
+  padding: 5px 15px;
   color: #587074;
   background: transparent;
   transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
@@ -169,7 +138,7 @@
   align-items: center;
   justify-content: center;
   gap: 7px;
-  padding: 9px 12px;
+  padding: 5px 12px;
 }
 
 .live-browser-actions button {
@@ -245,15 +214,7 @@
   .scene-inner.live-demo-layout {
     height: 100svh;
     min-height: 0;
-    padding: 72px 12px 14px;
-  }
-
-  .live-demo-heading {
-    width: 96vw;
-  }
-
-  .live-demo-heading > span {
-    display: none;
+    padding: 72px 12px 10px;
   }
 
   .live-browser {
@@ -276,23 +237,13 @@
 
 @media (max-width: 620px) {
   .scene-inner.live-demo-layout {
-    gap: 9px;
     padding-top: 68px;
-  }
-
-  .live-demo-heading p {
-    margin-bottom: 4px;
-    font-size: 8px;
-  }
-
-  .live-demo-heading h2 {
-    font-size: 24px;
   }
 
   .live-browser-toolbar {
     grid-template-columns: 1fr;
-    min-height: 98px;
-    padding: 7px;
+    min-height: 76px;
+    padding: 4px 6px;
   }
 
   .live-browser-tabs,
