@@ -1,0 +1,23 @@
+a: Herpes Zoster | Infectious
+b: Herpes Zoster | Infectious
+c: Herpes Zoster | Infectious
+d: Drug Rash | Non-infectious
+e: Drug Rash | Non-infectious
+f: Drug Rash | Non-infectious
+g: Psoriasis | Non-infectious
+h: Psoriasis | Non-infectious
+i: Folliculitis | Infectious
+j: Folliculitis | Infectious
+k: Tinea | Infectious
+l: Allergic Contact Dermatitis | Non-infectious
+m: Allergic Contact Dermatitis | Non-infectious
+n: Allergic Contact Dermatitis | Non-infectious
+o: Insect Bite | Non-infectious
+p: Insect Bite | Non-infectious
+q: Insect Bite | Non-infectious
+r: Insect Bite | Non-infectious
+s: Insect Bite | Non-infectious
+t: Insect Bite | Non-infectious
+u: Irritant Contact Dermatitis | Non-infectious
+v: Irritant Contact Dermatitis | Non-infectious
+w: Irritant Contact Dermatitis | Non-infectious

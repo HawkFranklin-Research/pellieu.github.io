@@ -42,15 +42,36 @@ const sampleCases = [
         <p class="downloads-kicker"><span></span>Presentation resources</p>
         <h1>Presentation resources,<br /><em>ready to download.</em></h1>
         <p class="downloads-lede">
-          Download the demonstration photographs used throughout the PelliScope clinic presentation or the
-          Naturalium interpreter briefing document.
+          Download the demonstration photographs used throughout the PelliScope clinic presentation in their
+          original mixed formats or as a JPEG-compatible package, alongside the Naturalium interpreter briefing.
         </p>
         <div class="downloads-actions">
           <div>
             <a class="downloads-primary" href="/downloads/pelliscope-sample-cases.zip" download>
-              Download sample images <span>↓</span>
+              Download original sample images <span>↓</span>
             </a>
             <p class="downloads-format">ZIP archive · 4 folders · 9 images · JPEG and WebP</p>
+          </div>
+          <div>
+            <a class="downloads-secondary" href="/downloads/pelliscope-sample-cases-jpeg.zip" download>
+              Download JPEG-compatible images <span>↓</span>
+            </a>
+            <p class="downloads-format">Separate ZIP archive · 4 folders · 9 JPEG images</p>
+          </div>
+          <div>
+            <a class="downloads-secondary" href="/downloads/pelliscope-original-jpeg-sample-case.zip" download>
+              Download original three-view JPEG case <span>↓</span>
+            </a>
+            <p class="downloads-format">Original JPEG assets · context, close-up and angled views</p>
+          </div>
+          <div>
+            <a class="downloads-secondary" href="/downloads/arab-health-dermatology-sample-library.zip" download>
+              Download Arab Health sample library <span>↓</span>
+            </a>
+            <p class="downloads-format">
+              ZIP archive · 23 grouped cases · 62 PNG photographs ·
+              <a href="/downloads/arab-health-dermatology-sample-library-mapping.txt" target="_blank">view mapping</a>
+            </p>
           </div>
           <div>
             <a class="downloads-secondary" href="/downloads/naturalium-interpreter-briefing-script.docx" download>
@@ -190,6 +211,12 @@ const sampleCases = [
     margin: 13px 0 0;
     color: #79979a;
     font-size: 12px;
+  }
+
+  .downloads-format a {
+    color: #8ff0d1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .downloads-cases {
