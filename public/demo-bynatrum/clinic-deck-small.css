@@ -1,0 +1,421 @@
+/* Compact presentation variant. Loaded only by demo-bynatrum-small.html. */
+
+.demo-small-page .deck-topbar {
+  grid-template-columns: 245px 1fr 58px;
+  gap: 24px;
+  width: min(100%, 1440px);
+  height: 70px;
+  padding: 11px clamp(20px, 3.2vw, 46px);
+}
+
+.demo-small-page .demo-deck-brand {
+  gap: 10px;
+}
+
+.demo-small-page .demo-deck-brand img {
+  width: 44px;
+  height: 44px;
+}
+
+.demo-small-page .demo-deck-brand > strong {
+  font-size: 19px;
+}
+
+.demo-small-page .deck-counter {
+  font-size: 9px;
+}
+
+.demo-small-page .deck-actions button,
+.demo-small-page .deck-actions a {
+  width: 38px;
+  height: 38px;
+}
+
+/* Scene 1: stronger reduction to the headline and handset shell. */
+
+.demo-small-page .demo-opening-layout {
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.62fr);
+  gap: clamp(28px, 3.4vw, 54px);
+  width: min(100%, 1420px);
+  padding: clamp(74px, 7.8vh, 88px) clamp(24px, 4vw, 58px) clamp(18px, 2.5vh, 30px);
+}
+
+.demo-small-page .demo-product-lockup {
+  gap: 12px;
+  margin-bottom: 11px;
+}
+
+.demo-small-page .demo-product-lockup img {
+  width: clamp(44px, 3.8vw, 56px);
+  height: clamp(44px, 3.8vw, 56px);
+  border-radius: 14px;
+}
+
+.demo-small-page .demo-product-lockup strong {
+  font-size: clamp(38px, 3.7vw, 55px);
+}
+
+.demo-small-page .demo-opening-copy .scene-kicker {
+  margin-bottom: 14px;
+  font-size: 9px;
+}
+
+.demo-small-page .demo-opening-copy h1 {
+  max-width: 650px;
+  margin-bottom: 14px;
+  font-size: clamp(42px, 4.25vw, 66px);
+  line-height: 0.92;
+}
+
+.demo-small-page .demo-opening-copy .scene-lede {
+  max-width: 620px;
+  font-size: clamp(13px, 1vw, 16px);
+}
+
+.demo-small-page .demo-opening-copy .scene-lede strong {
+  font-size: clamp(15px, 1.2vw, 19px);
+}
+
+.demo-small-page .demo-opening-benefits {
+  margin-top: 13px;
+}
+
+.demo-small-page .demo-opening-benefits span {
+  padding: 8px 11px;
+  font-size: clamp(10px, 0.75vw, 12px);
+}
+
+.demo-small-page .demo-validation {
+  margin-top: 10px;
+  padding: 9px 12px;
+  font-size: clamp(12px, 0.85vw, 14px);
+}
+
+.demo-small-page .demo-opening-copy .clinical-boundary {
+  margin-top: 9px;
+  font-size: 10px;
+}
+
+.demo-small-page .demo-opening-copy .patient-steps {
+  margin-top: 10px;
+}
+
+.demo-small-page .demo-opening-copy .patient-steps button {
+  gap: 6px;
+  padding: 9px 7px;
+}
+
+.demo-small-page .demo-opening-copy .patient-steps strong {
+  font-size: clamp(11px, 0.85vw, 14px);
+}
+
+.demo-small-page .demo-opening-copy .scroll-cue {
+  margin-top: 10px;
+}
+
+.demo-small-page .demo-opening .phone-story {
+  width: min(29vw, 390px);
+}
+
+/* Keep the Scene 1 phone text only one visual step smaller. */
+.demo-small-page .demo-opening .phone-screen h3 {
+  font-size: 27px;
+}
+
+.demo-small-page .demo-opening .capture-camera-screen h3,
+.demo-small-page .demo-opening .clinician-list-screen h3 {
+  font-size: 25px;
+}
+
+.demo-small-page .demo-opening .phone-screen > button {
+  min-height: 47px;
+  font-size: 12px;
+}
+
+.demo-small-page .demo-opening .screen-step {
+  font-size: 9px;
+}
+
+.demo-small-page .demo-opening .camera-capture-view {
+  height: 290px;
+}
+
+.demo-small-page .demo-opening .camera-controls {
+  min-height: 78px;
+}
+
+.demo-small-page .demo-opening .phone-photo-grid {
+  grid-template-rows: 166px 80px;
+}
+
+.demo-small-page .demo-opening .demo-possible-matches li {
+  min-height: 47px;
+}
+
+.demo-small-page .demo-opening .demo-possible-matches li > strong {
+  font-size: 14px;
+}
+
+.demo-small-page .demo-opening .teleconsult-list article {
+  min-height: 62px;
+}
+
+/* Scene 2: a small reduction to each phone in both dimensions. */
+
+.demo-small-page .demo-journey-layout {
+  width: min(100%, 1560px);
+  padding: clamp(74px, 7.5vh, 88px) clamp(20px, 3.5vw, 50px) clamp(17px, 2.5vh, 28px);
+}
+
+.demo-small-page .journey-step {
+  height: min(78vh, 800px);
+  padding: clamp(13px, 1.5vw, 23px);
+}
+
+.demo-small-page .journey-boundary {
+  min-height: 57px;
+}
+
+.demo-small-page .journey-boundary h3 {
+  font-size: clamp(18px, 1.45vw, 24px);
+}
+
+.demo-small-page .journey-phone {
+  width: min(100%, 305px);
+  height: min(53vh, 545px);
+  margin-block: 10px 12px;
+}
+
+.demo-small-page .journey-phone-content h4 {
+  font-size: clamp(20px, 1.45vw, 25px);
+}
+
+.demo-small-page .journey-photo-pair figure {
+  height: min(17vh, 175px);
+}
+
+.demo-small-page .journey-signal-photo {
+  width: min(15vh, 142px);
+  height: min(15vh, 142px);
+}
+
+.demo-small-page .journey-step-copy h3 {
+  font-size: clamp(17px, 1.35vw, 22px);
+}
+
+.demo-small-page .journey-step-copy p {
+  font-size: clamp(10px, 0.78vw, 12px);
+}
+
+/* Scene 3: reduce the two interface panels, preserving their internal type. */
+
+.demo-small-page .clinician-phase-panel {
+  inset: clamp(70px, 7.5vh, 86px) 6vw clamp(24px, 3.5vh, 34px);
+}
+
+.demo-small-page .scene-clinician-combined .dashboard-stage,
+.demo-small-page .scene-clinician-combined .review-visual {
+  width: min(86vw, 1320px);
+}
+
+.demo-small-page .scene-clinician-combined .dashboard-paper {
+  min-height: min(74vh, 700px);
+}
+
+.demo-small-page .scene-clinician-combined .clinical-theatre {
+  height: min(74vh, 700px);
+  min-height: 560px;
+}
+
+.demo-small-page .scene-clinician-combined .record-primary {
+  height: min(31vh, 300px);
+}
+
+.demo-small-page .scene-clinician-combined .record-thumbs figure {
+  height: min(8vh, 72px);
+}
+
+/* Scene 4: compact cards while retaining readable evidence labels. */
+
+.demo-small-page .demo-evidence-layout {
+  width: min(100%, 1520px);
+  padding: clamp(76px, 8vh, 90px) clamp(28px, 5vw, 68px) clamp(24px, 3vh, 36px);
+}
+
+.demo-small-page .developer-proof-grid {
+  gap: clamp(14px, 1.6vw, 22px);
+}
+
+.demo-small-page .developer-proof-card {
+  min-height: min(64vh, 620px);
+  padding: clamp(21px, 2.4vw, 34px);
+  border-radius: 21px;
+}
+
+.demo-small-page .developer-proof-card > header h3 {
+  font-size: clamp(24px, 2.45vw, 39px);
+}
+
+.demo-small-page .developer-workflow-compare {
+  gap: clamp(18px, 2.4vh, 28px);
+  margin-top: clamp(27px, 3.8vh, 44px);
+}
+
+.demo-small-page .condition-catalogue {
+  margin-top: clamp(18px, 2.7vh, 29px);
+  padding-top: clamp(14px, 2vh, 21px);
+}
+
+.demo-small-page .condition-catalogue > div {
+  gap: 7px 13px;
+}
+
+/* Scene 5: reduce only the browser shell; iframe content remains untouched. */
+
+.demo-small-page .scene-inner.live-demo-layout {
+  padding: clamp(72px, 7.5vh, 82px) clamp(22px, 4vw, 58px) clamp(18px, 2.5vh, 28px);
+}
+
+.demo-small-page .live-browser {
+  width: min(88vw, 1500px);
+}
+
+.demo-small-page .live-browser-toolbar {
+  min-height: 40px;
+}
+
+.demo-small-page .live-browser-tabs button,
+.demo-small-page .live-browser-actions button,
+.demo-small-page .live-browser-actions a {
+  min-height: 29px;
+  font-size: 11px;
+}
+
+/* Scene 6: retain typography and stabilize portraits across OS scaling. */
+
+.demo-small-page .team-grid {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 1.15vw, 16px);
+}
+
+.demo-small-page .team-grid article {
+  grid-template-columns: clamp(74px, 6vw, 96px) minmax(0, 1fr);
+  gap: clamp(13px, 1.3vw, 20px);
+  padding: clamp(13px, 1.35vw, 20px);
+}
+
+.demo-small-page .team-grid img {
+  display: block;
+  width: clamp(74px, 6vw, 96px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Scene 7: smaller headline and cards, unchanged internal body copy. */
+
+.demo-small-page .scene-inner.collaboration-layout {
+  grid-template-columns: minmax(285px, 0.65fr) minmax(0, 1.35fr);
+  gap: clamp(18px, 2.4vw, 36px);
+  width: min(100%, 1560px);
+  padding: clamp(74px, 8vh, 90px) clamp(28px, 4vw, 60px) clamp(20px, 2.5vh, 30px);
+}
+
+.demo-small-page .collaboration-scene .collaboration-heading h2 {
+  font-size: clamp(42px, 4.6vw, 68px);
+}
+
+.demo-small-page .collaboration-heading > span {
+  max-width: 470px;
+  margin-top: 21px;
+  font-size: clamp(13px, 1vw, 16px);
+}
+
+.demo-small-page .collaboration-route {
+  min-height: min(54vh, 520px);
+  padding: clamp(20px, 1.9vw, 29px);
+  border-radius: clamp(17px, 1.5vw, 23px);
+}
+
+.demo-small-page .collaboration-route > header {
+  gap: 11px;
+}
+
+.demo-small-page .collaboration-route > header strong {
+  font-size: clamp(23px, 1.9vw, 32px);
+}
+
+@media (max-width: 1199px) and (min-width: 901px) {
+  .demo-small-page .demo-opening .phone-story {
+    width: min(28vw, 330px);
+  }
+
+  .demo-small-page .demo-opening .phone-screen h3,
+  .demo-small-page .demo-opening .capture-camera-screen h3,
+  .demo-small-page .demo-opening .clinician-list-screen h3 {
+    font-size: 19px;
+  }
+
+  .demo-small-page .demo-opening .camera-capture-view {
+    height: 225px;
+  }
+
+  .demo-small-page .demo-opening .phone-photo-grid {
+    grid-template-rows: 105px 52px;
+  }
+}
+
+@media (max-width: 900px) {
+  .demo-small-page .deck-topbar {
+    grid-template-columns: 168px 1fr 45px;
+    gap: 9px;
+    height: 64px;
+    padding: 10px 13px;
+  }
+
+  .demo-small-page .demo-deck-brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .demo-small-page .demo-deck-brand > strong {
+    font-size: 14px;
+  }
+
+  .demo-small-page .demo-opening-layout {
+    padding-top: 72px;
+  }
+
+  .demo-small-page .scene-inner.collaboration-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 76px 50px 34px 16px;
+  }
+
+  .demo-small-page .collaboration-route {
+    min-height: 460px;
+  }
+
+  .demo-small-page .team-grid img {
+    width: 72px;
+  }
+}
+
+@media (max-width: 680px) {
+  .demo-small-page .demo-product-lockup strong {
+    font-size: 32px;
+  }
+
+  .demo-small-page .demo-opening-copy h1 {
+    font-size: clamp(38px, 12vw, 55px);
+  }
+
+  .demo-small-page .demo-opening .phone-story {
+    width: min(70vw, 276px);
+  }
+
+  .demo-small-page .team-grid img {
+    width: 70px;
+  }
+}
