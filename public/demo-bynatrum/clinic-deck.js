@@ -462,7 +462,7 @@
   }
 
   function rotateTractionPhotos() {
-    if (tractionPhotos.length !== 2) return;
+    if (tractionPhotos.length === 0) return;
     const nextSources = [];
     tractionPhotos.forEach((photo) => {
       const availableSources = tractionPhotoSources.filter((source) => source !== photo.getAttribute("src") && !nextSources.includes(source));

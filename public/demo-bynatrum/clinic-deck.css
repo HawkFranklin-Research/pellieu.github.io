@@ -4464,7 +4464,8 @@ img {
 
 .traction-media-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.85fr) minmax(280px, 1fr);
+  grid-template-columns: minmax(0, 3fr) minmax(250px, 2fr);
+  align-items: stretch;
   gap: clamp(14px, 1.8vw, 28px);
   min-height: 0;
 }
@@ -4491,15 +4492,10 @@ img {
   background: #fff;
 }
 
-.traction-photo-mosaic {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: center;
-  gap: clamp(8px, 0.9vw, 14px);
-  min-width: 0;
-}
-
-.traction-photo-mosaic figure {
+.traction-photo-player {
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 460px);
   aspect-ratio: 1;
   min-width: 0;
   margin: 0;
@@ -4510,10 +4506,17 @@ img {
   box-shadow: 0 15px 34px rgba(0, 0, 0, 0.13);
 }
 
-.traction-photo-mosaic img {
+.traction-photo-player img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 1;
+  transition: opacity 280ms ease, transform 700ms ease;
+}
+
+.traction-photo-player img.is-switching {
+  opacity: 0;
+  transform: scale(1.018);
 }
 
 .engagement-tags-row {
@@ -4922,18 +4925,9 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .traction-media-layout {
-    grid-template-columns: 1fr;
-  }
-
   .traction-pdf-frame,
   .traction-pdf-frame iframe {
     min-height: 620px;
-  }
-
-  .traction-photo-mosaic {
-    width: min(100%, 620px);
-    justify-self: center;
   }
 
   .traction-photo-grid figure {
@@ -4979,9 +4973,17 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .traction-media-layout {
+    grid-template-columns: 1fr;
+  }
+
   .traction-pdf-frame,
   .traction-pdf-frame iframe {
     min-height: 520px;
+  }
+
+  .traction-photo-player {
+    width: min(100%, 430px);
   }
 
   .team-panel-heading > span {
