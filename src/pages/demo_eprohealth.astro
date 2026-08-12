@@ -21,8 +21,8 @@
     <link rel="preload" href="/demo-bynatrum/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/demo-bynatrum/case/context.jpeg" as="image" />
     <link rel="stylesheet" href="/demo-bynatrum/clinic-deck.css?v=20260812-3" />
-    <script defer src="/demo-bynatrum/clinic-deck-eprohealth-i18n.js?v=20260812-1"></script>
-    <script defer src="/demo-bynatrum/clinic-deck.js?v=20260812-2"></script>
+    <script defer src="/demo-bynatrum/clinic-deck-eprohealth-i18n.js?v=20260812-2"></script>
+    <script defer src="/demo-bynatrum/clinic-deck.js?v=20260812-3"></script>
     <noscript><style>.scene-reveal{opacity:1!important;transform:none!important}.phone-screen:not(:first-child){display:none}</style></noscript>
   </head>
   <body>
@@ -397,11 +397,20 @@
         <section class="deck-scene live-demo-scene" id="live-demo" data-tone="dark" aria-label="Live patient and clinician demonstration">
           <div class="live-demo-background" aria-hidden="true"></div>
           <div class="scene-inner live-demo-layout">
-            <div class="live-browser scene-reveal" data-live-demo>
+            <div
+              class="live-browser scene-reveal"
+              data-live-demo
+              data-patient-url="https://pelliscope-epro-demo.web.app/"
+              data-patient-title="E-Health Pro patient demonstration"
+              data-patient-address="pelliscope-epro-demo.web.app"
+              data-clinician-url="https://pelliscope-epro-demo.web.app/clinician"
+              data-clinician-title="E-Health Pro clinician portal demonstration"
+              data-clinician-address="pelliscope-epro-demo.web.app/clinician"
+            >
               <header class="live-browser-toolbar">
                 <div class="live-browser-identity" aria-hidden="true">
                   <i></i><i></i><i></i>
-                  <span data-live-demo-address>demo.pelliscope.eu</span>
+                  <span data-live-demo-address>pelliscope-epro-demo.web.app</span>
                 </div>
 
                 <div class="live-browser-tabs" role="tablist" aria-label="Live demonstration views">
@@ -423,7 +432,7 @@
                 <div class="live-browser-actions">
                   <button type="button" data-live-demo-refresh aria-label="Refresh the embedded demonstration">↻ <span>Refresh</span></button>
                   <a
-                    href="https://demo.pelliscope.eu/"
+                    href="https://pelliscope-epro-demo.web.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-live-demo-external
@@ -437,8 +446,8 @@
                   <span>Loading the live demonstration…</span>
                 </div>
                 <iframe
-                  src="https://demo.pelliscope.eu/"
-                  title="Naturalium patient demonstration"
+                  src="https://pelliscope-epro-demo.web.app/"
+                  title="E-Health Pro patient demonstration"
                   referrerpolicy="strict-origin-when-cross-origin"
                   loading="lazy"
                   data-live-demo-frame

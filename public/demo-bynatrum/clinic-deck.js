@@ -539,18 +539,18 @@
     else stopTractionPhotos();
   });
 
-  // The final scene embeds the unchanged Naturalium demo. Cross-origin access is
-  // intentionally limited to navigation and load-state events.
+  // Each presentation can provide its own trusted live-demo URLs through data
+  // attributes. Cross-origin access remains limited to navigation and load state.
   const liveDemoViews = {
     patient: {
-      url: "https://demo.pelliscope.eu/",
-      title: "Naturalium patient demonstration",
-      address: "demo.pelliscope.eu",
+      url: liveDemo?.dataset.patientUrl || "https://demo.pelliscope.eu/",
+      title: liveDemo?.dataset.patientTitle || "Naturalium patient demonstration",
+      address: liveDemo?.dataset.patientAddress || "demo.pelliscope.eu",
     },
     clinician: {
-      url: "https://demo.pelliscope.eu/clinician",
-      title: "Naturalium clinician portal demonstration",
-      address: "demo.pelliscope.eu/clinician",
+      url: liveDemo?.dataset.clinicianUrl || "https://demo.pelliscope.eu/clinician",
+      title: liveDemo?.dataset.clinicianTitle || "Naturalium clinician portal demonstration",
+      address: liveDemo?.dataset.clinicianAddress || "demo.pelliscope.eu/clinician",
     },
   };
   let liveDemoView = "patient";
