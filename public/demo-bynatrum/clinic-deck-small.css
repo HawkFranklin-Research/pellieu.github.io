@@ -299,14 +299,14 @@
 }
 
 .demo-small-page .team-grid article {
-  grid-template-columns: clamp(74px, 6vw, 96px) minmax(0, 1fr);
+  grid-template-columns: clamp(88px, 7vw, 112px) minmax(0, 1fr);
   gap: clamp(13px, 1.3vw, 20px);
   padding: clamp(13px, 1.35vw, 20px);
 }
 
 .demo-small-page .team-grid img {
   display: block;
-  width: clamp(74px, 6vw, 96px);
+  width: clamp(88px, 7vw, 112px);
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
@@ -398,7 +398,7 @@
   }
 
   .demo-small-page .team-grid img {
-    width: 72px;
+    width: 86px;
   }
 }
 
@@ -416,6 +416,6 @@
   }
 
   .demo-small-page .team-grid img {
-    width: 70px;
+    width: 84px;
   }
 }

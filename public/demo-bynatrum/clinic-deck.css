@@ -4249,16 +4249,16 @@ img {
 
 .team-traction-scene {
   color: var(--porcelain);
-  background: #0a222b;
+  background: #15343d;
 }
 
 .team-traction-background {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 88% 14%, rgba(216, 166, 78, 0.2), transparent 32%),
-    radial-gradient(circle at 8% 84%, rgba(43, 224, 173, 0.14), transparent 36%),
-    linear-gradient(140deg, #071d24, #10343b 58%, #162a35);
+    radial-gradient(circle at 88% 14%, rgba(216, 166, 78, 0.22), transparent 32%),
+    radial-gradient(circle at 8% 84%, rgba(43, 224, 173, 0.17), transparent 36%),
+    linear-gradient(140deg, #103039, #1a464b 58%, #294550);
 }
 
 .scene-inner.team-traction-layout {
@@ -4327,7 +4327,7 @@ img {
 
 .team-panel-heading > span {
   padding-bottom: 5px;
-  color: #a8bdc0;
+  color: #d5e1e1;
   font-size: clamp(11px, 0.95vw, 14px);
 }
 
@@ -4341,26 +4341,31 @@ img {
 
 .team-grid article {
   display: grid;
-  grid-template-columns: clamp(78px, 7vw, 112px) minmax(0, 1fr);
+  grid-template-columns: clamp(94px, 8vw, 132px) minmax(0, 1fr);
   align-items: center;
   gap: clamp(14px, 1.5vw, 23px);
   min-width: 0;
   padding: clamp(14px, 1.6vw, 24px);
   border: 1px solid rgba(245, 248, 245, 0.13);
   border-radius: clamp(15px, 1.4vw, 22px);
-  background: linear-gradient(145deg, rgba(245, 248, 245, 0.09), rgba(245, 248, 245, 0.035));
+  background: linear-gradient(145deg, rgba(245, 248, 245, 0.13), rgba(245, 248, 245, 0.06));
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
 }
 
 .team-grid img {
-  width: clamp(78px, 7vw, 112px);
-  height: clamp(78px, 7vw, 112px);
+  width: clamp(94px, 8vw, 132px);
+  height: clamp(94px, 8vw, 132px);
   padding: 2px;
   border: 3px solid rgba(43, 224, 173, 0.35);
   border-radius: 50%;
   background: rgba(245, 248, 245, 0.08);
   object-fit: contain;
   object-position: center;
+}
+
+.team-grid img.team-portrait-vatsal {
+  object-fit: cover;
+  object-position: 50% 38%;
 }
 
 .team-grid h3 {
@@ -4375,14 +4380,14 @@ img {
   display: block;
   margin-top: 8px;
   color: var(--mint);
-  font-size: clamp(14px, 1.05vw, 17px);
+  font-size: clamp(16px, 1.18vw, 19px);
   line-height: 1.25;
 }
 
 .team-grid p {
   margin: 7px 0 0;
-  color: #9fb5b8;
-  font-size: clamp(13px, 0.94vw, 15px);
+  color: #d7e3e3;
+  font-size: clamp(15px, 1.06vw, 17px);
   line-height: 1.35;
 }
 
@@ -4863,13 +4868,13 @@ img {
 
 @media (max-width: 1100px) {
   .team-grid article {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 88px minmax(0, 1fr);
     padding: 13px;
   }
 
   .team-grid img {
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
   }
 
   .scene-inner.collaboration-layout {
@@ -5020,13 +5025,13 @@ img {
   }
 
   .team-grid article {
-    grid-template-columns: 68px minmax(0, 1fr);
+    grid-template-columns: 84px minmax(0, 1fr);
     padding: 11px 14px;
   }
 
   .team-grid img {
-    width: 68px;
-    height: 68px;
+    width: 84px;
+    height: 84px;
   }
 
   .team-grid strong {

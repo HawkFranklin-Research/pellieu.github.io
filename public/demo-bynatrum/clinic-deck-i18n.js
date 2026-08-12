@@ -239,6 +239,7 @@
     "Research · Clinical interpretation · Operations": "Investigación · Interpretación clínica · Operaciones",
     "Founder & Research Engineer": "Fundador e ingeniero de investigación",
     "M.Sc Artificial Intelligence (IU Berlin)": "Máster en Inteligencia Artificial (IU Berlín)",
+    "M.Sc Artificial Intelligence (IU Berlin, Germany)": "Máster en Inteligencia Artificial (IU Berlín, Alemania)",
     "Clinical Research Physician": "Médico de investigación clínica",
     "Bachelor of Medicine & Surgery": "Grado en Medicina y Cirugía",
     "Consultant Dermatologist": "Dermatóloga consultora",
