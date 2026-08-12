@@ -597,9 +597,10 @@
   setLiveDemoView("patient");
 
   shareButton?.addEventListener("click", async () => {
+    const translate = window.PelliScopeI18n?.translate || ((value) => value);
     const data = {
-      title: "PelliScope Digital Telemedicine Platform | HawkFranklin OÜ",
-      text: "See how PelliScope connects digital inquiry, AI-assisted screening and prepared clinical review.",
+      title: translate("PelliScope Digital Telemedicine Platform | HawkFranklin OÜ"),
+      text: translate("See how PelliScope connects digital inquiry, AI-assisted screening and prepared clinical review."),
       url: window.location.href,
     };
 

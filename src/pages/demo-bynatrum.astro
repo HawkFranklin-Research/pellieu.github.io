@@ -21,6 +21,7 @@
     <link rel="preload" href="/demo-bynatrum/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/demo-bynatrum/case/context.jpeg" as="image" />
     <link rel="stylesheet" href="/demo-bynatrum/clinic-deck.css" />
+    <script defer src="/demo-bynatrum/clinic-deck-i18n.js"></script>
     <script defer src="/demo-bynatrum/clinic-deck.js"></script>
     <noscript><style>.scene-reveal{opacity:1!important;transform:none!important}.phone-screen:not(:first-child){display:none}</style></noscript>
   </head>
@@ -53,6 +54,11 @@
       <main class="deck-reel" data-reel>
         <section class="deck-scene scene-patient demo-opening is-active" id="opening" data-tone="light" aria-labelledby="opening-title">
           <div class="demo-opening-grid" aria-hidden="true"></div>
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button class="is-active" type="button" data-language="en" aria-label="Use English" aria-pressed="true">EN</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-language="es" aria-label="Use Spanish" aria-pressed="false">ES</button>
+          </div>
           <div class="scene-inner patient-layout demo-opening-layout">
             <div class="scene-copy patient-copy demo-opening-copy">
               <div class="demo-product-lockup scene-reveal" aria-label="PelliScope">
