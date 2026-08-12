@@ -4462,6 +4462,67 @@ img {
   transform: scale(1.018);
 }
 
+.traction-media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(280px, 1fr);
+  gap: clamp(14px, 1.8vw, 28px);
+  min-height: 0;
+}
+
+.traction-pdf-frame {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  min-height: 310px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(245, 248, 245, 0.2);
+  border-radius: clamp(14px, 1.3vw, 21px);
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.traction-pdf-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  border: 0;
+  background: #fff;
+}
+
+.traction-photo-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: clamp(8px, 0.9vw, 14px);
+  min-width: 0;
+}
+
+.traction-photo-mosaic figure {
+  aspect-ratio: 1;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(245, 248, 245, 0.16);
+  border-radius: clamp(12px, 1vw, 17px);
+  background: #071d24;
+  box-shadow: 0 15px 34px rgba(0, 0, 0, 0.13);
+}
+
+.traction-photo-mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.engagement-tags-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
 .engagement-proof-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
@@ -4861,6 +4922,20 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .traction-media-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .traction-pdf-frame,
+  .traction-pdf-frame iframe {
+    min-height: 620px;
+  }
+
+  .traction-photo-mosaic {
+    width: min(100%, 620px);
+    justify-self: center;
+  }
+
   .traction-photo-grid figure {
     min-height: 240px;
   }
@@ -4902,6 +4977,11 @@ img {
   .traction-photo-grid,
   .collaboration-routes {
     grid-template-columns: 1fr;
+  }
+
+  .traction-pdf-frame,
+  .traction-pdf-frame iframe {
+    min-height: 520px;
   }
 
   .team-panel-heading > span {
